@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maciej Ryszka - WTF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="top">
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="dziennik.html">Dziennik</a>
+            <a href="teoria.html">Teoria</a>
+        </nav>
+    </header>
+    <main>
+        <header class="header">Teoria – WTF: Co Ten Frontend?</header>
+        <section>
+            <h1 class="heading-one">teoria</h1>
+            <img src="/img/books.jpg" alt="męski tors z książkami zamiast głowy">
+            <article>
+                <h2 class="heading-two">warstwy strony internetowej</h2>
+                <p>Warstwy strony internetowej:<br>
+                    0. Treść.<br>
+                    1. HTML.<br>
+                    2. CSS.<br>
+                    3. JavaScript.
+                </p>
+                <p>Każda z warstw strony ma swoją odpowiedzialność (jeśli coś można zrobić za pomocą samego HTML, należy
+                    to zrobić za pomocą HTML). Treść jest najważniejsza.</p>
+            </article>
+            <article>
+                <h2 class="heading-two">wtf: html</h2>
+                <p>Budowa znacznika HTML:
+                    &lt;znacznik atrybut=”wartość”>treść&lt;/znacznik>
+                </p>
+                <p>Semantyczny HTML – mający znaczenie – tagi HTML nadają znaczenie, dlatego nazywane są też znaczikami.
+                </p>
+                <ul>
+                    <li><b>&lt;!DOCTYPE html></b> Mówi o tym jakiego typu jest to dokument. W dawnych czasach
+                        definiowało
+                        się dokładny standard HTML.
+                        Obecnie nie należy wpisywać niczego więcej.</li>
+                    <li><b>&lt;html lang="en"></b> Należy tutaj umieścić kod języka, w którym jest strona.
+                        Przykładowo
+                        strona będzie czytana w tym
+                        języku przez asystenta głosowego dla osób niewidomych.</li>
+                    <li><b>&lt;main>&lt;/main></b> Główna część dokumentu. Wewnątrz znacznika powinna zostać zawarta
+                        główna
+                        część dokumentu.</li>
+                    <li><b>&lt;section>&lt;/section></b> Sekcja dokumentu. Część logicznie podzielonego dokumentu.
+                    </li>
+                    <li><b>&lt;article>&lt;/article></b> Artykuł. Może istnieć samodzielnie i zawiera większą treść.
+                    </li>
+                    <li><b>&lt;header>&lt;/header></b> Nagłówek. Opisuje nagłówek dokumentu / sekcji / artykułu.
+                    </li>
+                    <li><b>&lt;footer>&lt;/footer></b> Stopka. Zawiera stopkę dokumentu / sekcji.</li>
+                    <li><b>&lt;p>&lt;/p></b> Paragraf. Akapit.</li>
+                </ul>
+                <p>Tekstowe nagłówki tytułowe. Im mniejszy numer ma znacznik nagłówka, tym większa jego ważność:</p>
+                <ul>
+                    <li><b>&lt;h1>&lt;/h1></b></li>
+                    <li><b>&lt;h2>&lt;/h2></b></li>
+                    <li><b>&lt;h3>&lt;/h3></b></li>
+                    <li><b>&lt;h4>&lt;/h4></b></li>
+                    <li><b>&lt;h5>&lt;/h5></b></li>
+                    <li><b>&lt;h6>&lt;/h6></b></li>
+                </ul>
+                <p>Dobrą praktyką jest manualne domykanie znaczników. <br>
+                    Każda sekcja powinna mieć tekstowy nagłówek tytułowy.<br>
+                    Doskonałym sposobem na sprawdzenie poprawności pliku .html jest strona:
+                    <a href="https://validator.w3.org/nu/#textarea">validator.w3.org</a></p>
+            </article>
+            <article>
+                <h2 class="heading-two">wtf: css</h2>
+                <p>Budowa reguły CSS:<br>
+                    selektor {<br>
+                    właściwość: wartość;<br>
+                    }<br>
+                </p>
+                <p>Różne przeglądarki potrafią różnie interpretować CSS.</p>
+            </article>
+            <article>
+                <h2 class="heading-two">magia programowania</h2>
+                <p>Programowanie to zamiana ludzkiego języka na język zrozumiały przez komputer.<br>
+                    Każdy język programowania ma swoją składnię, gramatykę i ortografię.<br>
+                    Na świecie istnieje ponad 700 języków programowania.</p>
+            </article>
+            <article>
+                <h2 class="heading-two">devtools: podglądamy!</h2>
+                <p>Narzędzia deweloperskie można uruchomić na kilka sposobów:</p>
+                <ul>
+                    <li>F12</li>
+                    <li>Ctrl + Shift + I</li>
+                    <li>PPM + Zbadaj</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="heading-two">kanban</h2>
+                <p>Kanban jest to spis widoczny podzielony na trzy kolumny:</p>
+                <ul>
+                    <li>TODO = do zrobienia</li>
+                    <li>DOING = w trakcie</li>
+                    <li>DONE = zrobione</li>
+                </ul>
+                <p>W pierwszej kolumnie znajdują się absolutnie wszystkie zadania do zrealizowania.<br>
+                    W drugiej kolumnie należy przechowoywać zadanie aktualnie wykonywane. Najlepiej jak jest tylko
+                    jedno.<br>
+                    W trzeciej kolumnie powinny znaleźć się ukończone zadania.<br>
+                    Przykładowym serwisem, pozwalającym na stworzenie własnego kanbana jest
+                    <a href="https://trello.com">Trello</a></p>
+            </article>
+            <article>
+                <h2 class="heading-two">wtf: html ii</h2>
+                <p>Pozostałe znaczniki:</p>
+                <ul>
+                    <li><b>&lt;br></b> Nowa linia. Nie należy używać tego znacznika kilkukrotnie po sobie.</li>
+                    <li><b>&lt;b></b> Pogrubienia tekst (efekt wizualny).</li>
+                    <li><b>&lt;i></b> Nadaje kursywę tekstowi (efekt wizualny).</li>
+                    <li><b>&lt;strong></b> Podkreśla wysokią istotność tekstu.</li>
+                    <li><b>&lt;em></b> Podkreśla, że tekst może mieć inne znaczenie.</li>
+                    <li><b>&lt;a href="" target="">opis łącza&lt;/a></b> Linki / łącza wewnątrz dokumentu.</li>
+                    <li><b>&lt;nav></b> Nawigacja.</li>
+                    <li><b>&lt;img/></b> Obrazek o podanym adresie.</li>
+                </ul>
+                <p>Niektóre atrybuty:</p>
+                <ul>
+                    <li><b>id</b> Identyfikuje element. Przydaje się do nawigacji w obrębie dokumentu.</li>
+                    <li><b>src</b> Źródło (obrazka, pliku .js, etc.).</li>
+                    <li><b>alt</b> Tekst alternatywny. Informuje wyszukiwarkę o zawartości obrazka. Wykorzystywany
+                        również
+                        przez syntezatory mowy dla niewidomych.</li>
+                </ul>
+                <p>Aby przejść na stronie do elementu o określonym 'id', należy atrybutowi 'href' znacznika 'a' nadać
+                    wartość: '#id_elementu_docelowego'.<br>
+                    W nazwach plików nie należy używać dużych liter, polskich znaków i spacji (w celu oddzielenia słów
+                    należy użyć myślnika).<br>
+                    Elementy powtarzalne na wielu podstronach, należy umieszczać poza znacznikiem 'main' (jedynie treść
+                    znajdująca się wewnątrz znacznika 'main' jest brana pod uwagę przez analizatory).<br>
+                    Atrybury pozwalają na identyfikowanie elementów (id), grupowanie elementów (class) lub nadanie im
+                    dodatkowych właściwości (href, src, alt). Lista globalnych atrybutów na
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">MDN web docs</a>.
+                </p>
+            </article>
+            <article>
+                <h2 class="heading-two">opowieść o wężu, kebabie, wielbłądzie i Pascalu</h2>
+                <p>Nazywanie rzeczy:</p>
+                <ul>
+                    <li>Nazwy zapisujemy bez polskich znaków.</li>
+                    <li>Nie używamy spacji.</li>
+                    <li>Używamy języka angielskiego.</li>
+                    <li>Trzymamy się jednego schematu.</li>
+                </ul>
+                <p>Sposoby zastąpienia spacji w nazewnictwie (dwie pierwsze wykorzystywane są najczęściej):</p>
+                <ul>
+                    <li>camelCase</li>
+                    <li>kebab-case</li>
+                    <li>snake_case</li>
+                    <li>PascalCase</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="heading-two">wtf: css ii</h2>
+                <p>Specyficzność w CSS<br>
+                    Szeregując selektory pod względem ważności można oprzeć się o klasyfikację medalową, gdzie
+                    odpowiednio poszczególnymi kolorami medalów są następujące style:</p>
+                <ul>
+                    <li>!important (niezalecane)</li>
+                    <li>style="" (niezalecane)</li>
+                    <li>#name</li>
+                    <li>.name</li>
+                    <li>element</li>
+                </ul>
+                <p>W przypadku równej ważności stylów, ważniejszy będzie ten, który jest niżej w kodzie, ponieważ kod
+                    jest interpretowany od góry do dołu.<br>
+                    Powinno się dodawać klasę do wszystkich elementów na stronie oraz unikać zagnieżdżeń.<br>
+                    Zasady nazewnictwa klas:</p>
+                <ul>
+                    <li>Używaj pojedynczych angielskich słów.</li>
+                    <li>Nazywaj rzeczy zgodnie z ich funkcją na stronie.</li>
+                    <li>Nazwy klas zaczynaj małą literą.</li>
+                    <li>Nie zaczynaj od cyfry.</li>
+                    <li>Skorzystaj z kebab case, kiedy musisz użyć większej ilości słów.</li>
+                    <li>Staraj się, aby element miał jedną klasę.</li>
+                </ul>
+                <p><a href="https://coolors.co/generate">Strona</a> dobierająca pasujące do siebie kolory.</p>
+            </article>
+            <article>
+                <h2 class="heading-two">jak działa Internet i przeglądarka</h2>
+                <p>Zawartość URL (Uniform Resource Locator):</p>
+                <ul>
+                    <li>protokół</li>
+                    <li>host (adres serwera)</li>
+                    <li>port (ukryty)</li>
+                    <li>root</li>
+                    <li>ścieżka dostępu do zasobu</li>
+                    <li>parametry (czasami ukryte)</li>
+                </ul>
+                <p>kody odpowiedzi HTTP:</p>
+                <ul>
+                    <li>1xx: należy poczekać na odpowiedź.</li>
+                    <li>2xx: OK.</li>
+                    <li>3xx: przekierowanie, należy szukać zasobu gdzie indziej.</li>
+                    <li>4xx: zasób nie został znaleziony.</li>
+                    <li>5xx: błąd serwera.</li>
+                </ul>
+                <p>Protokół obsługujący strony internetowe to HTTP (coraz częściej HTTP/2)<br>
+                    Komunikacja między przeglądarką a serwerem odbywa się na zasadzie request - response.<br>
+                    Adres do zasobu bez '/' z przodu powoduje, że adres ten staje się adresem względnym i przeglądarka
+                    szuka pliku w aktualnym katalogu. Nazleży pamiętać o umieszczaniu '/' przed ścieżką do zasobu w
+                    przypadku gdy pracujemy z wykorzystaniem serwera.</p>
+            </article>
+            <article>
+                <h2 class="heading-two">wtf: javascrips</h2>
+                <p>Co to jest ECMAScript 6+</p>
+                <ul>
+                    <li>ECMAScript jest to ustandaryzowany przez organizację ECMA skryptowy język programowania.</li>
+                    <li>JavaScript implementuje rzeczy ze specyfikacji ECMAScript.</li>
+                    <li>Rozwój ECMAScript mocno przyspieszył przez szerokie wykorzystanie JavaScriptu.</li>
+                    <li>ES6 (i nowsze) wprowadzają wiele udogodnień dla developerów.</li>
+                    <li>Nowe feature'y mogą nie być wspierane we wszystkich przeglądarkach, ale są na to sposoby.</li>
+                </ul>
+                <p>Składowe JavaScript:</p>
+                <ul>
+                    <li>Wartości</li>
+                    <li>Operacje porównania</li>
+                    <li>Zmienne</li>
+                    <li>Literały</li>
+                    <li>Funkcje</li>
+                    <li>Obiekty</li>
+                </ul>
+                <p>Skrypty należy umieszczać na końcu znacznika 'body'.<br>
+                    Kod JS uruchamia się raz (po załadowaniu strony).<br>
+                    JavaScript to frontendowe programowanie.</p>
+            </article>
+            <article>
+                <h2 class="heading-two">terminal</h2>
+                <p>MacOS / Linux</p>
+                <ul>
+                    <li><b>cd ~</b> Przejście do katalogu domowego.</li>
+                    <li><b>ls</b> Wypisanie zawartości katalogu.</li>
+                    <li><b>cd ..</b> Przejście do katalogu wyżej.</li>
+                    <li><b>cd nazwa-katalogu</b> Przejście do katalogu o danej nazwie.</li>
+                    <li><b>code .</b> Uruchomienie Visual Studio Code w aktualnym katalogu.</li>
+                    <li><b>pwd</b> Wyświetlenie aktualnej ścieżki.</li>
+                    <li><b>mkdir nazwa-katalogu</b> Stworzenie katalogu o danej nazwie.</li>
+                </ul>
+                <p>Windows</p>
+                <ul>
+                    <li><b>cd C:</b> Przejście do głównego katalogu na dysku C.</li>
+                    <li><b>dir</b> Wypisanie zawartości katalogu.</li>
+                    <li><b>cd ..</b> Przejście do katalogu wyżej.</li>
+                    <li><b>cd nazwa-katalogu</b> Przejście do katalogu o danej nazwie.</li>
+                    <li><b>code .</b> Uruchomienie Visual Studio Code w aktualnym katalogu.</li>
+                    <li><b>cd</b> Wyświetlenie aktualnej ścieżki.</li>
+                    <li><b>mkdir nazwa-katalogu</b> Stworzenie katalogu o danej nazwie.</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="heading-two">jest git!</h2>
+                <p>System kontroli wersji GIT dostępny jest na <a href="http://git-scm.com">tej</a> stronie.<br>
+                    Po zainstalowaniu należy skonfigurować użytkownika wykonując polecenia:
+                </p>
+                <ul>
+                    <li>git config --global user.name "Imię Nazwisko"</li>
+                    <li>git config --global user.email adres_email</li>
+                </ul>
+                <p>Dane użytkownika można sprawdzić z użyciem poleceń:</p>
+                <ul>
+                    <li>git config --get user.name</li>
+                    <li>git config --get user.email</li>
+                </ul>
+                <p>Polecenia GITa:</p>
+                <li><b>git init</b> Inicjalizacja repozytorium (należy być w katalogu z projektem).</li>
+                <li><b>git status</b> Sprawdzenie stan repozytorium (śledzone / nieśledzone pliki, ostatni commit,
+                    aktualną
+                    gałąź).</li>
+                <li><b>git add .</b> Dodanie plików z aktualnego katalogu oraz podkatalogów jako śledzone.</li>
+
+
+                <p>GIT składa się z:</p>
+                <ul>
+                    <li>Repozytorium (jeden projekt = jedno repozytorium!)</li>
+                    <li></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Zawartość będzie aktualizowana na bieżąco w miarę możliwości. <a href="#top">Wróć na górę</a></p>
+        <p>Maciej Ryszka - 2020</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

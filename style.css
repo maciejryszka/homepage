@@ -1,0 +1,12 @@
+body {
+    background: #202020;
+    color: #6A7B76;
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading-one,
+.heading-two,
+.header {
+    color: #BEB0A7;
+    text-transform: uppercase;
+}
