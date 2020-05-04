@@ -262,6 +262,8 @@
             <article>
                 <h2 class="heading-two">jest git!</h2>
                 <p>System kontroli wersji GIT dostępny jest na <a href="http://git-scm.com">tej</a> stronie.<br>
+                    Jeden projekt = jedno repozytorium!<br>
+                    Source Control / GitLens to narzędzia ułatwiające pracę z GITem w Visual Studio Code.<br>
                     Po zainstalowaniu należy skonfigurować użytkownika wykonując polecenia:
                 </p>
                 <ul>
@@ -274,20 +276,39 @@
                     <li>git config --get user.email</li>
                 </ul>
                 <p>Polecenia GITa:</p>
-                <li><b>git init</b> Inicjalizacja repozytorium (należy być w katalogu z projektem).</li>
-                <li><b>git status</b> Sprawdzenie stan repozytorium (śledzone / nieśledzone pliki, ostatni commit,
-                    aktualną
-                    gałąź).</li>
-                <li><b>git add .</b> Dodanie plików z aktualnego katalogu oraz podkatalogów jako śledzone.</li>
-                <li><b>git commit -m "komentarz"</b> Zapis plików. Utworzenie commita ('wersji' projektu).</li>
-                <li><b>gitk</b> Wyświetlenie historii commitów.</li>
-
-
-                <p>GIT składa się z:</p>
                 <ul>
-                    <li>Repozytorium (jeden projekt = jedno repozytorium!)</li>
-                    <li></li>
+                    <li><b>git init</b> Inicjalizacja repozytorium (należy być w katalogu z projektem).</li>
+                    <li><b>git status</b> Sprawdzenie stan repozytorium (śledzone / nieśledzone pliki, ostatni commit,
+                        aktualną
+                        gałąź).</li>
+                    <li><b>git add .</b> Dodanie plików z aktualnego katalogu oraz podkatalogów jako śledzone.</li>
+                    <li><b>git commit -m "komentarz"</b> Zapis plików. Utworzenie commita ('wersji' projektu).</li>
+                    <li><b>gitk</b> Wyświetlenie historii commitów.</li>
                 </ul>
+                <p>GIT podsumowanie:</p>
+                <ul>
+                    <li>GIT pozwala na sprawne zarządzanie zmianami w projekcie.</li>
+                    <li>Działa lokalnie.</li>
+                    <li>Do działania zdalnego potrzebuje serwera (np. GitHub).</li>
+                    <li>Commity należy wykonywać po wykodaniu widocznej zmiany w projekcie (lepiej za często niż za
+                        rzadko).</li>
+                    <li>Podstawowy flow: git add . / git commit -m "komentarz" / git push</li>
+                </ul>
+
+            </article>
+            <article>
+                <h2 class="heading-two">github</h2>
+                <p>Serwis służący do przechowywania repozytoriów online to <a href="https://github.com">GitHub</a>.<br>
+                    Nowe repozytorium zdalne można utworzyć za pomocą opcji New repository (po wcześniejszym zalogowaniu
+                    do
+                    serwisu)<br>
+                    Nazwa repozytorium zdalnego powinna być taka sama jak nazwa repozytorium lokalnego.<br>
+                    Po utworzeniu repozytorium zdalnego można albo zainicjalizować nowe repozytorium lokalne albo
+                    podpiąć się do już istniejącego (odpowiednie komendy dla obu przypadków wyświetlają się po
+                    utworzeniu repozytorium zdalnego).<br>
+                    Kiedy repozytorium zdalne i lokalne są już połączone, aby zaktualizować repozytorium zdalne należy
+                    jedynie użyć metody <b>git push</b> po wykonaniu commita.
+                </p>
             </article>
         </section>
     </main>
