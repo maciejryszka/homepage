@@ -310,6 +310,83 @@
                     jedynie użyć metody <b>git push</b> po wykonaniu commita.
                 </p>
             </article>
+            <article>
+                <h2 class="heading-two">życie w pudełku: display, wymiary i overflow</h2>
+                <p>
+                    <b>&lt;div></b> Nie ma znaczenia semantycznego. Używamy go tylko w celu
+                    stylowania, gdy nie istnieje odpowiedni semantyczny znacznik.
+                </p>
+                <p>Reguły / właściwości CSS:</p>
+                <ul>
+                    <li><b>display: block</b> Powoduje, że elementy zajmują całą szerokość rodzica i ustawiają
+                        się jeden pod drugim.</li>
+                    <li><b>display: inline</b> Powoduje, że elementy zajmują na szerokość tyle miejsca ile potrzebują i
+                        ustawiają
+                        się obok siebie.</li>
+                    <li><b>display: inline-block</b> Powoduje, że elementy ustawiają
+                        się obok siebie, jednak otrzymują właściwości charakterystyczne dla elementów blokowych, np.
+                        'width', 'height'.</li>
+                    <li><b>min-width</b> Ustala minimalną szerokość elementu.</li>
+                    <li><b>min-height</b> Ustala minimalną wysokość elementu.</li>
+                    <li><b>max-width</b> Ustala maksymalną szerokość elementu.</li>
+                    <li><b>max-height</b> Ustala maksymalną wysokość elementu.</li>
+                    <li><b>overflow</b> Steruje widocznością treści znajdującą się poza elementem.</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="heading-two">życie w pudełku: jednostki</h2>
+                <p>Jednostki służące do zapisu wymiarów w CSS:</p>
+                <ul>
+                    <li><b>0</b> Nie wymaga dopisywania jednostki.</li>
+                    <li><b>px</b> Piksele.</li>
+                    <li><b>%</b> Procenty. Liczone są względem rodzica.</li>
+                    <li><b>vw</b> Viewport width. Szekokość względem szerokości okna.</li>
+                    <li><b>vh</b> Viewport height. Wysokość względem wysokości okna.</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="heading-two">życie w pudełku: box model (padding / border / margin)</h2>
+                <p>Box model - elementy:</p>
+                <ul>
+                    <li><b>padding</b> Margines wewnętrzny.</li>
+                    <li><b>border</b> Obramowanie elementu oraz paddingu. Wchodzi w skład elementu.</li>
+                    <li><b>margin</b> Margines zewnętrzny. Informuje o odległościach, które muszą być zachowane od
+                        elementu. Działa jeynie dla wartości blokowych.</li>
+                </ul>
+                <p>W przypadku powyższych własności (oraz innych kierunkowych) można nadać wartość
+                    jedynie dla jednej z krawędzi, np.
+                    'margin-bottom'.<br>
+                    W celu nadania wartości dla wszystkich krawędzi, można wykorzystać zapis skrótowy (shorthand) i
+                    podać
+                    je odpowiednio dla krawędzi górnej, prawej, dolnej i lewej, np. 'padding: 20px 10px 0 10px;'.<br>
+                    Jeśli zostaną podane jedynie dwie wartości, pierwsza będzie się odnosić do krawędzi górnej i dolnej,
+                    a druga do lewej i prawej, np. 'margin: 10px 30px;'.<br>
+                    Jeśli zostanie podana jedynie jedna wartość, będzie się ona odnosić do wszystkich krawędzi,
+                    np.'padding: 5px;'.<br>
+                    Zapis skrótowy dla własności 'border' może mieć również postać, gdzie jako wartości podajemy
+                    kolejno: szerokość, styl i kolor, np. 'border: 2px solid #000;'.<br>
+                    Własność 'border-radius' umożliwia zaokrąglenie narożników poprzez podanie promienia zaokrąglenia
+                    (najczęściej w pikselach lub procentach).<br>
+                    Margines automatyczny zadziała tylko wtedy, gdy blokowy element będzie miał nadaną szerokość. W
+                    innym wypadku element zjmie całą szerokość rodzica i nie będzie już miejsca na umieszczenie
+                    marginesu po
+                    obu
+                    stronach elementu.
+                </p>
+            </article>
+            <article>
+                <h2 class="heading-two">życie w pudełku: box-sizing</h2>
+                <p>Właściwość 'box-sizing' decyduje o tym, co wchodzi w skład zdefiniowanych wymiarów elementu:</p>
+                <ul>
+                    <li><b>content-box</b> Wartość domyślna. W skład zdefiniowanych wymiarów elemetnu wchodzi jedynie
+                        jego zawartość, a ewentualny padding i obramowanie są doliczane do tej wartości, powodując
+                        powiększenie elementu.</li>
+                    <li><b>border-box</b> W skład zdefiniowanych wymiarów elemetnu wchodzi zarówno zawartość, padding i
+                        obramowanie. Pozwala to na zdefiniowanie wymiarów elementu, gdzie w przypadku ewentualnego
+                        paddingu i obramowania zawartość zostanie odpowiednio pomniejszona, co nie spowoduje
+                        powiększenia elementu i będzie on miał nadal zdefiniowane wymiary.</li>
+                </ul>
+            </article>
         </section>
     </main>
     <footer>
