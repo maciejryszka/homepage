@@ -387,6 +387,45 @@
                         powiększenia elementu i będzie on miał nadal zdefiniowane wymiary.</li>
                 </ul>
             </article>
+            <article>
+                <h2 class="heading-two">życie w pudełku: position</h2>
+                <p>Właściwość 'position' określa sposób pozycjonowania elementu na stronie:</p>
+                <ul>
+                    <li><b>static</b> Wartość domyślna.</li>
+                    <li><b>relative</b> Tworzy z elementu układ odniesienia dla elementów posiadających wartość tej
+                        własności ustawioną na
+                        'absolute'.</li>
+                    <li><b>absolute</b> Pozwala na nadawanie elementowi konkretnej pozycji wraz z wykorzystaniem
+                        własności: 'top', 'right', 'bottom', 'left'.</li>
+                    <li><b>fixed</b> Działa na podobnej zasadzie jak 'absolute', jednak element jest pozycjonowany
+                        względem ekranu a nie względem dokumentu (w czasie scrollowania nie zmienia swojej
+                        pozycji).</li>
+                    <li><b>sticky</b> Pozycja elementu zmienia się względem rodzica (który nie może posiadać właściwości
+                        'overflow') wraz ze scrollowaniem, jednak nie
+                        wychodzi on poza obszar rodzica, lecz przykleja się do niego, kiedy rodzic przestaje być
+                        widoczny.</li>
+                    <li><b>z-index</b> Pozwala na sterowanie widocznością elementów nachodzących na siebie. Im większa
+                        wartość własności, tym jest on wyżej na osi Z.</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="heading-two">życie w pudełku: float</h2>
+                <p>Właściwość 'float' służy do opływania elementów:</p>
+                <ul>
+                    <li><b>left</b> Element znajduje się z lewej strony, a treść opływa go z prawej.</li>
+                </ul>
+                <ul>
+                    <li><b>right</b> Element znajduje się z prawej strony, a treść opływa go z lewej.</li>
+                </ul>
+                <p>Element z właściwością 'float' nie jest ograniczony przez rodzica. Aby nie wykraczał poza granice
+                    rodzica, można dodać rodzicowi na końcu pusty element posiadający właściwość 'clear', która
+                    dostosuje rozmiar rodzica do pływającego
+                    elementu.<br>
+                    Drugą metodą jest dodanie rodzicowi reguły 'overflow: hidden', jednak należy pamiętać, że określenie
+                    wysokości rodzica może spowodować przysłonięcie pewnej części pływającego elementu.<br>
+                    Właściwości 'float' nie należy stosować do budowania wyglądu strony.
+                </p>
+            </article>
         </section>
     </main>
     <footer>
