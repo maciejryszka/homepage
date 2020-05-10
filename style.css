@@ -4,9 +4,52 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .header,
 .main__heading,
 .article__heading {
   color: #beb0a7;
   text-transform: uppercase;
+}
+
+.header,
+.main__header,
+.footer__text {
+  text-align: center;
+}
+
+.main__heading {
+  text-align: center;
+}
+
+.main__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.header-navigation__link {
+  margin: 10px;
+  padding: 5px 15px;
+  border-radius: calc(29px / 2);
+  font-weight: bold;
+  text-decoration: none;
+  color: #6a7b76;
+  background-color: #beb0a7;
+}
+
+.article {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #6a7b76;
+  border-radius: 10px;
+}
+
+.article__link,
+.footer__link {
+  font-weight: bold;
+  color: #6a7b76;
 }
