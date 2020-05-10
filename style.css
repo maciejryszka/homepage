@@ -4,9 +4,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.heading-one,
-.heading-two,
-.header {
+.header,
+.main__heading,
+.article__heading {
   color: #beb0a7;
   text-transform: uppercase;
 }

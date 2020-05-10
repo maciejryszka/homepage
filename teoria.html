@@ -8,89 +8,95 @@
   </head>
 
   <body>
-    <header id="top">
-      <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="dziennik.html">Dziennik</a>
-        <a href="teoria.html">Teoria</a>
+    <header id="top" class="header">
+      <nav class="header-navigation">
+        <a class="header-navigation__link" href="index.html">Strona główna</a>
+        <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
+        <a class="header-navigation__link" href="teoria.html">Teoria</a>
       </nav>
     </header>
-    <main>
-      <header class="header">teoria – WTF: Co Ten Frontend?</header>
-      <section>
-        <h1 class="heading-one">teoria</h1>
-        <img src="/img/books.jpg" alt="męski tors z książkami zamiast głowy" />
-        <article>
-          <h2 class="heading-two">warstwy strony internetowej</h2>
-          <p>
+    <main class="main">
+      <header class="main__header">teoria – WTF: Co Ten Frontend?</header>
+      <section class="main__section">
+        <h1 class="main__heading">teoria</h1>
+        <img
+          class="main__image"
+          src="/img/books.jpg"
+          alt="tors z książkami zamiast głowy"
+        />
+        <article class="article">
+          <h2 class="article__heading">warstwy strony internetowej</h2>
+          <p class="article__text">
             Warstwy strony internetowej:<br />
             0. Treść.<br />
             1. HTML.<br />
             2. CSS.<br />
             3. JavaScript.
           </p>
-          <p>
+          <p class="article__text">
             Każda z warstw strony ma swoją odpowiedzialność (jeśli coś można
             zrobić za pomocą samego HTML, należy to zrobić za pomocą HTML).
             Treść jest najważniejsza.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">wtf: html</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">wtf: html</h2>
+          <p class="article__text">
             Budowa znacznika HTML: &lt;znacznik
             atrybut=”wartość”>treść&lt;/znacznik>
           </p>
-          <p>
+          <p class="article__text">
             Semantyczny HTML – mający znaczenie – tagi HTML nadają znaczenie,
             dlatego nazywane są też znaczikami.
           </p>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>&lt;!DOCTYPE html></b> Mówi o tym jakiego typu jest to
               dokument. W dawnych czasach definiowało się dokładny standard
               HTML. Obecnie nie należy wpisywać niczego więcej.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;html lang="en"></b> Należy tutaj umieścić kod języka, w
               którym jest strona. Przykładowo strona będzie czytana w tym języku
               przez asystenta głosowego dla osób niewidomych.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;main>&lt;/main></b> Główna część dokumentu. Wewnątrz
               znacznika powinna zostać zawarta główna część dokumentu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;section>&lt;/section></b> Sekcja dokumentu. Część logicznie
               podzielonego dokumentu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;article>&lt;/article></b> Artykuł. Może istnieć
               samodzielnie i zawiera większą treść.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;header>&lt;/header></b> Nagłówek. Opisuje nagłówek
               dokumentu / sekcji / artykułu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;footer>&lt;/footer></b> Stopka. Zawiera stopkę dokumentu /
               sekcji.
             </li>
-            <li><b>&lt;p>&lt;/p></b> Paragraf. Akapit.</li>
+            <li class="article__list-item">
+              <b>&lt;p>&lt;/p></b> Paragraf. Akapit.
+            </li>
           </ul>
-          <p>
+          <p class="article__text">
             Tekstowe nagłówki tytułowe. Im mniejszy numer ma znacznik nagłówka,
             tym większa jego ważność:
           </p>
-          <ul>
-            <li><b>&lt;h1>&lt;/h1></b></li>
-            <li><b>&lt;h2>&lt;/h2></b></li>
-            <li><b>&lt;h3>&lt;/h3></b></li>
-            <li><b>&lt;h4>&lt;/h4></b></li>
-            <li><b>&lt;h5>&lt;/h5></b></li>
-            <li><b>&lt;h6>&lt;/h6></b></li>
+          <ul class="article__list">
+            <li class="article__list-item"><b>&lt;h1>&lt;/h1></b></li>
+            <li class="article__list-item"><b>&lt;h2>&lt;/h2></b></li>
+            <li class="article__list-item"><b>&lt;h3>&lt;/h3></b></li>
+            <li class="article__list-item"><b>&lt;h4>&lt;/h4></b></li>
+            <li class="article__list-item"><b>&lt;h5>&lt;/h5></b></li>
+            <li class="article__list-item"><b>&lt;h6>&lt;/h6></b></li>
           </ul>
-          <p>
+          <p class="article__text">
             Dobrą praktyką jest manualne domykanie znaczników. <br />
             Każda sekcja powinna mieć tekstowy nagłówek tytułowy.<br />
             Doskonałym sposobem na sprawdzenie poprawności pliku .html jest
@@ -98,19 +104,21 @@
             <a href="https://validator.w3.org/nu/#textarea">validator.w3.org</a>
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">wtf: css</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">wtf: css</h2>
+          <p class="article__text">
             Budowa reguły CSS:<br />
             selektor {<br />
             właściwość: wartość;<br />
             }<br />
           </p>
-          <p>Różne przeglądarki potrafią różnie interpretować CSS.</p>
+          <p class="article__text">
+            Różne przeglądarki potrafią różnie interpretować CSS.
+          </p>
         </article>
-        <article>
-          <h2 class="heading-two">magia programowania</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">magia programowania</h2>
+          <p class="article__text">
             Programowanie to zamiana ludzkiego języka na język zrozumiały przez
             komputer.<br />
             Każdy język programowania ma swoją składnię, gramatykę i
@@ -118,24 +126,28 @@
             Na świecie istnieje ponad 700 języków programowania.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">devtools: podglądamy!</h2>
-          <p>Narzędzia deweloperskie można uruchomić na kilka sposobów:</p>
-          <ul>
-            <li>F12</li>
-            <li>Ctrl + Shift + I</li>
-            <li>PPM + Zbadaj</li>
+        <article class="article">
+          <h2 class="article__heading">devtools: podglądamy!</h2>
+          <p class="article__text">
+            Narzędzia deweloperskie można uruchomić na kilka sposobów:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">F12</li>
+            <li class="article__list-item">Ctrl + Shift + I</li>
+            <li class="article__list-item">PPM + Zbadaj</li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">kanban</h2>
-          <p>Kanban jest to spis widoczny podzielony na trzy kolumny:</p>
-          <ul>
-            <li>TODO = do zrobienia</li>
-            <li>DOING = w trakcie</li>
-            <li>DONE = zrobione</li>
+        <article class="article">
+          <h2 class="article__heading">kanban</h2>
+          <p class="article__text">
+            Kanban jest to spis widoczny podzielony na trzy kolumny:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">TODO = do zrobienia</li>
+            <li class="article__list-item">DOING = w trakcie</li>
+            <li class="article__list-item">DONE = zrobione</li>
           </ul>
-          <p>
+          <p class="article__text">
             W pierwszej kolumnie znajdują się absolutnie wszystkie zadania do
             zrealizowania.<br />
             W drugiej kolumnie należy przechowoywać zadanie aktualnie
@@ -143,44 +155,54 @@
             W trzeciej kolumnie powinny znaleźć się ukończone zadania.<br />
             Przykładowym serwisem, pozwalającym na stworzenie własnego kanbana
             jest
-            <a href="https://trello.com">Trello</a>
+            <a class="article__link" href="https://trello.com">Trello</a>
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">wtf: html ii</h2>
-          <p>Pozostałe znaczniki:</p>
-          <ul>
-            <li>
+        <article class="article">
+          <h2 class="article__heading">wtf: html ii</h2>
+          <p class="article__text">Pozostałe znaczniki:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>&lt;br></b> Nowa linia. Nie należy używać tego znacznika
               kilkukrotnie po sobie.
             </li>
-            <li><b>&lt;b></b> Pogrubienia tekst (efekt wizualny).</li>
-            <li><b>&lt;i></b> Nadaje kursywę tekstowi (efekt wizualny).</li>
-            <li><b>&lt;strong></b> Podkreśla wysokią istotność tekstu.</li>
-            <li>
+            <li class="article__list-item">
+              <b>&lt;b></b> Pogrubienia tekst (efekt wizualny).
+            </li>
+            <li class="article__list-item">
+              <b>&lt;i></b> Nadaje kursywę tekstowi (efekt wizualny).
+            </li>
+            <li class="article__list-item">
+              <b>&lt;strong></b> Podkreśla wysokią istotność tekstu.
+            </li>
+            <li class="article__list-item">
               <b>&lt;em></b> Podkreśla, że tekst może mieć inne znaczenie.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>&lt;a href="" target="">opis łącza&lt;/a></b> Linki / łącza
               wewnątrz dokumentu.
             </li>
-            <li><b>&lt;nav></b> Nawigacja.</li>
-            <li><b>&lt;img/></b> Obrazek o podanym adresie.</li>
+            <li class="article__list-item"><b>&lt;nav></b> Nawigacja.</li>
+            <li class="article__list-item">
+              <b>&lt;img/></b> Obrazek o podanym adresie.
+            </li>
           </ul>
-          <p>Niektóre atrybuty:</p>
-          <ul>
-            <li>
+          <p class="article__text">Niektóre atrybuty:</p>
+          <ul class="article__list" class="article__list-item">
+            <li class="article__list-item">
               <b>id</b> Identyfikuje element. Przydaje się do nawigacji w
               obrębie dokumentu.
             </li>
-            <li><b>src</b> Źródło (obrazka, pliku .js, etc.).</li>
-            <li>
+            <li class="article__list-item">
+              <b>src</b> Źródło (obrazka, pliku .js, etc.).
+            </li>
+            <li class="article__list-item">
               <b>alt</b> Tekst alternatywny. Informuje wyszukiwarkę o zawartości
               obrazka. Wykorzystywany również przez syntezatory mowy dla
               niewidomych.
             </li>
           </ul>
-          <p>
+          <p class="article__text">
             Aby przejść na stronie do elementu o określonym 'id', należy
             atrybutowi 'href' znacznika 'a' nadać wartość:
             '#id_elementu_docelowego'.<br />
@@ -193,49 +215,52 @@
             elementów (class) lub nadanie im dodatkowych właściwości (href, src,
             alt). Lista globalnych atrybutów na
             <a
+              class="article__link"
               href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
               >MDN web docs</a
             >.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">
+        <article class="article">
+          <h2 class="article__heading">
             opowieść o wężu, kebabie, wielbłądzie i Pascalu
           </h2>
-          <p>Nazywanie rzeczy:</p>
-          <ul>
-            <li>Nazwy zapisujemy bez polskich znaków.</li>
-            <li>Nie używamy spacji.</li>
-            <li>Używamy języka angielskiego.</li>
-            <li>Trzymamy się jednego schematu.</li>
+          <p class="article__text">Nazywanie rzeczy:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              Nazwy zapisujemy bez polskich znaków.
+            </li>
+            <li class="article__list-item">Nie używamy spacji.</li>
+            <li class="article__list-item">Używamy języka angielskiego.</li>
+            <li class="article__list-item">Trzymamy się jednego schematu.</li>
           </ul>
-          <p>
+          <p class="article__text">
             Sposoby zastąpienia spacji w nazewnictwie (dwie pierwsze
             wykorzystywane są najczęściej):
           </p>
-          <ul>
-            <li>camelCase</li>
-            <li>kebab-case</li>
-            <li>snake_case</li>
-            <li>PascalCase</li>
+          <ul class="article__list">
+            <li class="article__list-item">camelCase</li>
+            <li class="article__list-item">kebab-case</li>
+            <li class="article__list-item">snake_case</li>
+            <li class="article__list-item">PascalCase</li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">wtf: css ii</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">wtf: css ii</h2>
+          <p class="article__text">
             Specyficzność w CSS<br />
             Szeregując selektory pod względem ważności można oprzeć się o
             klasyfikację medalową, gdzie odpowiednio poszczególnymi kolorami
             medalów są następujące style:
           </p>
-          <ul>
-            <li>!important (niezalecane)</li>
-            <li>style="" (niezalecane)</li>
-            <li>#name</li>
-            <li>.name</li>
-            <li>element</li>
+          <ul class="article__list">
+            <li class="article__list-item">!important (niezalecane)</li>
+            <li class="article__list-item">style="" (niezalecane)</li>
+            <li class="article__list-item">#name</li>
+            <li class="article__list-item">.name</li>
+            <li class="article__list-item">element</li>
           </ul>
-          <p>
+          <p class="article__text">
             W przypadku równej ważności stylów, ważniejszy będzie ten, który
             jest niżej w kodzie, ponieważ kod jest interpretowany od góry do
             dołu.<br />
@@ -243,41 +268,55 @@
             unikać zagnieżdżeń.<br />
             Zasady nazewnictwa klas:
           </p>
-          <ul>
-            <li>Używaj pojedynczych angielskich słów.</li>
-            <li>Nazywaj rzeczy zgodnie z ich funkcją na stronie.</li>
-            <li>Nazwy klas zaczynaj małą literą.</li>
-            <li>Nie zaczynaj od cyfry.</li>
-            <li>
+          <ul class="article__list">
+            <li class="article__list-item">
+              Używaj pojedynczych angielskich słów.
+            </li>
+            <li class="article__list-item">
+              Nazywaj rzeczy zgodnie z ich funkcją na stronie.
+            </li>
+            <li class="article__list-item">Nazwy klas zaczynaj małą literą.</li>
+            <li class="article__list-item">Nie zaczynaj od cyfry.</li>
+            <li class="article__list-item">
               Skorzystaj z kebab case, kiedy musisz użyć większej ilości słów.
             </li>
-            <li>Staraj się, aby element miał jedną klasę.</li>
+            <li class="article__list-item">
+              Staraj się, aby element miał jedną klasę.
+            </li>
           </ul>
-          <p>
-            <a href="https://coolors.co/generate">Strona</a> dobierająca
-            pasujące do siebie kolory.
+          <p class="article__text">
+            <a class="article__link" href="https://coolors.co/generate"
+              >Strona</a
+            >
+            dobierająca pasujące do siebie kolory.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">jak działa Internet i przeglądarka</h2>
-          <p>Zawartość URL (Uniform Resource Locator):</p>
-          <ul>
-            <li>protokół</li>
-            <li>host (adres serwera)</li>
-            <li>port (ukryty)</li>
-            <li>root</li>
-            <li>ścieżka dostępu do zasobu</li>
-            <li>parametry (czasami ukryte)</li>
+        <article class="article">
+          <h2 class="article__heading">jak działa Internet i przeglądarka</h2>
+          <p class="article__text">Zawartość URL (Uniform Resource Locator):</p>
+          <ul class="article__list">
+            <li class="article__list-item">protokół</li>
+            <li class="article__list-item">host (adres serwera)</li>
+            <li class="article__list-item">port (ukryty)</li>
+            <li class="article__list-item">root</li>
+            <li class="article__list-item">ścieżka dostępu do zasobu</li>
+            <li class="article__list-item">parametry (czasami ukryte)</li>
           </ul>
-          <p>kody odpowiedzi HTTP:</p>
-          <ul>
-            <li>1xx: należy poczekać na odpowiedź.</li>
-            <li>2xx: OK.</li>
-            <li>3xx: przekierowanie, należy szukać zasobu gdzie indziej.</li>
-            <li>4xx: zasób nie został znaleziony.</li>
-            <li>5xx: błąd serwera.</li>
+          <p class="article__text">kody odpowiedzi HTTP:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              1xx: należy poczekać na odpowiedź.
+            </li>
+            <li class="article__list-item">2xx: OK.</li>
+            <li class="article__list-item">
+              3xx: przekierowanie, należy szukać zasobu gdzie indziej.
+            </li>
+            <li class="article__list-item">
+              4xx: zasób nie został znaleziony.
+            </li>
+            <li class="article__list-item">5xx: błąd serwera.</li>
           </ul>
-          <p>
+          <p class="article__text">
             Protokół obsługujący strony internetowe to HTTP (coraz częściej
             HTTP/2)<br />
             Komunikacja między przeglądarką a serwerem odbywa się na zasadzie
@@ -288,138 +327,169 @@
             przypadku gdy pracujemy z wykorzystaniem serwera.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">wtf: javascrips</h2>
-          <p>Co to jest ECMAScript 6+</p>
-          <ul>
-            <li>
+        <article class="article">
+          <h2 class="article__heading">wtf: javascrips</h2>
+          <p class="article__text">Co to jest ECMAScript 6+</p>
+          <ul class="article__list">
+            <li class="article__list-item">
               ECMAScript jest to ustandaryzowany przez organizację ECMA
               skryptowy język programowania.
             </li>
-            <li>JavaScript implementuje rzeczy ze specyfikacji ECMAScript.</li>
-            <li>
+            <li class="article__list-item">
+              JavaScript implementuje rzeczy ze specyfikacji ECMAScript.
+            </li>
+            <li class="article__list-item">
               Rozwój ECMAScript mocno przyspieszył przez szerokie wykorzystanie
               JavaScriptu.
             </li>
-            <li>
+            <li class="article__list-item">
               ES6 (i nowsze) wprowadzają wiele udogodnień dla developerów.
             </li>
-            <li>
+            <li class="article__list-item">
               Nowe feature'y mogą nie być wspierane we wszystkich
               przeglądarkach, ale są na to sposoby.
             </li>
           </ul>
-          <p>Składowe JavaScript:</p>
-          <ul>
-            <li>Wartości</li>
-            <li>Operacje porównania</li>
-            <li>Zmienne</li>
-            <li>Literały</li>
-            <li>Funkcje</li>
-            <li>Obiekty</li>
+          <p class="article__text">Składowe JavaScript:</p>
+          <ul class="article__list">
+            <li class="article__list-item">Wartości</li>
+            <li class="article__list-item">Operacje porównania</li>
+            <li class="article__list-item">Zmienne</li>
+            <li class="article__list-item">Literały</li>
+            <li class="article__list-item">Funkcje</li>
+            <li class="article__list-item">Obiekty</li>
           </ul>
-          <p>
+          <p class="article__text">
             Skrypty należy umieszczać na końcu znacznika 'body'.<br />
             Kod JS uruchamia się raz (po załadowaniu strony).<br />
             JavaScript to frontendowe programowanie.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">terminal</h2>
-          <p>MacOS / Linux</p>
-          <ul>
-            <li><b>cd ~</b> Przejście do katalogu domowego.</li>
-            <li><b>ls</b> Wypisanie zawartości katalogu.</li>
-            <li><b>cd ..</b> Przejście do katalogu wyżej.</li>
-            <li>
+        <article class="article">
+          <h2 class="article__heading">terminal</h2>
+          <p class="article__text">MacOS / Linux</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>cd ~</b> Przejście do katalogu domowego.
+            </li>
+            <li class="article__list-item">
+              <b>ls</b> Wypisanie zawartości katalogu.
+            </li>
+            <li class="article__list-item">
+              <b>cd ..</b> Przejście do katalogu wyżej.
+            </li>
+            <li class="article__list-item">
               <b>cd nazwa-katalogu</b> Przejście do katalogu o danej nazwie.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>code .</b> Uruchomienie Visual Studio Code w aktualnym
               katalogu.
             </li>
-            <li><b>pwd</b> Wyświetlenie aktualnej ścieżki.</li>
-            <li>
+            <li class="article__list-item">
+              <b>pwd</b> Wyświetlenie aktualnej ścieżki.
+            </li>
+            <li class="article__list-item">
               <b>mkdir nazwa-katalogu</b> Stworzenie katalogu o danej nazwie.
             </li>
           </ul>
-          <p>Windows</p>
-          <ul>
-            <li><b>cd C:</b> Przejście do głównego katalogu na dysku C.</li>
-            <li><b>dir</b> Wypisanie zawartości katalogu.</li>
-            <li><b>cd ..</b> Przejście do katalogu wyżej.</li>
-            <li>
+          <p class="article__text">Windows</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>cd C:</b> Przejście do głównego katalogu na dysku C.
+            </li>
+            <li class="article__list-item">
+              <b>dir</b> Wypisanie zawartości katalogu.
+            </li>
+            <li class="article__list-item">
+              <b>cd ..</b> Przejście do katalogu wyżej.
+            </li>
+            <li class="article__list-item">
               <b>cd nazwa-katalogu</b> Przejście do katalogu o danej nazwie.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>code .</b> Uruchomienie Visual Studio Code w aktualnym
               katalogu.
             </li>
-            <li><b>cd</b> Wyświetlenie aktualnej ścieżki.</li>
-            <li>
+            <li class="article__list-item">
+              <b>cd</b> Wyświetlenie aktualnej ścieżki.
+            </li>
+            <li class="article__list-item">
               <b>mkdir nazwa-katalogu</b> Stworzenie katalogu o danej nazwie.
             </li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">jest git!</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">jest git!</h2>
+          <p class="article__text">
             System kontroli wersji GIT dostępny jest na
-            <a href="http://git-scm.com">tej</a> stronie.<br />
+            <a class="article__link" href="http://git-scm.com">tej</a>
+            stronie.<br />
             Jeden projekt = jedno repozytorium!<br />
             Source Control / GitLens to narzędzia ułatwiające pracę z GITem w
             Visual Studio Code.<br />
             Po zainstalowaniu należy skonfigurować użytkownika wykonując
             polecenia:
           </p>
-          <ul>
-            <li>git config --global user.name "Imię Nazwisko"</li>
-            <li>git config --global user.email adres_email</li>
+          <ul class="article__list">
+            <li class="article__list-item">
+              git config --global user.name "Imię Nazwisko"
+            </li>
+            <li class="article__list-item">
+              git config --global user.email adres_email
+            </li>
           </ul>
-          <p>Dane użytkownika można sprawdzić z użyciem poleceń:</p>
-          <ul>
-            <li>git config --get user.name</li>
-            <li>git config --get user.email</li>
+          <p class="article__text">
+            Dane użytkownika można sprawdzić z użyciem poleceń:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">git config --get user.name</li>
+            <li class="article__list-item">git config --get user.email</li>
           </ul>
-          <p>Polecenia GITa:</p>
-          <ul>
-            <li>
+          <p class="article__text">Polecenia GITa:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>git init</b> Inicjalizacja repozytorium (należy być w katalogu
               z projektem).
             </li>
-            <li>
+            <li class="article__list-item">
               <b>git status</b> Sprawdzenie stan repozytorium (śledzone /
               nieśledzone pliki, ostatni commit, aktualną gałąź).
             </li>
-            <li>
+            <li class="article__list-item">
               <b>git add .</b> Dodanie plików z aktualnego katalogu oraz
               podkatalogów jako śledzone.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>git commit -m "komentarz"</b> Zapis plików. Utworzenie commita
               ('wersji' projektu).
             </li>
-            <li><b>gitk</b> Wyświetlenie historii commitów.</li>
+            <li class="article__list-item">
+              <b>gitk</b> Wyświetlenie historii commitów.
+            </li>
           </ul>
-          <p>GIT podsumowanie:</p>
-          <ul>
-            <li>GIT pozwala na sprawne zarządzanie zmianami w projekcie.</li>
-            <li>Działa lokalnie.</li>
-            <li>Do działania zdalnego potrzebuje serwera (np. GitHub).</li>
-            <li>
+          <p class="article__text">GIT podsumowanie:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              GIT pozwala na sprawne zarządzanie zmianami w projekcie.
+            </li>
+            <li class="article__list-item">Działa lokalnie.</li>
+            <li class="article__list-item">
+              Do działania zdalnego potrzebuje serwera (np. GitHub).
+            </li>
+            <li class="article__list-item">
               Commity należy wykonywać po wykodaniu widocznej zmiany w projekcie
               (lepiej za często niż za rzadko).
             </li>
-            <li>
+            <li class="article__list-item">
               Podstawowy flow: git add . / git commit -m "komentarz" / git push
             </li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">github</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">github</h2>
+          <p class="article__text">
             Serwis służący do przechowywania repozytoriów online to
-            <a href="https://github.com">GitHub</a>.<br />
+            <a class="article__link" href="https://github.com">GitHub</a>.<br />
             Nowe repozytorium zdalne można utworzyć za pomocą opcji New
             repository (po wcześniejszym zalogowaniu do serwisu)<br />
             Nazwa repozytorium zdalnego powinna być taka sama jak nazwa
@@ -433,72 +503,88 @@
             <b>git push</b> po wykonaniu commita.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">
+        <article class="article">
+          <h2 class="article__heading">
             życie w pudełku: display, wymiary i overflow
           </h2>
-          <p>
+          <p class="article__text">
             <b>&lt;div></b> Nie ma znaczenia semantycznego. Używamy go tylko w
             celu stylowania, gdy nie istnieje odpowiedni semantyczny znacznik.
           </p>
-          <p>Reguły / właściwości CSS:</p>
-          <ul>
-            <li>
+          <p class="article__text">Reguły / właściwości CSS:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>display: block</b> Powoduje, że elementy zajmują całą szerokość
               rodzica i ustawiają się jeden pod drugim.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>display: inline</b> Powoduje, że elementy zajmują na szerokość
               tyle miejsca ile potrzebują i ustawiają się obok siebie.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>display: inline-block</b> Powoduje, że elementy ustawiają się
               obok siebie, jednak otrzymują właściwości charakterystyczne dla
               elementów blokowych, np. 'width', 'height'.
             </li>
-            <li><b>min-width</b> Ustala minimalną szerokość elementu.</li>
-            <li><b>min-height</b> Ustala minimalną wysokość elementu.</li>
-            <li><b>max-width</b> Ustala maksymalną szerokość elementu.</li>
-            <li><b>max-height</b> Ustala maksymalną wysokość elementu.</li>
-            <li>
+            <li class="article__list-item">
+              <b>min-width</b> Ustala minimalną szerokość elementu.
+            </li>
+            <li class="article__list-item">
+              <b>min-height</b> Ustala minimalną wysokość elementu.
+            </li>
+            <li class="article__list-item">
+              <b>max-width</b> Ustala maksymalną szerokość elementu.
+            </li>
+            <li class="article__list-item">
+              <b>max-height</b> Ustala maksymalną wysokość elementu.
+            </li>
+            <li class="article__list-item">
               <b>overflow</b> Steruje widocznością treści znajdującą się poza
               elementem.
             </li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">życie w pudełku: jednostki</h2>
-          <p>Jednostki służące do zapisu wymiarów w CSS:</p>
-          <ul>
-            <li><b>0</b> Nie wymaga dopisywania jednostki.</li>
-            <li><b>px</b> Piksele.</li>
-            <li><b>%</b> Procenty. Liczone są względem rodzica.</li>
-            <li>
+        <article class="article">
+          <h2 class="article__heading">życie w pudełku: jednostki</h2>
+          <p class="article__text">
+            Jednostki służące do zapisu wymiarów w CSS:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>0</b> Nie wymaga dopisywania jednostki.
+            </li>
+            <li class="article__list-item"><b>px</b> Piksele.</li>
+            <li class="article__list-item">
+              <b>%</b> Procenty. Liczone są względem rodzica.
+            </li>
+            <li class="article__list-item">
               <b>vw</b> Viewport width. Szekokość względem szerokości okna.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>vh</b> Viewport height. Wysokość względem wysokości okna.
             </li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">
+        <article class="article">
+          <h2 class="article__heading">
             życie w pudełku: box model (padding / border / margin)
           </h2>
-          <p>Box model - elementy:</p>
-          <ul>
-            <li><b>padding</b> Margines wewnętrzny.</li>
-            <li>
+          <p class="article__text">Box model - elementy:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>padding</b> Margines wewnętrzny.
+            </li>
+            <li class="article__list-item">
               <b>border</b> Obramowanie elementu oraz paddingu. Wchodzi w skład
               elementu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>margin</b> Margines zewnętrzny. Informuje o odległościach,
               które muszą być zachowane od elementu. Działa jeynie dla wartości
               blokowych.
             </li>
           </ul>
-          <p>
+          <p class="article__text">
             W przypadku powyższych własności (oraz innych kierunkowych) można
             nadać wartość jedynie dla jednej z krawędzi, np. 'margin-bottom'.<br />
             W celu nadania wartości dla wszystkich krawędzi, można wykorzystać
@@ -521,20 +607,20 @@
             po obu stronach elementu.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">życie w pudełku: box-sizing</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">życie w pudełku: box-sizing</h2>
+          <p class="article__text">
             Właściwość 'box-sizing' decyduje o tym, co wchodzi w skład
             zdefiniowanych wymiarów elementu:
           </p>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>content-box</b> Wartość domyślna. W skład zdefiniowanych
               wymiarów elemetnu wchodzi jedynie jego zawartość, a ewentualny
               padding i obramowanie są doliczane do tej wartości, powodując
               powiększenie elementu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>border-box</b> W skład zdefiniowanych wymiarów elemetnu wchodzi
               zarówno zawartość, padding i obramowanie. Pozwala to na
               zdefiniowanie wymiarów elementu, gdzie w przypadku ewentualnego
@@ -544,56 +630,56 @@
             </li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">życie w pudełku: position</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">życie w pudełku: position</h2>
+          <p class="article__text">
             Właściwość 'position' określa sposób pozycjonowania elementu na
             stronie:
           </p>
-          <ul>
-            <li><b>static</b> Wartość domyślna.</li>
-            <li>
+          <ul class="article__list">
+            <li class="article__list-item"><b>static</b> Wartość domyślna.</li>
+            <li class="article__list-item">
               <b>relative</b> Tworzy z elementu układ odniesienia dla elementów
               posiadających wartość tej własności ustawioną na 'absolute'.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>absolute</b> Pozwala na nadawanie elementowi konkretnej pozycji
               wraz z wykorzystaniem własności: 'top', 'right', 'bottom', 'left'.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>fixed</b> Działa na podobnej zasadzie jak 'absolute', jednak
               element jest pozycjonowany względem ekranu a nie względem
               dokumentu (w czasie scrollowania nie zmienia swojej pozycji).
             </li>
-            <li>
+            <li class="article__list-item">
               <b>sticky</b> Pozycja elementu zmienia się względem rodzica (który
               nie może posiadać właściwości 'overflow') wraz ze scrollowaniem,
               jednak nie wychodzi on poza obszar rodzica, lecz przykleja się do
               niego, kiedy rodzic przestaje być widoczny.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>z-index</b> Pozwala na sterowanie widocznością elementów
               nachodzących na siebie. Im większa wartość własności, tym jest on
               wyżej na osi Z.
             </li>
           </ul>
         </article>
-        <article>
-          <h2 class="heading-two">życie w pudełku: float</h2>
-          <p>Właściwość 'float' służy do opływania elementów:</p>
-          <ul>
-            <li>
+        <article class="article">
+          <h2 class="article__heading">życie w pudełku: float</h2>
+          <p class="article__text">
+            Właściwość 'float' służy do opływania elementów:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>left</b> Element znajduje się z lewej strony, a treść opływa go
               z prawej.
             </li>
-          </ul>
-          <ul>
-            <li>
+            <li class="article__list-item">
               <b>right</b> Element znajduje się z prawej strony, a treść opływa
               go z lewej.
             </li>
           </ul>
-          <p>
+          <p class="article__text">
             Element z właściwością 'float' nie jest ograniczony przez rodzica.
             Aby nie wykraczał poza granice rodzica, można dodać rodzicowi na
             końcu pusty element posiadający właściwość 'clear', która dostosuje
@@ -604,46 +690,52 @@
             Właściwości 'float' nie należy stosować do budowania wyglądu strony.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">js: typy danych i immutability</h2>
-          <p>Słowa kluczowe służące do deklaracji zmiennych w JavaScript:</p>
-          <ul>
-            <li>
+        <article class="article">
+          <h2 class="article__heading">js: typy danych i immutability</h2>
+          <p class="article__text">
+            Słowa kluczowe służące do deklaracji zmiennych w JavaScript:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>const</b> Deklaruje zmienną. Połączenie między zmienną i jej
               wartością nie może być zmieniane w trakcie działania programu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>let</b> Deklaruje zmienną. Połączenie między zmienną i jej
               wartością może być zmieniane w trakcie działania programu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>var</b> Używany do deklaracji we wcześniejszych wersjach
               JavaScriptu. Teraz do deklaracji zmiennych należy używać słowa
               kluczowego 'const', a jeśli połączenie między zmienną i jej
               wartością będzie edytowane w trakcie działania programu - 'let'.
             </li>
           </ul>
-          <p>Typy proste w JavaScript:</p>
-          <ul>
-            <li>
+          <p class="article__text">Typy proste w JavaScript:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
               <b>String</b> Tekst. Należy podać go w apostrofach (zalecany
               pojedynczy).
             </li>
-            <li><b>Number</b> Liczba.</li>
-            <li><b>Bigint</b> Duża liczba. Większa niż 2^53.</li>
-            <li><b>boolean</b> True lub false.</li>
-            <li>
+            <li class="article__list-item"><b>Number</b> Liczba.</li>
+            <li class="article__list-item">
+              <b>Bigint</b> Duża liczba. Większa niż 2^53.
+            </li>
+            <li class="article__list-item"><b>boolean</b> True lub false.</li>
+            <li class="article__list-item">
               <b>null</b> Wartość celowo niezdefiniowana. Na etapie deklaracji
               jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo, że zmienna
               będzie wykorzystana w trakcie działania programu.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>undefinied</b> Brak definicji. Przy próbie odwołania do
               nieistniejącej zmiennej występuje błąd.
             </li>
-            <li><b>*symbol</b> Tworzy "unikalne opakowanie".</li>
+            <li class="article__list-item">
+              <b>*symbol</b> Tworzy "unikalne opakowanie".
+            </li>
           </ul>
-          <p>
+          <p class="article__text">
             Do nazywania zmiennych należy używać schematu camelCase.<br />
             Do sprawdzenia typu zmiennej służy słowo kluczowe 'typeof'.<br />
             Operator przypisania '=' nie tworzy nowych zmiennych, lecz tworzy i
@@ -659,9 +751,11 @@
             lub na odwrót.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">code: formatowanie kodu i lokalny serwer</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">
+            code: formatowanie kodu i lokalny serwer
+          </h2>
+          <p class="article__text">
             Narzędziem służącym do automatycznego formatowania kodu jest
             Prettier. Wyboru narzędzia do formatowania spośród zainstalowanych
             można dokonać wpisując w Command Palette 'Format Document'.<br />
@@ -674,34 +768,44 @@
             podmienić na adres IP komputera, na którym jest uruchomiony serwer.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">block – element – modifier</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">block – element – modifier</h2>
+          <p class="article__text">
             Dlaczego powstał sposób nazywania klas BEM?:
           </p>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list-item">
               Świat stylowania doszedł do wysokiego stopnia skomplikowania.
             </li>
-            <li>Problem z logicznym nazywaniem klas.</li>
-            <li>Brak ujenoliconego sposobu stylowania.</li>
-            <li>Importanty, nadpisywanie rzeczy.</li>
-            <li>Brak odwzorowania struktury HTML w CSS.</li>
-            <li>Stylowanie kilkoma klasami, powtarzające się nazwy.</li>
+            <li class="article__list-item">
+              Problem z logicznym nazywaniem klas.
+            </li>
+            <li class="article__list-item">
+              Brak ujenoliconego sposobu stylowania.
+            </li>
+            <li class="article__list-item">Importanty, nadpisywanie rzeczy.</li>
+            <li class="article__list-item">
+              Brak odwzorowania struktury HTML w CSS.
+            </li>
+            <li class="article__list-item">
+              Stylowanie kilkoma klasami, powtarzające się nazwy.
+            </li>
           </ul>
-          <p>Elementy BEM:</p>
-          <ul>
-            <li><b>Block</b> Nadrzędny element. Ogranicza treść.</li>
-            <li>
+          <p class="article__text">Elementy BEM:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>Block</b> Nadrzędny element. Ogranicza treść.
+            </li>
+            <li class="article__list-item">
               <b>Element</b> Część bloku, która nie musi być jego bezpośrednim
               dzieckiem.
             </li>
-            <li>
+            <li class="article__list-item">
               <b>Modifier</b> Modyfikator. Jeśli element występuje w kilku
               wariacjach, tworzymy dodatkową klasę.
             </li>
           </ul>
-          <p>
+          <p class="article__text">
             Sposób nazywania klasy to: <b>block__element--modifier</b>.<br />
             Nazwa klasy nie musi być zgodna ze znacznikiem HTML, staramy się nią
             nią opisać, czym jest element pod kątem treści.<br />
@@ -722,9 +826,9 @@
             HTML.
           </p>
         </article>
-        <article>
-          <h2 class="heading-two">domowe przedszkole</h2>
-          <p>
+        <article class="article">
+          <h2 class="article__heading">domowe przedszkole</h2>
+          <p class="article__text">
             Document Object Model to 'złożony' w przeglądarce HTML.<br />
             JavaScript może modyfikować DOM.<br />
             Funkcja 'querySelector' zwraca węzeł (node) z HTMLa, selektor jest
@@ -742,12 +846,12 @@
         </article>
       </section>
     </main>
-    <footer>
-      <p>
+    <footer class="footer">
+      <p class="footer__text">
         Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
-        <a href="#top">Wróć na górę</a>
+        <a class="footer__link" href="#top">Wróć na górę</a>
       </p>
-      <p>Maciej Ryszka - 2020</p>
+      <p class="footer__text">Maciej Ryszka - 2020</p>
     </footer>
     <script src="script.js"></script>
   </body>
