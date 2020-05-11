@@ -849,6 +849,8 @@
               Należy stylować pojedyncze klasy.<br />
               Nie należy używać skrótów podczas nazywania klas.<br />
               Modyfikator może dotyczyć zarówno elementu jak i bloku.<br />
+              W przypadku użycia klasy z modyfikatorem, element musi posiadać
+              również klasę bazową.<br />
               W modyfikatorze należy zmienić jedynie unikalne dla niego wartości
               i nie przepisywać reguł z klasy bazowej.<br />
               Podział strony na bloki należy wykonać w oparciu o analizę pliku
@@ -871,6 +873,66 @@
               ma w DOM, zostanie zwrócona wartość null.<br />
               Treść elemetnu znajdującego się na stronie można zmieniać z pomocą
               właściwości 'innerHTML'.
+            </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">wtf: klan</h2>
+            <p class="article__text">
+              Pojedynczy element drzewa DOM to węzeł / node.<br />
+              Jeśli element nie posiada zdefiniowanego dla siebie danego stylu,
+              dziedziczy go od najbliższego elementu nadrzędnego, który posiada
+              ten styl. Wyjątkiem jest sytuacja, kiedy dany styl jest
+              predefiniowany dla danego elementu w stylach przeglądarki, np.
+              właściwość 'color' dla znacznika 'a'.<br />
+              Element z predefiniowanym stylem może odziedziczyć właściwość od
+              elementu nadrzędnego, jeśli dla danej właściwości tego elementu
+              nadamy wartość: 'inherit'.<br />
+            </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">js: funkcje</h2>
+            <p class="article__text">
+              Składowe funkcji w JavaScript:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Deklaracja.
+              </li>
+              <li class="article__list-item">
+                Parametr (opcjonalnie).
+              </li>
+              <li class="article__list-item">
+                Słowo kluczowe 'return' (opcjonalnie).
+              </li>
+              <li class="article__list-item">
+                Wynik.
+              </li>
+            </ul>
+            <p class="article__text">
+              Wynikiem funkcji, która nie posiada słowa kluczowego 'return' jest
+              'undefined'.<br />
+              Funkcja może przyjmować dowolną ilość argumentów (może również nie
+              przyjmować żadnego).<br />
+              Typ zwracanej wartości może być inny niż typ argumetu / argumentów
+              przyjmowanych przez funkcję.<br />
+              Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu
+              w wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa
+              jego czytelność oraz ułatwia wyszukiwanie i poprawę błędów.<br />
+              Dobrą praktyką jest nazywanie funkcji podczas deklaracji.<br />
+              Wewnątrz funkcji wykowywane są obliczenia / zadania.<br />
+            </p>
+            <p class="article__text">
+              Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
+              arrow function': const nazwaFunkcji = (parameter) => {ciało
+              funkcji}.<br />
+              Jeśli w ciele funkcji znajduje się tylko 'return' oraz zwracana
+              wartość, można zapisać tę wartość bezpośrednio po strzałce z
+              pominięciem słowa kluczowego 'return'.<br />
+              Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa
+              czytelność.<br />
+              Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma
+              dostępu do 'arguments' i 'super', a więc nie jest zamiennikiem
+              tradycyjnej funkcji.
             </p>
           </article>
         </section>

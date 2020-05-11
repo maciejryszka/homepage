@@ -6,5 +6,5 @@ const articleParagraph = document.querySelector(".article__text--js");
 
 if (articleParagraph) {
   articleParagraph.innerHTML =
-    "Ta część artykułu notatki została zmodyfikowana z użyciem JavaScript.";
+    "Ta część artykułu została zmodyfikowana z użyciem JavaScript.";
 }
