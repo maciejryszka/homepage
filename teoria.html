@@ -199,7 +199,7 @@
               </li>
             </ul>
             <p class="article__text">Niektóre atrybuty:</p>
-            <ul class="article__list" class="article__list-item">
+            <ul class="article__list">
               <li class="article__list-item">
                 <b>id</b> Identyfikuje element. Przydaje się do nawigacji w
                 obrębie dokumentu.
@@ -923,7 +923,7 @@
             </p>
             <p class="article__text">
               Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
-              arrow function': const nazwaFunkcji = (parameter) => {ciało
+              arrow function': const nazwaFunkcji = (parametr) => {ciało
               funkcji}.<br />
               Jeśli w ciele funkcji znajduje się tylko 'return' oraz zwracana
               wartość, można zapisać tę wartość bezpośrednio po strzałce z
@@ -934,6 +934,140 @@
               dostępu do 'arguments' i 'super', a więc nie jest zamiennikiem
               tradycyjnej funkcji.
             </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">js: obiekt</h2>
+            <p class="article__text">
+              Obiekt w JavaScript:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Jest strukturą danych ułatwiającą odwzorowanie świata
+                rzeczywistego w świecie programowania.
+              </li>
+              <li class="article__list-item">
+                Posiada oddzielone przecinkami własności (zmienne wewnątrz
+                obiektu) oraz metody (funcje wewnątrz obiektu).
+              </li>
+              <li class="article__list-item">
+                Własności / metody składają się z unikalnego w ramach obiektu
+                klucza oraz podanej po dwukropku wartości, którą może być typ
+                prymitywny, funkcja bądź zagnieżdżenie.
+              </li>
+              <li class="article__list-item">
+                Aby dostać się do konkretnej własności obiektu, należy po jego
+                nazwie i kropce odwołać się do konkretnego klucza (w przypadku
+                kiedy w obiekcie występują zagnieżdżenia, można dostać się do
+                kolejnych poziomów własności z wykorzystaniem kolejnych kropek).
+              </li>
+              <li class="article__list-item">
+                Aby dostać się do konkretnej metody obiektu, należy po jego
+                nazwie i kropce odwołać się do konkretnego klucza oraz użyć
+                nawiasów okrągłych (i opcjonalnie parametrów) w celu wywołania
+                metody.
+              </li>
+              <li class="article__list-item">
+                Alternatywną opcją dostania się do własności obiektu jest
+                skorzystanie z nawiasów kwadratowych po jego nazwie i podanie
+                wewnątrz nich konkretnego klucza (w apostrofach).
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">js: immutability w obiektach</h2>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Jeśli obiekt został stworzony z użyciem słowa kluczowego
+                'const', jedynie połączenie między nazwą zmiennej a obiektem
+                jest stałe i nie może zostać zmienione. Połączenia między
+                własnościami obiektu i wartościami na jakie wskazują mogą być
+                jednak w dalszym ciągu edytowane. Jest to tzw. mutowanie
+                obiektów, czyli ich zmienianie. Cecha ta odróżnia typy złożone
+                (obiekty) od typów prostych, które nie mogą być mutowane.
+              </li>
+              <li class="article__list-item">
+                Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się
+                do danej wartości, dopóki nie zmienimy dokładnie tego
+                przypięcia.
+              </li>
+              <li class="article__list-item">
+                Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy
+                zmienione zostanie przypięcie dla którejś z jego własności.
+                Zmiana takiego przypięcia może nastąpić z "inicjatywy" innego
+                elementu wskazującego na ten obiekt.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">u mnie (nie) działa</h2>
+            <p class="article__text">
+              Co robić gdy coś nie działa:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Sprawdź czy plik został zapisany.
+              </li>
+              <li class="article__list-item">
+                Sprawdź czy edytujesz właściwy plik z właściwego projektu.
+              </li>
+              <li class="article__list-item">
+                Sprawdź czy odświeżyłeś przeglądakę. Wykonaj twardy reset:
+                <b>Ctrl + F5</b> - Windows / Linux, <b>Cmd + Shift + R</b> -
+                MacOS.
+              </li>
+              <li class="article__list-item">
+                Sprawdź czy nie masz błędów w edytorze / devtoolsach.
+              </li>
+              <li class="article__list-item">Czytaj błędy.</li>
+              <li class="article__list-item">Zajrzyj w zakładkę network.</li>
+              <li class="article__list-item">
+                Poszukaj rozwiązania problemu w Google (najlepiej z ostatniego
+                roku) lub na Stack Overflow.
+              </li>
+              <li class="article__list-item"></li>
+            </ul>
+            <p class="article__text">
+              Źródła przydatne w rozwiązywaniu problemów:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Dokumentacja narzędzia z którego korzystasz.
+              </li>
+              <li class="article__list-item">GitHub issues.</li>
+              <li class="article__list-item">
+                <a class="article__link" href="https://developer.mozilla.com"
+                  >Mozilla Developer</a
+                >
+              </li>
+              <li class="article__list-item">
+                <a class="article__link" href="https://devdocs.io/">DevDocs</a>
+                - zbiór dokumentacji różnych technologii.
+              </li>
+              <li class="article__list-item">
+                <a class="article__link" href="https://caniuse.com/"
+                  >Can I use</a
+                >
+                - informacje czy można użyć danej własności.
+              </li>
+              <li class="article__list-item">
+                <a class="article__link" href="https://css-tricks.com/almanac/"
+                  >CSS Almanac</a
+                >
+                - własności CSS, wiele nowinek.
+              </li>
+              <li class="article__list-item">
+                <a class="article__link" href="https://w3.org/TR/html52/"
+                  >W3C - HTML 5.2</a
+                >
+                - dokumentacja HTML.
+              </li>
+              <li class="article__list-item">
+                <a class="article__link" href="https://w3.org/TR/CSS/"
+                  >W3C - CSS Snapshot 2018</a
+                >
+                - dokumentacja CSS.
+              </li>
+            </ul>
           </article>
         </section>
       </main>
