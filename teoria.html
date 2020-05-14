@@ -1069,6 +1069,169 @@
               </li>
             </ul>
           </article>
+          <article class="article">
+            <h2 class="article__heading">html: listy, tabele, definicje</h2>
+            <p class="article__text">
+              Znaczniki dotyczące list i tabel:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>&lt;ul></b> Nieuporządkowana lista.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;ol></b> Uporządkowana lista, która jest automatycznie
+                numerowana.
+              </li>
+              <li class="article__list-item"><b>&lt;li></b> Element listy.</li>
+              <li class="article__list-item"><b>&lt;dl></b> Lista opisów.</li>
+              <li class="article__list-item">
+                <b>&lt;dt></b> Termin, który chcemy opisać.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;dd></b> Szczegóły dotyczące terminu.
+              </li>
+              <li class="article__list-item"><b>&lt;table></b> Tabela.</li>
+              <li class="article__list-item"><b>&lt;tr></b> Wiersz tabeli.</li>
+              <li class="article__list-item"><b>&lt;td></b> Komórka tabeli.</li>
+              <li class="article__list-item">
+                <b>&lt;thead></b> Nagłówek tabeli.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;th></b> Komórka w nagłówku tabeli.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;tbody></b> Ciało tabeli.
+              </li>
+              <li class="article__list-item"><b>&lt;caption></b> Opis.</li>
+            </ul>
+            <p class="article__text">
+              Rodzaj listy można wybrać używając własności 'list-style' w
+              CSS.<br />
+              Aby zagnieździć listę, należy umieścić ją wewnątrz elementu innej
+              listy.<br />
+              Nie używamy tabel do budowania layoutów.
+            </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">flexbox</h2>
+            <p class="article__text">
+              Właściwości flexbox nadawane kontenerowi:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>display</b> Służy do zmiany systemu rozmieszczania i
+                pozycjonowania elementów.
+              </li>
+              <li class="article__list-item">
+                <b>flex-direction</b> Odpowiada za zawijanie wiersza / kolumny.
+              </li>
+              <li class="article__list-item">
+                <b>flex-wrap</b> Ustala główną oś flexboxa.
+              </li>
+              <li class="article__list-item">
+                <b>flex-flow</b> Skrót zawierający: 'flex-direction' i
+                'flex-wrap'.
+              </li>
+              <li class="article__list-item">
+                <b>justify-content</b> Ustawia elementy wzdłuż osi głównej
+                flexboxa.
+              </li>
+              <li class="article__list-item">
+                <b>align-content</b> Ustawia elementy wzdłuż osi prostopadłej do
+                osi głównej flexboxa.
+              </li>
+              <li class="article__list-item">
+                <b>align-items</b> Ustawia elementy wzdłuż osi prostopadłej do
+                osi głównej flexboxa, ale w obrębie pojedynczego wiersza.
+              </li>
+            </ul>
+            <p class="article__text">Właściwości flexbox nadawane elementom:</p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>align-self</b> Ustawia element wzdłuż osi prostopadłej do osi
+                głównej flexboxa.
+              </li>
+              <li class="article__list-item">
+                <b>order</b> Ustala kolejość elementu.
+              </li>
+              <li class="article__list-item">
+                <b>flex-grow</b> Odpowiada za wzrost elementu w celu wypełnienia
+                pozostałego wolnego miejsca.
+              </li>
+              <li class="article__list-item">
+                <b>flex-shrink</b> Odpowiada za kurczenie się elementu.
+              </li>
+              <li class="article__list-item">
+                <b>flex-basis</b> Minimalny rozmiar bazowy elementu wewnątrz
+                kontenera. Określa szerokość elementu - kiedy główną osią
+                flexboxa jest oś pozioma lub wysokość elementu - kiedy główną
+                osią flexboxa jest oś pionowa.
+              </li>
+              <li class="article__list-item">
+                <b>flex</b> Skrót zawierający: 'flex-grow', 'flex-shrink' i
+                'flex-basis'.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">normalizacja vs reset</h2>
+            <p class="article__text">Reset:</p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Przeglądarka posiada domyślne style 'user agent stylesheet'.
+              </li>
+              <li class="article__list-item">
+                Reset wyłącza wszystkie domyślne style przeglądarki.
+              </li>
+              <li class="article__list-item">
+                Selektorem uniwersalnym, wybierającym wszystkie elementy na
+                stronie jest '*'. Selektor ten jest najczęściej wykorzystywany
+                podczas resetu.
+              </li>
+              <li class="article__list-item">
+                Nie należy wyłączać domyślnej właściwości 'outline', ponieważ
+                ułatwia ona nawigację po stronie osobom niepełnosprawnym. Reset
+                nie jest zatem dobrym rozwiązaniem i należy go unikać.
+              </li>
+            </ul>
+            <p class="article__text">Normalizacja:</p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Normalizacja usprawnia wyświetlanie elementów pomiędzy różnymi
+                przeglądarkami, ponieważ style domyślne nie są identyczne dla
+                każdej z nich.
+              </li>
+              <li>
+                Powstał specjalny
+                <a
+                  class="article__link"
+                  href="https://necolas.github.io/normalize.css/"
+                  >plik normalizujący</a
+                >, który można dodać do strony (oraz każdej z podstron).
+                Nnajlepiej dodać go jako osobny plik 'normalize.css' przed
+                plikiem z własnymi stylami.
+              </li>
+              <li class="article__list-item">
+                Normalizacja to bardzo dobra alternatywa dla niezalecanego
+                resetu.
+              </li>
+            </ul>
+            <p class="article__text">
+              Najlepszą praktyką jest miks: normalizacja oraz dodanie własnego
+              resetu:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Dodaj plik 'normalize.css' do strony (oraz każdej z podstron).
+              </li>
+              <li class="article__list-item">
+                Na górze pliku z własnymi stylami dodaj dla elementu
+                <b>html</b> regułę <b>box-sizing: border-box</b>, a dla
+                elementów <b>*</b>, <b>*:before</b> oraz <b>*:after</b> regułę
+                <b>box-sizing: inherit</b>.
+              </li>
+            </ul>
+          </article>
         </section>
       </main>
       <footer class="footer">
