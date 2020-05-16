@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maciej Ryszka - WTF</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -28,8 +29,8 @@
           <h1 class="main__heading">teoria</h1>
           <img
             class="main__image"
-            src="/img/books.jpg"
-            alt="tors z książkami zamiast głowy"
+            src="/img/knowledge.jpg"
+            alt="książka i okulary"
           />
           <article class="article">
             <h2 class="article__heading">warstwy strony internetowej</h2>
@@ -1229,6 +1230,101 @@
                 <b>html</b> regułę <b>box-sizing: border-box</b>, a dla
                 elementów <b>*</b>, <b>*:before</b> oraz <b>*:after</b> regułę
                 <b>box-sizing: inherit</b>.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">tła</h2>
+            <p class="article__text">
+              Skrótowa właściwość CSS związana z tłem:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>background</b> Zawiera 8 poniższych właściwości
+                szczegółowych. Nadpisuje wszystkie właściwości szegółowe
+                zdefiniowane powyżej niej dla danego elementu. Zaleca się
+                używanie właściwości szczegółowych zamiast właściwości skrótowej
+                ze względu na większą czytelność kodu.
+              </li>
+            </ul>
+            <p class="article__text">
+              Szczegółowe właściwości CSS związane z tłem:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>background-image</b> Pozawala zaaplikować tło z poziomu
+                stylów. Ścieżkę do obrazka należy podać względem pliku CSS.
+              </li>
+              <li class="article__list-item">
+                <b>background-position</b> Ustawia tło względem elementu, który
+                je dostaje.
+              </li>
+              <li class="article__list-item">
+                <b>background-repeat</b> Pozwala na sterowanie powtarzaniem tła.
+              </li>
+              <li class="article__list-item">
+                <b>background-attachment</b> Pozwala na sterowanie tłem podczas
+                scrollowania strony.
+              </li>
+              <li class="article__list-item">
+                <b>background-origin</b> Definiuje w którym miejscu tło powinno
+                się zaczynać.
+              </li>
+              <li class="article__list-item">
+                <b>background-clip</b> Definiuje w którym miejscu tło powinno
+                być cięte.
+              </li>
+              <li class="article__list-item">
+                <b>background-color</b> Definiuje kolor tła.
+              </li>
+              <li class="article__list-item">
+                <b>background-size</b> Definiuje wielkość tła.
+              </li>
+            </ul>
+            <p class="article__text">
+              Przejścia między kolorami można utworzyć z wykorzystaniem
+              gradientów. Na stronie
+              <a
+                class="article__link"
+                href="https://cssgradient.io/gradient-backgrounds/"
+                >cssgradient.io</a
+              >
+              można skorzystać z gotowych gradientów jak również stworzyć
+              własne.
+            </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">grafik cięcie – też zajęcie</h2>
+            <p class="article__text">
+              'Cięcie grafiki' to potoczne określenie procesu w którym projekt
+              graficzny jest kodowany do działającej strony www.
+              <a class="article__link" href="https://www.figma.com/">Figma</a>
+              to aplikacja webowa służąca do 'cięcia grafik'.<br />
+              Możliwa do pobrania jest również
+              <a class="article__link" href="https://www.figma.com/downloads/"
+                >wersja desktopowa</a
+              >.
+            </p>
+            <p class="article__text">Etapy 'cięcia grafiki':</p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Stworzenie szkieletu plików w skład którego wchodzą pliki z
+                treścią strony oraz stylami (zarówno strony jak i
+                normalizującymi).
+              </li>
+              <li class="article__list-item">
+                Zbudowanie szkieletu strony w pliku HTML na podstawie jej treści
+                z projektu graficznego.
+              </li>
+              <li class="article__list-item">
+                Nadanie służących do stylowania klas elementom HTML (zaleca się
+                korzystanie z metodologii BEM).
+              </li>
+              <li class="article__list-item">
+                Stylowanie strony na podstawie projektu graficznego. Aplikacja
+                służąca do 'cięcia grafik' umożliwia łatwy dostęp do wszystkich
+                parametrów niezbędnych do stylowania: marginesów, paddingów,
+                kolorów, rozmiarów i krojów czcionek, obrazów itp.
               </li>
             </ul>
           </article>

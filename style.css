@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background: #202020;
   color: #6a7b76;
@@ -38,6 +48,7 @@ body {
 .main__image {
   display: block;
   margin: 0 auto;
+  border-radius: 50px;
 }
 
 .article {
