@@ -1025,7 +1025,6 @@
                 Poszukaj rozwiązania problemu w Google (najlepiej z ostatniego
                 roku) lub na Stack Overflow.
               </li>
-              <li class="article__list-item"></li>
             </ul>
             <p class="article__text">
               Źródła przydatne w rozwiązywaniu problemów:
@@ -1325,6 +1324,210 @@
                 służąca do 'cięcia grafik' umożliwia łatwy dostęp do wszystkich
                 parametrów niezbędnych do stylowania: marginesów, paddingów,
                 kolorów, rozmiarów i krojów czcionek, obrazów itp.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">js: logika</h2>
+            <p class="article__text">Operatory porównania:</p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>></b> Lewa strona większa od prawej.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;</b> Lewa strona mniejsza od prawej.
+              </li>
+              <li class="article__list-item">
+                <b>>=</b> Lewa strona większa / równa prawej.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;=</b> Lewa strona mniejsza / równa prawej.
+              </li>
+              <li class="article__list-item"><b>==</b> Obie strony równe.</li>
+              <li class="article__list-item">
+                <b>===</b> Obie strony równe (sprawdza typeof).
+              </li>
+              <li class="article__list-item"><b>!=</b> Obie strony różne.</li>
+              <li class="article__list-item">
+                <b>!==</b> Obie strony różne (sprawdza typeof).
+              </li>
+            </ul>
+            <p class="article__text">Wartości fałszywe w JavaScript:</p>
+            <ul class="article__list">
+              <li class="article__list-item"><b>false</b></li>
+              <li class="article__list-item"><b>0</b></li>
+              <li class="article__list-item">
+                <b>'', "", ``</b> Pusty string.
+              </li>
+              <li class="article__list-item"><b>null</b></li>
+              <li class="article__list-item"><b>undefined</b></li>
+              <li class="article__list-item"><b>NaN</b> Not a number.</li>
+            </ul>
+            <p class="article__text">
+              Cała reszta stanowi wartości prawdziwe w JavaScript. Przykłady:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item"><b>true</b></li>
+              <li class="article__list-item">
+                <b>'Text'</b> Dowolny niepusty string.
+              </li>
+              <li class="article__list-item"><b>12</b> Liczba dodatnia.</li>
+              <li class="article__list-item"><b>-4</b> Liczba ujemna.</li>
+              <li class="article__list-item"><b>{}</b> Obiekt.</li>
+              <li class="article__list-item"><b>[]</b> Tablica.</li>
+              <li class="article__list-item">Tablica.</li>
+            </ul>
+            <p class="article__text">
+              Operatory logiczne:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>AND (&&)</b> Wszystkie warunki muszą być prawdziwe, żeby
+                wyrażenie było prawdziwe.
+              </li>
+              <li class="article__list-item">
+                <b>OR (||)</b> Przynajmniej jeden warunek muszi być prawdziwy,
+                żeby wyrażenie było prawdziwe.
+              </li>
+              <li class="article__list-item">
+                <b>NOT (!)</b> Odwraca wartość wyrażenia logicznego.
+              </li>
+            </ul>
+            <p class="article__text">
+              Instrukcje warunkowe:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>if(condition)</b> Kod w klamrach następujących po instrukcji
+                'if' wykona się jeśli warunek w nawiasie zwróci prawdę.
+              </li>
+              <li class="article__list-item">
+                <b>else if(condition)</b> Kod w klamrach następujących po
+                instrukcji 'if else' wykona się jeśli warunek w nawiasie zwróci
+                prawdę oraz jeśli żaden z wcześniejszych warunków instrukcji nie
+                zwrócił prawdy.
+              </li>
+              <li class="article__list-item">
+                <b>else</b> Kod w klamrach następujących po instrukcji 'else'
+                wykona się jeśli żaden z wcześniejszych warunków instrukcji nie
+                zwrócił prawdy.
+              </li>
+            </ul>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>switch(variable)</b> Wykona kod dla przypadku odpowiadającego
+                wartości zmiennej znajdującej się w nawiasie. W przypadku braku
+                takiego przypadku zwróci wartość domyślną, która jest
+                zdefiniowana na końcu instrukcji. Instrukcja przy porównaniu
+                sprawdza również zgodność typów.
+              </li>
+            </ul>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b> (condition) ? 'ifTrue' : 'ifFalse' </b> 'Ternary operator'.
+                Jeśli warunek podany przed znakiem zapytania jest spełniony,
+                zwracana jest wartość znajdująca się między znakiem zapytania a
+                dwukropkiem. W przeciwnym razie zwracana jest wartość znajdująca
+                się po dwukropku.
+              </li>
+            </ul>
+            <p class="article__text">
+              <a
+                class="article__link"
+                href="https://www.destroyallsoftware.com/talks/wat/"
+                >Dziwne rzeczy</a
+              >
+              w JavaScript.
+            </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">
+              formularze: form, input, label, fieldset, radio, checkbox, number,
+              tel, email, range, password, file
+            </h2>
+            <p class="article__text">
+              Znaczniki dotyczące formularzy:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>&lt;form></b> Opakowanie dla formularza.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;input id="" name="" type="" value="" placeholder=""></b>
+                Podstawowy element budujący formularz. Zgodnie z dokumentacją
+                znacznik 'input' powinien być 'opakowany' w paragraf wraz z
+                opisującym go znacznikiem 'label'. 'Id' służy do odniesienia się
+                do etykiety i może posiadać wartość taką jak nazwa. 'Name' służy
+                do identyfikacji wartości w miejscu, do którego wysyłamy dane za
+                pomocą formularza. 'Type' określa typ pola. 'Value' to domyślna
+                wartość pola, wyświetlana zanim wpiszemy tam cokolwiek.
+                'Placeholder' przechowuje podpowieź dotyczącą pola, która
+                wyświetlana jest, kiedy pole jest puste. Właściwość
+                'placeholder' nie zastępuje znacznika 'label', ponieważ czytniki
+                jako opis pola zawsze odczytują etykietę.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;label for=""></b> Etykieta tworząca opis pola. Aby
+                przypiąć ją do konkretnego pola, atrybut 'for' musi przyjąć
+                wartość atrybutu 'id' tego pola. Jeśli znacznik 'input' znajduje
+                się zaś wewnątrz znacznika 'label', takie przypięcie nie jest
+                konieczne.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;fieldset></b> Grupa pól.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;legend></b> Opis grupy pól znajdującej się wewnątrz
+                znacznika 'fieldset'.
+              </li>
+            </ul>
+            <p class="article__text">
+              Typy pól:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>text</b> Służy do wpisywania widocznego tekstu.
+              </li>
+              <li class="article__list-item">
+                <b>radio</b> Służy do wyboru jednej wartości z grupy. Wszystkie
+                pola danej grupy muszą posiadać taką samą wartość znacznika
+                'name'. Dodanie nieposiadającego wartości atrybutu 'checked' dla
+                pola tego typu, spowoduje domyślny wybór tego pola.
+              </li>
+              <li class="article__list-item">
+                <b>checkbox</b> Służy do wyboru większej ilości wartości. Gdy
+                pole nie będzie posiadało parametru 'value', w momencie
+                przesłania formularza zostanie przesłana wartość 'on', kiedy
+                pole było zaznaczone lub brak tej wartości, kiedy pole nie było
+                zaznaczone. Dodanie nieposiadającego wartości atrybutu 'checked'
+                dla pola tego typu, spowoduje domyślny wybór tego pola.
+              </li>
+              <li class="article__list-item">
+                <b>number</b> Umożliwia wpisywanie jedynie cyfr do pola.
+              </li>
+              <li class="article__list-item">
+                <b>tel</b> Sygnalizuje, że podane pole zawiera numer telefonu.
+                Ze względu na różne formaty numerów telefonicznych, nie posiada
+                ograniczeń.
+              </li>
+              <li class="article__list-item">
+                <b>email</b> Sygnalizuje, że podane pole zawiera adres e-mail.
+              </li>
+              <li class="article__list-item">
+                <b>range</b> Służy do wyboru konkretnej wartości z danego
+                zakresu za pomocą suwaka. Wartość minimalną, maksymalną oraz
+                skok określają odpowiednio atrybuty pola: 'min', 'max' oraz
+                'step'. Do aktualnie wskazywanej wartości można dostać się z
+                poziomu JavaScript, odwołując się do własności 'value' znacznika
+                'imput'.
+              </li>
+              <li class="article__list-item">
+                <b>password</b> Służy do wpisywania hasła. Wpisywane znaki są
+                ukryte na ekranie.
+              </li>
+              <li class="article__list-item">
+                <b>file</b> Służy do wyboru pliku (z pamięci urządzenia) do
+                przesłania.
               </li>
             </ul>
           </article>
