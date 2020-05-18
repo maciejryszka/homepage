@@ -9,7 +9,13 @@ html {
 }
 
 body {
-  background: #202020;
+  min-height: 100vh;
+  background: rgb(32, 32, 32);
+  background: linear-gradient(
+    225deg,
+    rgba(32, 32, 32, 1) 33%,
+    rgba(37, 68, 65, 1) 66%
+  );
   color: #6a7b76;
   font-family: "Roboto", sans-serif;
 }
@@ -25,8 +31,14 @@ body {
   text-transform: uppercase;
 }
 
+.header-navigation {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .header-navigation__link {
-  margin: 10px;
+  margin: 0 20px;
   padding: 5px 15px;
   border-radius: calc(29px / 2);
   font-weight: bold;
