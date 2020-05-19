@@ -81,6 +81,10 @@
                 samodzielnie i zawiera większą treść.
               </li>
               <li class="article__list-item">
+                <b>&lt;aside>&lt;/aside></b> Treść mniej istotna od treści
+                głównej. Notatka boczna.
+              </li>
+              <li class="article__list-item">
                 <b>&lt;header>&lt;/header></b> Nagłówek. Opisuje nagłówek
                 dokumentu / sekcji / artykułu.
               </li>
@@ -1113,9 +1117,9 @@
             </p>
           </article>
           <article class="article">
-            <h2 class="article__heading">flexbox</h2>
+            <h2 class="article__heading">css: flexbox</h2>
             <p class="article__text">
-              Właściwości flexbox nadawane kontenerowi:
+              Właściwości CSS Flexbox nadawane kontenerowi:
             </p>
             <ul class="article__list">
               <li class="article__list-item">
@@ -1126,30 +1130,32 @@
                 <b>flex-direction</b> Odpowiada za zawijanie wiersza / kolumny.
               </li>
               <li class="article__list-item">
-                <b>flex-wrap</b> Ustala główną oś flexboxa.
+                <b>flex-wrap</b> Ustala główną oś CSS Flexbox.
               </li>
               <li class="article__list-item">
                 <b>flex-flow</b> Skrót zawierający: 'flex-direction' i
                 'flex-wrap'.
               </li>
               <li class="article__list-item">
-                <b>justify-content</b> Ustawia elementy wzdłuż osi głównej
-                flexboxa.
+                <b>justify-content</b> Ustawia elementy wzdłuż osi głównej CSS
+                Flexbox.
               </li>
               <li class="article__list-item">
                 <b>align-content</b> Ustawia elementy wzdłuż osi prostopadłej do
-                osi głównej flexboxa.
+                osi głównej CSS Flexbox.
               </li>
               <li class="article__list-item">
                 <b>align-items</b> Ustawia elementy wzdłuż osi prostopadłej do
-                osi głównej flexboxa, ale w obrębie pojedynczego wiersza.
+                osi głównej CSS Flexbox, ale w obrębie pojedynczego wiersza.
               </li>
             </ul>
-            <p class="article__text">Właściwości flexbox nadawane elementom:</p>
+            <p class="article__text">
+              Właściwości CSS Flexbox nadawane elementom:
+            </p>
             <ul class="article__list">
               <li class="article__list-item">
                 <b>align-self</b> Ustawia element wzdłuż osi prostopadłej do osi
-                głównej flexboxa.
+                głównej CSS Flexbox.
               </li>
               <li class="article__list-item">
                 <b>order</b> Ustala kolejość elementu.
@@ -1163,9 +1169,9 @@
               </li>
               <li class="article__list-item">
                 <b>flex-basis</b> Minimalny rozmiar bazowy elementu wewnątrz
-                kontenera. Określa szerokość elementu - kiedy główną osią
-                flexboxa jest oś pozioma lub wysokość elementu - kiedy główną
-                osią flexboxa jest oś pionowa.
+                kontenera. Określa szerokość elementu - kiedy główną osią CSS
+                Flexbox jest oś pozioma lub wysokość elementu - kiedy główną
+                osią CSS Flexbox jest oś pionowa.
               </li>
               <li class="article__list-item">
                 <b>flex</b> Skrót zawierający: 'flex-grow', 'flex-shrink' i
@@ -1443,7 +1449,7 @@
           <article class="article">
             <h2 class="article__heading">
               formularze: form, input, label, fieldset, radio, checkbox, number,
-              tel, email, range, password, file
+              tel, email, range, password, file, select, textarea, submit
             </h2>
             <p class="article__text">
               Znaczniki dotyczące formularzy:
@@ -1479,6 +1485,20 @@
               <li class="article__list-item">
                 <b>&lt;legend></b> Opis grupy pól znajdującej się wewnątrz
                 znacznika 'fieldset'.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;select></b> Umożliwia wybór elementu z rozwijanej listy.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;option></b> Element rozwijanej listy. Znajduje się
+                wewnątrz znacznika 'select'. Można zdefiniować wartość pola w
+                atrybucie 'value' w przypadku gdy ma być ona inna niż
+                wyświetlana w polu.
+              </li>
+              <li class="article__list-item">
+                <b>&lt;textarea></b> Służy do wprowadzania dłuższej treści. Nie
+                posiada atrybutu 'value', w związku z czym jego wartość należy
+                umieścić jako treść znacznika.
               </li>
             </ul>
             <p class="article__text">
@@ -1519,7 +1539,7 @@
                 skok określają odpowiednio atrybuty pola: 'min', 'max' oraz
                 'step'. Do aktualnie wskazywanej wartości można dostać się z
                 poziomu JavaScript, odwołując się do własności 'value' znacznika
-                'imput'.
+                'input'.
               </li>
               <li class="article__list-item">
                 <b>password</b> Służy do wpisywania hasła. Wpisywane znaki są
@@ -1529,7 +1549,144 @@
                 <b>file</b> Służy do wyboru pliku (z pamięci urządzenia) do
                 przesłania.
               </li>
+              <li class="article__list-item">
+                <b>submit</b> Służy do wysyłania formularza. Nie posiada
+                etykiety, a jego nazwa jest zdefiniowana w atrybucie 'value'.
+              </li>
             </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">
+              formularze: get i post
+            </h2>
+            <p class="article__text">
+              Formularz posiada atrybut 'action', który jako wartość przyjmuje
+              adres URL miejsca, gdzie wysłąny będzie formularz. Domyślnie jest
+              wysyłany do strony, na której się znajduje.<br />
+              Atrybut 'enctype' mówi o tym czy jest to zwykły formularz
+              (domyślna wartość: "application/x-www-form-urlencoded") czy
+              zawiera inne treści poza tekstowymi, np. kiedy wysyłane są pliki
+              (wartość "multipart/form-data").<br />
+              Atrybut 'method' pozwala na wybór metody wysłania żądania:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>GET</b> Domyślna metoda. Przekazuje parametry i wartości w
+                adresie URL strony. Wysyłane są wartości atrybutu 'value' pola,
+                niezależnie od tego co znajduje się w etykiecie pola. Ze względu
+                na limitowaną liczbę znaków w adresie, plików nie wysyła się tą
+                metodą. Używa Query String Parameters (zakładka 'Network' w
+                przeglądarce).
+              </li>
+              <li class="article__list-item">
+                <b>POST</b> Nie umieszcza w adresie URL żadnych dodatkowych
+                znaków. Jest metodą bezpieczniejszą. Używa Form Data (zakładka
+                'Network' w przeglądarce).
+              </li>
+            </ul>
+            <p class="article__text">
+              Metoda GET służy zazwyczaj do pobierania danych, a metoda POST do
+              ich wysyłania.
+            </p>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">
+              formularze: walidacja
+            </h2>
+            <p class="article__text">
+              Walidacja, to sprawdzenie poprawności danych wprowadzanych do
+              formularza.
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Nadanie atrybutu 'required' dla konkretnego pola nie pozwoli
+                wysłać formularza, dopóki pole to pozostanie nieuzupełnione.
+              </li>
+              <li class="article__list-item">
+                Sprawdzenie następuje także pod kątem typu pola (np. pole typu
+                'email' musi być uzupełnione treścią posiadającą odpowiedni
+                format).
+              </li>
+              <li class="article__list-item">
+                Nadanie atrybutu 'pattern' pozwoli zwalidować pole z
+                wykorzystaniem wyrażenia regularnego (regular expression). Jest
+                to specjalny sposób zapisu pozwalający na wykrywanie pewnych
+                ciągów znaków. Należy umieścić wyrażenia jako wartość atrybutu.
+                Zbiór gotowych wyrażeń regularnych znajduje się na stronie
+                <a class="article__link" href="http://html5pattern.com/"
+                  >html5pattern.com</a
+                >.
+              </li>
+              <li class="article__list-item">
+                Walidacja po stronie frontendu nie zastępuje walidacji po
+                stronie backendu. Możliwa jest na przykład zmiana wartości
+                parametrów w adresie URL bezpośrednio przed wysłaniem formularza
+                metodą GET. W takim wypadku zmienione w ten sposób wartości nie
+                zostaną zwalidowane po stronie frontendu.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">css: grid</h2>
+            <p class="article__text">
+              CSS Grid jest to oparty na siatce prostokątów sposób
+              pozycjonowania elementów na stronie.<br />
+              Pozycjonowanie tego typu działa jedynie na elementy znajdujące się
+              bezpośrednio w kontenerze.<br />
+              CSS Grid posiada następujące elementy:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>Grid Line</b> Linia gridowe. Linie są numerowane od wartości
+                1.
+              </li>
+              <li class="article__list-item">
+                <b>Grid Track (Column)</b> Pojedyncza kolumna.
+              </li>
+              <li class="article__list-item">
+                <b>Grid Track (Row)</b> Pojedynczy rząd.
+              </li>
+              <li class="article__list-item">
+                <b>Grid Cell</b> Pojedyncza, prostokątna komórka.
+              </li>
+              <li class="article__list-item">
+                <b>Grid Area</b> Prostokątny obszar składający się z wielu
+                komórek.
+              </li>
+            </ul>
+            <p class="article__text">
+              Właściwości CSS Grid nadawane kontenerowi:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>display</b> Służy do zmiany systemu rozmieszczania i
+                pozycjonowania elementów.
+              </li>
+              <li class="article__list-item">
+                <b>grid-template-columns</b> Tworzy kolumny.
+              </li>
+              <li class="article__list-item">
+                <b>grid-template-rows</b> Tworzy wiersze.
+              </li>
+              <li class="article__list-item">
+                <b>column-gap</b> Tworzy odstępy między kolumnami.
+              </li>
+              <li class="article__list-item">
+                <b>row-gap</b> Tworzy odstępy między wierszami.
+              </li>
+            </ul>
+            <p class="article__text">
+              Jednostka 'fr' działa jak ułamek, gdzie licznikiem jest ilość 'fr'
+              konkretnego elementu a mianownikiem suma 'fr' wszystkich
+              elemetnów. Ułamek ten pokazuje jaką część wolnej przestrzeni
+              zajmie dany element.<br />
+              Funkcą 'repeat' pozwala na natychmiastowe stworzenie większej
+              ilości kolumn / wierszy. Jako argumenty przyjmuje ilość wystąpień
+              oraz wielkość danego elementu.<br />
+              Funkcja 'minmax' pozwala na określenie minimalnego i maksymalnego
+              rozmiaru kolumny / wiersza. Jako argumenty przyjmuje minimalny i
+              maksymalny rozmiar obiektu.
+            </p>
           </article>
         </section>
       </main>
