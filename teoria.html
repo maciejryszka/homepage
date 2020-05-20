@@ -957,7 +957,7 @@
               <li class="article__list-item">
                 Własności / metody składają się z unikalnego w ramach obiektu
                 klucza oraz podanej po dwukropku wartości, którą może być typ
-                prymitywny, funkcja bądź zagnieżdżenie.
+                prymitywny, funkcja lub zagnieżdżenie.
               </li>
               <li class="article__list-item">
                 Aby dostać się do konkretnej własności obiektu, należy po jego
@@ -1674,6 +1674,75 @@
               <li class="article__list-item">
                 <b>row-gap</b> Tworzy odstępy między wierszami.
               </li>
+              <li class="article__list-item">
+                <b>grid-template-areas</b> Określa nazwy obszarów siatki. Jako
+                wartość należy podać nazwy obszarów (każdy wiersz zdefiniowany w
+                osobnym cudzysłowie, zawierający tyle nazw obszarów, ile wynosi
+                liczba kolumn). Pojedynczy obszar może przybierać jedynie
+                kształt prostokąta (tyle samo kolumn w każdym wierszu dla
+                konkretnej nazwy obszaru). Zamiast nazwy obszaru można podać
+                '.', co stworzy nienazwany obszar, który może zostać
+                wykorzystany np. do zdefiniowania odstępu między wierszami /
+                kolumnami.
+              </li>
+            </ul>
+            <p class="article__text">
+              Właściwości CSS Grid nadawane elementom:
+            </p>
+            <ul class="article__list">
+              <li class="article__list-item">
+                <b>grid-area</b> Przypisanie nazwy obszaru zdefiniowanej we
+                właściwości 'grid-template-areas'. Nazwę należy podać bez
+                cudzysłowu.
+              </li>
+              <li class="article__list-item">
+                <b>grid-row-start</b> Rząd początkowy obszaru. Jako argument
+                może przyjąć numer wiersza lub nazwę zdefiniowaną podczas
+                nadawania wysokości wierszom (przed wartością w nawiasie
+                kwadratowym).
+              </li>
+              <li class="article__list-item">
+                <b>grid-row-end</b> Rząd końcowy obszaru. Jako argument może
+                przyjąć numer wiersza, nazwę zdefiniowaną podczas nadawania
+                wysokości wierszom (przed wartością w nawiasie kwadratowym) lub
+                słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma
+                obejmować obszar.
+              </li>
+              <li class="article__list-item">
+                <b>grid-column-start</b> Kolumna początkowa obszaru. Jako
+                argument może przyjąć numer kolumny lub nazwę zdefiniowaną
+                podczas nadawania szerokości kolumnom (przed wartością w
+                nawiasie kwadratowym).
+              </li>
+              <li class="article__list-item">
+                <b>grid-column-end</b> Kolumna końcowa obszaru. Jako argument
+                może przyjąć numer kolumny, nazwę zdefiniowaną podczas nadawania
+                szerokości kolumnom (przed wartością w nawiasie kwadratowym) lub
+                słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma
+                obejmować obszar.
+              </li>
+              <li class="article__list-item">
+                <b>grid-column-end</b> Kolumna końcowa obszaru. Jako argument
+                może przyjąć numer kolumny, nazwę zdefiniowaną podczas nadawania
+                szerokości kolumnom (przed wartością w nawiasie kwadratowym) lub
+                słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma
+                obejmować obszar.
+              </li>
+              <li class="article__list-item">
+                <b>grid-area</b> Skrót zawierający odpowiednio:
+                'grid-row-start', 'grid-column-start', 'grid-row-end',
+                'grid-column-end'. Każdą z wartości należy oddzielić znakiem
+                '/'.
+              </li>
+              <li class="article__list-item">
+                <b>grid-row</b> Skrót zawierający odpowiednio: 'grid-row-start',
+                'grid-row-end'. Każdą z wartości należy oddzielić znakiem '/'.
+              </li>
+              <li class="article__list-item">
+                <b>grid-column</b> Skrót zawierający odpowiednio:
+                'grid-column-start', 'grid-column-end'. Każdą z wartości należy
+                oddzielić znakiem '/'.
+              </li>
             </ul>
             <p class="article__text">
               Jednostka 'fr' działa jak ułamek, gdzie licznikiem jest ilość 'fr'
@@ -1685,7 +1754,12 @@
               oraz wielkość danego elementu.<br />
               Funkcja 'minmax' pozwala na określenie minimalnego i maksymalnego
               rozmiaru kolumny / wiersza. Jako argumenty przyjmuje minimalny i
-              maksymalny rozmiar obiektu.
+              maksymalny rozmiar obiektu.<br />
+              CSS Grid nie zastępuje CSS Flexbox, lecz są dla siebie
+              uzupełnieniem. CSS Grid powinien być wyorzystywany do budowania
+              całych layoutów (kiedy na stronie występują wiersze, kolumny),
+              natomiast CSS Flexbox do pozycjonowania elementów wewnątrz
+              pojedynczego elementu.
             </p>
           </article>
         </section>
