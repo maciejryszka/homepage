@@ -32,9 +32,15 @@ body {
 }
 
 .header-navigation {
-  padding-top: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 0 5px 0;
   display: flex;
   justify-content: center;
+  background-color: #6a7b7680;
 }
 
 .header-navigation__link {
@@ -45,6 +51,12 @@ body {
   text-decoration: none;
   color: #6a7b76;
   background-color: #beb0a7;
+}
+
+.diary-main,
+.theory-main,
+.main {
+  padding-top: 43px;
 }
 
 .diary-main__header,
@@ -250,6 +262,17 @@ body {
   }
 }
 
+@media screen and (orientation: portrait) and (max-width: 393px) {
+  .wrapper {
+    max-width: 380px;
+  }
+
+  .diary-main__image,
+  .theory-main__image {
+    width: 380px;
+  }
+}
+
 @media screen and (orientation: portrait) and (max-width: 375px) {
   .wrapper {
     max-width: 350px;
@@ -268,6 +291,7 @@ body {
     border-radius: calc(23px / 2);
     font-size: 12px;
   }
+
   .wrapper {
     max-width: 300px;
   }
