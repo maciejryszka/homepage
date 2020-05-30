@@ -1,0 +1,53 @@
+HTML DONE
+wtf: html
+wtf: html ii
+block – element – modifier
+html: listy, tabele, definicje
+formularze: form, input, label, fieldset, radio, checkbox, number, tel, email, range, password, file, select, textarea, submit
+formularze: get i post
+formularze: walidacja
+
+CSS DONE
+wtf: css
+wtf: css ii
+życie w pudełku: display, wymiary i overflow
+życie w pudełku: jednostki
+życie w pudełku: box model (padding/border/margin)
+życie w pudełku: box-sizing
+życie w pudełku: position
+życie w pudełku: float
+css: flexbox
+tła
+normalizacja vs reset
+css: grid
+css: media queries & mobile first
+
+JS DONE
+wtf: javascript
+js: typy danych i immutability
+js: funkcje
+js: obiekt
+js: immutability w obiektach
+js: logika
+js: eventy
+
+GIT DONE
+jest git!
+github
+github pages: statyczny hosting
+
+PRZEGLĄDARKA DONE
+devtools: podglądamy!
+jak działa Internet i przeglądarka
+domowe przedszkole
+wtf: klan
+
+POZOSTAŁE DONE
+warstwy strony internetowej
+magia programowania
+kanban
+opowieść o wężu, kebabie, wielbłądzie i Pascalu
+terminal
+code: formatowanie kodu i lokalny serwer
+grafik cięcie – też zajęcie
+hamburger menu

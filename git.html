@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maciej Ryszka - WTF</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9e22ac749d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="header-navigation">
+        <section class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li>
+              <a href="#website-layers" class="hamburger-menu__list-item"
+                >warstwy strony internetowej</a
+              >
+            </li>
+          </ul>
+        </section>
+        <button class="header-navigation__menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-navigation__links-wrapper">
+          <a class="header-navigation__link" href="index.html">Strona główna</a>
+          <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
+          <a class="header-navigation__link" href="teoria.html">Teoria</a>
+        </div>
+      </nav>
+    </header>
+    <main id="top" class="theory-main">
+      <header class="theory-main__header">
+        <p class="theory-main__text">WTF: Co Ten Frontend?</p>
+      </header>
+      <section class="theory-main__section">
+        <h1 class="theory-main__heading">teoria</h1>
+        <div class="theory-main__image"></div>
+        <article id="git" class="article">
+          <h2 class="article__heading">jest git!</h2>
+          <p class="article__text">
+            System kontroli wersji GIT dostępny jest na
+            <a class="article__link" href="http://git-scm.com">tej</a>
+            stronie.<br />
+            Jeden projekt = jedno repozytorium!<br />
+            Source Control/GitLens to narzędzia ułatwiające pracę z GITem w
+            Visual Studio Code.<br />
+            Po zainstalowaniu należy skonfigurować użytkownika wykonując
+            polecenia:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              git config --global user.name "Imię Nazwisko"
+            </li>
+            <li class="article__list-item">
+              git config --global user.email adres_email
+            </li>
+          </ul>
+          <p class="article__text">
+            Dane użytkownika można sprawdzić z użyciem poleceń:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              git config --get user.name
+            </li>
+            <li class="article__list-item">
+              git config --get user.email
+            </li>
+          </ul>
+          <p class="article__text">Polecenia GITa:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>git init</b> Inicjalizacja repozytorium (należy być w katalogu
+              z projektem).
+            </li>
+            <li class="article__list-item">
+              <b>git status</b> Sprawdzenie stan repozytorium (śledzone /
+              nieśledzone pliki, ostatni commit, aktualną gałąź).
+            </li>
+            <li class="article__list-item">
+              <b>git add .</b> Dodanie plików z aktualnego katalogu oraz
+              podkatalogów jako śledzone.
+            </li>
+            <li class="article__list-item">
+              <b>git commit -m "komentarz"</b> Zapis plików. Utworzenie commita
+              ('wersji' projektu).
+            </li>
+            <li class="article__list-item">
+              <b>gitk</b> Wyświetlenie historii commitów.
+            </li>
+          </ul>
+          <p class="article__text">GIT podsumowanie:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              GIT pozwala na sprawne zarządzanie zmianami w projekcie.
+            </li>
+            <li class="article__list-item">Działa lokalnie.</li>
+            <li class="article__list-item">
+              Do działania zdalnego potrzebuje serwera (np. GitHub).
+            </li>
+            <li class="article__list-item">
+              Commity należy wykonywać po wykodaniu widocznej zmiany w projekcie
+              (lepiej za często niż za rzadko).
+            </li>
+            <li class="article__list-item">
+              Podstawowy flow: git add ./git commit -m "komentarz"/git push
+            </li>
+          </ul>
+        </article>
+        <article id="github" class="article">
+          <h2 class="article__heading">github</h2>
+          <p class="article__text">
+            Serwis służący do przechowywania repozytoriów online to
+            <a class="article__link" href="https://github.com">GitHub</a>.<br />
+            Nowe repozytorium zdalne można utworzyć za pomocą opcji New
+            repository (po wcześniejszym zalogowaniu do serwisu)<br />
+            Nazwa repozytorium zdalnego powinna być taka sama jak nazwa
+            repozytorium lokalnego.<br />
+            Po utworzeniu repozytorium zdalnego można albo zainicjalizować nowe
+            repozytorium lokalne albo podpiąć się do już istniejącego
+            (odpowiednie komendy dla obu przypadków wyświetlają się po
+            utworzeniu repozytorium zdalnego).<br />
+            Kiedy repozytorium zdalne i lokalne są już połączone, aby
+            zaktualizować repozytorium zdalne należy jedynie użyć metody
+            <b>git push</b> po wykonaniu commita.
+          </p>
+        </article>
+        <article id="github-pages" class="article">
+          <h2 class="article__heading">
+            github pages: statyczny hosting
+          </h2>
+          <p class="article__text">
+            Serwis 'GitHub Pages' umożliwia publikację strony. Opcja taka
+            znajduje się w ustawieniach repozytorium zdalnego w sekcji 'GitHub
+            Pages'.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
+        <a class="footer__link" href="#topdwa">Wróć na górę</a>
+      </p>
+      <p class="footer__text">Maciej Ryszka - 2020</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

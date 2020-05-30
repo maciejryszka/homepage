@@ -51,7 +51,7 @@ body {
 
 .hamburger-menu--active {
   width: 50%;
-  /* position: absolute; */
+  position: absolute;
 }
 
 .hamburger-menu__list {

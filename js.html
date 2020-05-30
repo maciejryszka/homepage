@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maciej Ryszka - WTF</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9e22ac749d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="header-navigation">
+        <section class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li>
+              <a href="#website-layers" class="hamburger-menu__list-item"
+                >warstwy strony internetowej</a
+              >
+            </li>
+          </ul>
+        </section>
+        <button class="header-navigation__menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-navigation__links-wrapper">
+          <a class="header-navigation__link" href="index.html">Strona główna</a>
+          <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
+          <a class="header-navigation__link" href="teoria.html">Teoria</a>
+        </div>
+      </nav>
+    </header>
+    <main id="top" class="theory-main">
+      <header class="theory-main__header">
+        <p class="theory-main__text">WTF: Co Ten Frontend?</p>
+      </header>
+      <section class="theory-main__section">
+        <h1 class="theory-main__heading">teoria</h1>
+        <div class="theory-main__image"></div>
+        <article id="wtf-javascript" class="article">
+          <h2 class="article__heading">wtf: javascript</h2>
+          <p class="article__text">Co to jest ECMAScript 6+</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              ECMAScript jest to ustandaryzowany przez organizację ECMA
+              skryptowy język programowania.
+            </li>
+            <li class="article__list-item">
+              JavaScript implementuje rzeczy ze specyfikacji ECMAScript.
+            </li>
+            <li class="article__list-item">
+              Rozwój ECMAScript mocno przyspieszył przez szerokie wykorzystanie
+              JavaScriptu.
+            </li>
+            <li class="article__list-item">
+              ES6 (i nowsze) wprowadzają wiele udogodnień dla developerów.
+            </li>
+            <li class="article__list-item">
+              Nowe feature'y mogą nie być wspierane we wszystkich
+              przeglądarkach, ale są na to sposoby.
+            </li>
+          </ul>
+          <p class="article__text">Składowe JavaScript:</p>
+          <ul class="article__list">
+            <li class="article__list-item">Wartości</li>
+            <li class="article__list-item">Operacje porównania</li>
+            <li class="article__list-item">Zmienne</li>
+            <li class="article__list-item">Literały</li>
+            <li class="article__list-item">Funkcje</li>
+            <li class="article__list-item">Obiekty</li>
+          </ul>
+          <p class="article__text">
+            Skrypty należy umieszczać na końcu znacznika 'body'.<br />
+            Kod JS uruchamia się raz (po załadowaniu strony).<br />
+            JavaScript to frontendowe programowanie.
+          </p>
+        </article>
+        <article id="js-types-of-data" class="article">
+          <h2 class="article__heading">
+            js: typy danych i immutability
+          </h2>
+          <p class="article__text">
+            Słowa kluczowe służące do deklaracji zmiennych w JavaScript:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>const</b> Deklaruje zmienną. Połączenie między zmienną i jej
+              wartością nie może być zmieniane w trakcie działania programu.
+            </li>
+            <li class="article__list-item">
+              <b>let</b> Deklaruje zmienną. Połączenie między zmienną i jej
+              wartością może być zmieniane w trakcie działania programu.
+            </li>
+            <li class="article__list-item">
+              <b>var</b> Używany do deklaracji we wcześniejszych wersjach
+              JavaScriptu. Teraz do deklaracji zmiennych należy używać słowa
+              kluczowego 'const', a jeśli połączenie między zmienną i jej
+              wartością będzie edytowane w trakcie działania programu - 'let'.
+            </li>
+          </ul>
+          <p class="article__text">Typy proste w JavaScript:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>String</b> Tekst. Należy podać go w apostrofach (zalecany
+              pojedynczy).
+            </li>
+            <li class="article__list-item"><b>Number</b> Liczba.</li>
+            <li class="article__list-item">
+              <b>Bigint</b> Duża liczba. Większa niż 2^53.
+            </li>
+            <li class="article__list-item"><b>boolean</b> True lub false.</li>
+            <li class="article__list-item">
+              <b>null</b> Wartość celowo niezdefiniowana. Na etapie deklaracji
+              jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo, że zmienna
+              będzie wykorzystana w trakcie działania programu.
+            </li>
+            <li class="article__list-item">
+              <b>undefinied</b> Brak definicji. Przy próbie odwołania do
+              nieistniejącej zmiennej występuje błąd.
+            </li>
+            <li class="article__list-item">
+              <b>*symbol</b> Tworzy "unikalne opakowanie".
+            </li>
+          </ul>
+          <p class="article__text">
+            Do nazywania zmiennych należy używać schematu camelCase.<br />
+            Do sprawdzenia typu zmiennej służy słowo kluczowe 'typeof'.<br />
+            Operator przypisania '=' nie tworzy nowych zmiennych, lecz tworzy i
+            zwraca połączenie.<br />
+            W przypadku połączenia zmiennej 'a' ze zmienną 'b', występuje
+            połączenie z wartością zmiennej 'b' a nie bezpośrednio z samą
+            zmienną 'b'.<br />
+            Koncept <b>immutability</b> polega na tym, że nie możemy zmieniać
+            wartości 'primitive values' (wartości typów prostych, do których
+            podłączamy się za pomocą zmiennych) w JavaScript. To co zmieniamy,
+            to połączenia między nimi a zmiennymi. Wartości już istnieją, są
+            niezmienne. Na przykład nie można sobie zmienić 'true' na 'false'
+            lub na odwrót.
+          </p>
+        </article>
+        <article id="js-functions" class="article">
+          <h2 class="article__heading">js: funkcje</h2>
+          <p class="article__text">
+            Składowe funkcji w JavaScript:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              Deklaracja.
+            </li>
+            <li class="article__list-item">
+              Parametr (opcjonalnie).
+            </li>
+            <li class="article__list-item">
+              Słowo kluczowe 'return' (opcjonalnie).
+            </li>
+            <li class="article__list-item">
+              Wynik.
+            </li>
+          </ul>
+          <p class="article__text">
+            Wynikiem funkcji, która nie posiada słowa kluczowego 'return' jest
+            'undefined'.<br />
+            Funkcja może przyjmować dowolną ilość argumentów (może również nie
+            przyjmować żadnego).<br />
+            Typ zwracanej wartości może być inny niż typ argumetu/argumentów
+            przyjmowanych przez funkcję.<br />
+            Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu w
+            wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa jego
+            czytelność oraz ułatwia wyszukiwanie i poprawę błędów.<br />
+            Dobrą praktyką jest nazywanie funkcji podczas deklaracji.<br />
+            Wewnątrz funkcji wykowywane są obliczenia/zadania.<br />
+          </p>
+          <p class="article__text">
+            Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
+            arrow function': const nazwaFunkcji = (parametr) => {ciało
+            funkcji}.<br />
+            Jeśli w ciele funkcji znajduje się tylko 'return' oraz zwracana
+            wartość, można zapisać tę wartość bezpośrednio po strzałce z
+            pominięciem słowa kluczowego 'return'.<br />
+            Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa
+            czytelność.<br />
+            Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma
+            dostępu do 'arguments' i 'super', a więc nie jest zamiennikiem
+            tradycyjnej funkcji.
+          </p>
+        </article>
+        <article id="js-object" class="article">
+          <h2 class="article__heading">js: obiekt</h2>
+          <p class="article__text">
+            Obiekt w JavaScript:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              Jest strukturą danych ułatwiającą odwzorowanie świata
+              rzeczywistego w świecie programowania.
+            </li>
+            <li class="article__list-item">
+              Posiada oddzielone przecinkami własności (zmienne wewnątrz
+              obiektu) oraz metody (funcje wewnątrz obiektu).
+            </li>
+            <li class="article__list-item">
+              Własności/metody składają się z unikalnego w ramach obiektu klucza
+              oraz podanej po dwukropku wartości, którą może być typ prymitywny,
+              funkcja lub zagnieżdżenie.
+            </li>
+            <li class="article__list-item">
+              Aby dostać się do konkretnej własności obiektu, należy po jego
+              nazwie i kropce odwołać się do konkretnego klucza (w przypadku
+              kiedy w obiekcie występują zagnieżdżenia, można dostać się do
+              kolejnych poziomów własności z wykorzystaniem kolejnych kropek).
+            </li>
+            <li class="article__list-item">
+              Aby dostać się do konkretnej metody obiektu, należy po jego nazwie
+              i kropce odwołać się do konkretnego klucza oraz użyć nawiasów
+              okrągłych (i opcjonalnie parametrów) w celu wywołania metody.
+            </li>
+            <li class="article__list-item">
+              Alternatywną opcją dostania się do własności obiektu jest
+              skorzystanie z nawiasów kwadratowych po jego nazwie i podanie
+              wewnątrz nich konkretnego klucza (w apostrofach).
+            </li>
+          </ul>
+        </article>
+        <article id="js-immutability" class="article">
+          <h2 class="article__heading">
+            js: immutability w obiektach
+          </h2>
+          <ul class="article__list">
+            <li class="article__list-item">
+              Jeśli obiekt został stworzony z użyciem słowa kluczowego 'const',
+              jedynie połączenie między nazwą zmiennej a obiektem jest stałe i
+              nie może zostać zmienione. Połączenia między własnościami obiektu
+              i wartościami na jakie wskazują mogą być jednak w dalszym ciągu
+              edytowane. Jest to tzw. mutowanie obiektów, czyli ich zmienianie.
+              Cecha ta odróżnia typy złożone (obiekty) od typów prostych, które
+              nie mogą być mutowane.
+            </li>
+            <li class="article__list-item">
+              Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do
+              danej wartości, dopóki nie zmienimy dokładnie tego przypięcia.
+            </li>
+            <li class="article__list-item">
+              Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy
+              zmienione zostanie przypięcie dla którejś z jego własności. Zmiana
+              takiego przypięcia może nastąpić z "inicjatywy" innego elementu
+              wskazującego na ten obiekt.
+            </li>
+          </ul>
+        </article>
+        <article id="js-logic" class="article">
+          <h2 class="article__heading">js: logika</h2>
+          <p class="article__text">Operatory porównania:</p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>></b> Lewa strona większa od prawej.
+            </li>
+            <li class="article__list-item">
+              <b>&lt;</b> Lewa strona mniejsza od prawej.
+            </li>
+            <li class="article__list-item">
+              <b>>=</b> Lewa strona większa/równa prawej.
+            </li>
+            <li class="article__list-item">
+              <b>&lt;=</b> Lewa strona mniejsza/równa prawej.
+            </li>
+            <li class="article__list-item"><b>==</b> Obie strony równe.</li>
+            <li class="article__list-item">
+              <b>===</b> Obie strony równe (sprawdza typeof).
+            </li>
+            <li class="article__list-item"><b>!=</b> Obie strony różne.</li>
+            <li class="article__list-item">
+              <b>!==</b> Obie strony różne (sprawdza typeof).
+            </li>
+          </ul>
+          <p class="article__text">Wartości fałszywe w JavaScript:</p>
+          <ul class="article__list">
+            <li class="article__list-item"><b>false</b></li>
+            <li class="article__list-item"><b>0</b></li>
+            <li class="article__list-item"><b>'', "", ``</b> Pusty string.</li>
+            <li class="article__list-item"><b>null</b></li>
+            <li class="article__list-item"><b>undefined</b></li>
+            <li class="article__list-item"><b>NaN</b> Not a number.</li>
+          </ul>
+          <p class="article__text">
+            Cała reszta stanowi wartości prawdziwe w JavaScript. Przykłady:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item"><b>true</b></li>
+            <li class="article__list-item">
+              <b>'Text'</b> Dowolny niepusty string.
+            </li>
+            <li class="article__list-item"><b>12</b> Liczba dodatnia.</li>
+            <li class="article__list-item"><b>-4</b> Liczba ujemna.</li>
+            <li class="article__list-item"><b>{}</b> Obiekt.</li>
+            <li class="article__list-item"><b>[]</b> Tablica.</li>
+            <li class="article__list-item">Tablica.</li>
+          </ul>
+          <p class="article__text">
+            Operatory logiczne:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>AND (&&)</b> Wszystkie warunki muszą być prawdziwe, żeby
+              wyrażenie było prawdziwe.
+            </li>
+            <li class="article__list-item">
+              <b>OR (||)</b> Przynajmniej jeden warunek muszi być prawdziwy,
+              żeby wyrażenie było prawdziwe.
+            </li>
+            <li class="article__list-item">
+              <b>NOT (!)</b> Odwraca wartość wyrażenia logicznego.
+            </li>
+          </ul>
+          <p class="article__text">
+            Instrukcje warunkowe:
+          </p>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>if(condition)</b> Kod w klamrach następujących po instrukcji
+              'if' wykona się jeśli warunek w nawiasie zwróci prawdę.
+            </li>
+            <li class="article__list-item">
+              <b>else if(condition)</b> Kod w klamrach następujących po
+              instrukcji 'if else' wykona się jeśli warunek w nawiasie zwróci
+              prawdę oraz jeśli żaden z wcześniejszych warunków instrukcji nie
+              zwrócił prawdy.
+            </li>
+            <li class="article__list-item">
+              <b>else</b> Kod w klamrach następujących po instrukcji 'else'
+              wykona się jeśli żaden z wcześniejszych warunków instrukcji nie
+              zwrócił prawdy.
+            </li>
+          </ul>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b>switch(variable)</b> Wykona kod dla przypadku odpowiadającego
+              wartości zmiennej znajdującej się w nawiasie. W przypadku braku
+              takiego przypadku zwróci wartość domyślną, która jest zdefiniowana
+              na końcu instrukcji. Instrukcja przy porównaniu sprawdza również
+              zgodność typów.
+            </li>
+          </ul>
+          <ul class="article__list">
+            <li class="article__list-item">
+              <b> (condition) ? 'ifTrue' : 'ifFalse' </b> 'Ternary operator'.
+              Jeśli warunek podany przed znakiem zapytania jest spełniony,
+              zwracana jest wartość znajdująca się między znakiem zapytania a
+              dwukropkiem. W przeciwnym razie zwracana jest wartość znajdująca
+              się po dwukropku.
+            </li>
+          </ul>
+          <p class="article__text">
+            <a
+              class="article__link"
+              href="https://www.destroyallsoftware.com/talks/wat/"
+              >Dziwne rzeczy</a
+            >
+            w JavaScript.
+          </p>
+        </article>
+        <article id="js-events" class="article">
+          <h2 class="article__heading">
+            js: eventy
+          </h2>
+          <p class="article__text">
+            Znacznik <b>&lt;button></b> służy do interakcji na stronie, na
+            której znajduje się już użytkownik, np. wysłanie formularza, zmiana
+            elementu, włączenie menu. Znacznik <b>&lt;a></b> służy do nawigacji,
+            np. przejście do konkretnej sekcji, podstrony, strony
+            zewnętrzenej.<br />
+            Funkcja służąca do nasłuchiwania w JavaScript to 'addEventListener',
+            która wywoływana jest na konkretnym elemencie DOM i przyjmuje jako
+            argumenty: typ (jako string) oraz nazwę wywoływanej funkcji.
+            Opcjonalnie funkcja 'addEventListener' może przyjąć również inne
+            argumenty.<br />
+            Wywoływaną funkcją może być również funkcja strzałkowa, przyjmująca
+            jako argument dowolną nazwę. W takim przypadku nazwa ta będzie
+            odnosić się do 'eventu'.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
+        <a class="footer__link" href="#topdwa">Wróć na górę</a>
+      </p>
+      <p class="footer__text">Maciej Ryszka - 2020</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
