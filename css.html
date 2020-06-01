@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maciej Ryszka - WTF</title>
+    <title>Teoria - CSS</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
@@ -21,639 +21,660 @@
       <nav class="header-navigation">
         <section class="hamburger-menu hamburger-menu--js">
           <ul class="hamburger-menu__list">
-            <li>
-              <a href="#website-layers" class="hamburger-menu__list-item"
-                >warstwy strony internetowej</a
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="index.html"
+                >strona główna</a
               >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="html.html">html</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="css.html">css</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="js.html">js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="git.html">git</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="przegladarka.html"
+                >przeglądarka</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="pozostale.html"
+                >pozostałe</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
             </li>
           </ul>
         </section>
         <button class="header-navigation__menu-button">
           <i class="fas fa-bars"></i>
         </button>
-        <div class="header-navigation__links-wrapper">
-          <a class="header-navigation__link" href="index.html">Strona główna</a>
-          <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
-          <a class="header-navigation__link" href="teoria.html">Teoria</a>
-        </div>
+        <p class="header-navigation__text">WTF: Co Ten Frontend?</p>
       </nav>
     </header>
     <main id="top" class="theory-main">
-      <header class="theory-main__header">
-        <p class="theory-main__text">WTF: Co Ten Frontend?</p>
-      </header>
-      <section class="theory-main__section">
-        <h1 class="theory-main__heading">teoria</h1>
-        <div class="theory-main__image"></div>
-        <article id="wtf-css" class="article">
-          <h2 class="article__heading">wtf: css</h2>
-          <p class="article__text">
-            Budowa reguły CSS:<br />
-            selektor {<br />
-            właściwość: wartość;<br />
-            }<br />
-          </p>
-          <p class="article__text">
-            Różne przeglądarki potrafią różnie interpretować CSS.
-          </p>
-        </article>
-        <article id="wtf-css-ii" class="article">
-          <h2 class="article__heading">wtf: css ii</h2>
-          <p class="article__text">
-            Specyficzność w CSS<br />
-            Szeregując selektory pod względem ważności można oprzeć się o
-            klasyfikację medalową, gdzie odpowiednio poszczególnymi kolorami
-            medalów są następujące style:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              !important (niezalecane)
-            </li>
-            <li class="article__list-item">style="" (niezalecane)</li>
-            <li class="article__list-item">#name</li>
-            <li class="article__list-item">.name</li>
-            <li class="article__list-item">element</li>
-          </ul>
-          <p class="article__text">
-            W przypadku równej ważności stylów, ważniejszy będzie ten, który
-            jest niżej w kodzie, ponieważ kod jest interpretowany od góry do
-            dołu.<br />
-            Powinno się dodawać klasę do wszystkich elementów na stronie oraz
-            unikać zagnieżdżeń.<br />
-            Zasady nazewnictwa klas:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Używaj pojedynczych angielskich słów.
-            </li>
-            <li class="article__list-item">
-              Nazywaj rzeczy zgodnie z ich funkcją na stronie.
-            </li>
-            <li class="article__list-item">
-              Nazwy klas zaczynaj małą literą.
-            </li>
-            <li class="article__list-item">Nie zaczynaj od cyfry.</li>
-            <li class="article__list-item">
-              Skorzystaj z kebab case, kiedy musisz użyć większej ilości słów.
-            </li>
-            <li class="article__list-item">
-              Staraj się, aby element miał jedną klasę.
-            </li>
-          </ul>
-          <p class="article__text">
-            <a class="article__link" href="https://coolors.co/generate"
-              >Strona</a
-            >
-            dobierająca pasujące do siebie kolory.
-          </p>
-        </article>
-        </article>
-        <article id="box-display" class="article">
-          <h2 class="article__heading">
-            życie w pudełku: display, wymiary i overflow
-          </h2>
-          <p class="article__text">
-            <b>&lt;div></b> Nie ma znaczenia semantycznego. Używamy go tylko w
-            celu stylowania, gdy nie istnieje odpowiedni semantyczny znacznik.
-          </p>
-          <p class="article__text">Reguły/właściwości CSS:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>display: block</b> Powoduje, że elementy zajmują całą szerokość
-              rodzica i ustawiają się jeden pod drugim.
-            </li>
-            <li class="article__list-item">
-              <b>display: inline</b> Powoduje, że elementy zajmują na szerokość
-              tyle miejsca ile potrzebują i ustawiają się obok siebie.
-            </li>
-            <li class="article__list-item">
-              <b>display: inline-block</b> Powoduje, że elementy ustawiają się
-              obok siebie, jednak otrzymują właściwości charakterystyczne dla
-              elementów blokowych, np. 'width', 'height'.
-            </li>
-            <li class="article__list-item">
-              <b>min-width</b> Ustala minimalną szerokość elementu.
-            </li>
-            <li class="article__list-item">
-              <b>min-height</b> Ustala minimalną wysokość elementu.
-            </li>
-            <li class="article__list-item">
-              <b>max-width</b> Ustala maksymalną szerokość elementu.
-            </li>
-            <li class="article__list-item">
-              <b>max-height</b> Ustala maksymalną wysokość elementu.
-            </li>
-            <li class="article__list-item">
-              <b>overflow</b> Steruje widocznością treści znajdującą się poza
-              elementem.
-            </li>
-          </ul>
-        </article>
-        <article id="box-units" class="article">
-          <h2 class="article__heading">życie w pudełku: jednostki</h2>
-          <p class="article__text">
-            Jednostki służące do zapisu wymiarów w CSS:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>0</b> Nie wymaga dopisywania jednostki.
-            </li>
-            <li class="article__list-item"><b>px</b> Piksele.</li>
-            <li class="article__list-item">
-              <b>%</b> Procenty. Liczone są względem rodzica.
-            </li>
-            <li class="article__list-item">
-              <b>vw</b> Viewport width. Szekokość względem szerokości okna.
-            </li>
-            <li class="article__list-item">
-              <b>vh</b> Viewport height. Wysokość względem wysokości okna.
-            </li>
-          </ul>
-        </article>
-        <article id="box-model" class="article">
-          <h2 class="article__heading">
-            życie w pudełku: box model (padding/border/margin)
-          </h2>
-          <p class="article__text">Box model - elementy:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>padding</b> Margines wewnętrzny.
-            </li>
-            <li class="article__list-item">
-              <b>border</b> Obramowanie elementu oraz paddingu. Wchodzi w skład
-              elementu.
-            </li>
-            <li class="article__list-item">
-              <b>margin</b> Margines zewnętrzny. Informuje o odległościach,
-              które muszą być zachowane od elementu. Działa jeynie dla wartości
-              blokowych.
-            </li>
-          </ul>
-          <p class="article__text">
-            W przypadku powyższych własności (oraz innych kierunkowych) można
-            nadać wartość jedynie dla jednej z krawędzi, np. 'margin-bottom'.<br />
-            W celu nadania wartości dla wszystkich krawędzi, można wykorzystać
-            zapis skrótowy (shorthand) i podać je odpowiednio dla krawędzi
-            górnej, prawej, dolnej i lewej, np. 'padding: 20px 10px 0 10px;'.<br />
-            Jeśli zostaną podane jedynie dwie wartości, pierwsza będzie się
-            odnosić do krawędzi górnej i dolnej, a druga do lewej i prawej, np.
-            'margin: 10px 30px;'.<br />
-            Jeśli zostanie podana jedynie jedna wartość, będzie się ona odnosić
-            do wszystkich krawędzi, np.'padding: 5px;'.<br />
-            Zapis skrótowy dla własności 'border' może mieć również postać,
-            gdzie jako wartości podajemy kolejno: szerokość, styl i kolor, np.
-            'border: 2px solid #000;'.<br />
-            Własność 'border-radius' umożliwia zaokrąglenie narożników poprzez
-            podanie promienia zaokrąglenia (najczęściej w pikselach lub
-            procentach).<br />
-            Margines automatyczny zadziała tylko wtedy, gdy blokowy element
-            będzie miał nadaną szerokość. W innym wypadku element zjmie całą
-            szerokość rodzica i nie będzie już miejsca na umieszczenie marginesu
-            po obu stronach elementu.
-          </p>
-        </article>
-        <article id="box-sizing" class="article">
-          <h2 class="article__heading">życie w pudełku: box-sizing</h2>
-          <p class="article__text">
-            Właściwość 'box-sizing' decyduje o tym, co wchodzi w skład
-            zdefiniowanych wymiarów elementu:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>content-box</b> Wartość domyślna. W skład zdefiniowanych
-              wymiarów elemetnu wchodzi jedynie jego zawartość, a ewentualny
-              padding i obramowanie są doliczane do tej wartości, powodując
-              powiększenie elementu.
-            </li>
-            <li class="article__list-item">
-              <b>border-box</b> W skład zdefiniowanych wymiarów elemetnu wchodzi
-              zarówno zawartość, padding i obramowanie. Pozwala to na
-              zdefiniowanie wymiarów elementu, gdzie w przypadku ewentualnego
-              paddingu i obramowania zawartość zostanie odpowiednio
-              pomniejszona, co nie spowoduje powiększenia elementu i będzie on
-              miał nadal zdefiniowane wymiary.
-            </li>
-          </ul>
-        </article>
-        <article id="box-position" class="article">
-          <h2 class="article__heading">życie w pudełku: position</h2>
-          <p class="article__text">
-            Właściwość 'position' określa sposób pozycjonowania elementu na
-            stronie:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item"><b>static</b> Wartość domyślna.</li>
-            <li class="article__list-item">
-              <b>relative</b> Tworzy z elementu układ odniesienia dla elementów
-              posiadających wartość tej własności ustawioną na 'absolute'.
-            </li>
-            <li class="article__list-item">
-              <b>absolute</b> Pozwala na nadawanie elementowi konkretnej pozycji
-              wraz z wykorzystaniem własności: 'top', 'right', 'bottom', 'left'.
-            </li>
-            <li class="article__list-item">
-              <b>fixed</b> Działa na podobnej zasadzie jak 'absolute', jednak
-              element jest pozycjonowany względem ekranu a nie względem
-              dokumentu (w czasie scrollowania nie zmienia swojej pozycji).
-            </li>
-            <li class="article__list-item">
-              <b>sticky</b> Pozycja elementu zmienia się względem rodzica (który
-              nie może posiadać właściwości 'overflow') wraz ze scrollowaniem,
-              jednak nie wychodzi on poza obszar rodzica, lecz przykleja się do
-              niego, kiedy rodzic przestaje być widoczny.
-            </li>
-            <li class="article__list-item">
-              <b>z-index</b> Pozwala na sterowanie widocznością elementów
-              nachodzących na siebie. Im większa wartość własności, tym jest on
-              wyżej na osi Z.
-            </li>
-          </ul>
-        </article>
-        <article id="box-float" class="article">
-          <h2 class="article__heading">życie w pudełku: float</h2>
-          <p class="article__text">
-            Właściwość 'float' służy do opływania elementów:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>left</b> Element znajduje się z lewej strony, a treść opływa go
-              z prawej.
-            </li>
-            <li class="article__list-item">
-              <b>right</b> Element znajduje się z prawej strony, a treść opływa
-              go z lewej.
-            </li>
-          </ul>
-          <p class="article__text">
-            Element z właściwością 'float' nie jest ograniczony przez rodzica.
-            Aby nie wykraczał poza granice rodzica, można dodać rodzicowi na
-            końcu pusty element posiadający właściwość 'clear', która dostosuje
-            rozmiar rodzica do pływającego elementu.<br />
-            Drugą metodą jest dodanie rodzicowi reguły 'overflow: hidden',
-            jednak należy pamiętać, że określenie wysokości rodzica może
-            spowodować przysłonięcie pewnej części pływającego elementu.<br />
-            Właściwości 'float' nie należy stosować do budowania wyglądu strony.
-          </p>
-        </article>
-        <article id="css-flexbox" class="article">
-          <h2 class="article__heading">css: flexbox</h2>
-          <p class="article__text">
-            Właściwości CSS Flexbox nadawane kontenerowi:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>display</b> Służy do zmiany systemu rozmieszczania i
-              pozycjonowania elementów.
-            </li>
-            <li class="article__list-item">
-              <b>flex-direction</b> Odpowiada za zawijanie wiersza/kolumny.
-            </li>
-            <li class="article__list-item">
-              <b>flex-wrap</b> Ustala główną oś CSS Flexbox.
-            </li>
-            <li class="article__list-item">
-              <b>flex-flow</b> Skrót zawierający: 'flex-direction' i
-              'flex-wrap'.
-            </li>
-            <li class="article__list-item">
-              <b>justify-content</b> Ustawia elementy wzdłuż osi głównej CSS
-              Flexbox.
-            </li>
-            <li class="article__list-item">
-              <b>align-content</b> Ustawia elementy wzdłuż osi prostopadłej do
-              osi głównej CSS Flexbox.
-            </li>
-            <li class="article__list-item">
-              <b>align-items</b> Ustawia elementy wzdłuż osi prostopadłej do osi
-              głównej CSS Flexbox, ale w obrębie pojedynczego wiersza.
-            </li>
-          </ul>
-          <p class="article__text">
-            Właściwości CSS Flexbox nadawane elementom:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>align-self</b> Ustawia element wzdłuż osi prostopadłej do osi
-              głównej CSS Flexbox.
-            </li>
-            <li class="article__list-item">
-              <b>order</b> Ustala kolejość elementu.
-            </li>
-            <li class="article__list-item">
-              <b>flex-grow</b> Odpowiada za wzrost elementu w celu wypełnienia
-              pozostałego wolnego miejsca.
-            </li>
-            <li class="article__list-item">
-              <b>flex-shrink</b> Odpowiada za kurczenie się elementu.
-            </li>
-            <li class="article__list-item">
-              <b>flex-basis</b> Minimalny rozmiar bazowy elementu wewnątrz
-              kontenera. Określa szerokość elementu - kiedy główną osią CSS
-              Flexbox jest oś pozioma lub wysokość elementu - kiedy główną osią
-              CSS Flexbox jest oś pionowa.
-            </li>
-            <li class="article__list-item">
-              <b>flex</b> Skrót zawierający: 'flex-grow', 'flex-shrink' i
-              'flex-basis'.
-            </li>
-          </ul>
-        </article>
-        <article id="styles-reset" class="article">
-          <h2 class="article__heading">normalizacja vs reset</h2>
-          <p class="article__text">Reset:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Przeglądarka posiada domyślne style 'user agent stylesheet'.
-            </li>
-            <li class="article__list-item">
-              Reset wyłącza wszystkie domyślne style przeglądarki.
-            </li>
-            <li class="article__list-item">
-              Selektorem uniwersalnym, wybierającym wszystkie elementy na
-              stronie jest '*'. Selektor ten jest najczęściej wykorzystywany
-              podczas resetu.
-            </li>
-            <li class="article__list-item">
-              Nie należy wyłączać domyślnej właściwości 'outline', ponieważ
-              ułatwia ona nawigację po stronie osobom niepełnosprawnym. Reset
-              nie jest zatem dobrym rozwiązaniem i należy go unikać.
-            </li>
-          </ul>
-          <p class="article__text">Normalizacja:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Normalizacja usprawnia wyświetlanie elementów pomiędzy różnymi
-              przeglądarkami, ponieważ style domyślne nie są identyczne dla
-              każdej z nich.
-            </li>
-            <li>
-              Powstał specjalny
-              <a
-                class="article__link"
-                href="https://necolas.github.io/normalize.css/"
-                >plik normalizujący</a
-              >, który można dodać do strony (oraz każdej z podstron).
-              Nnajlepiej dodać go jako osobny plik 'normalize.css' przed plikiem
-              z własnymi stylami.
-            </li>
-            <li class="article__list-item">
-              Normalizacja to bardzo dobra alternatywa dla niezalecanego resetu.
-            </li>
-          </ul>
-          <p class="article__text">
-            Najlepszą praktyką jest miks: normalizacja oraz dodanie własnego
-            resetu:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Dodaj plik 'normalize.css' do strony (oraz każdej z podstron).
-            </li>
-            <li class="article__list-item">
-              Na górze pliku z własnymi stylami dodaj dla elementu
-              <b>html</b> regułę <b>box-sizing: border-box</b>, a dla elementów
-              <b>*</b>, <b>*:before</b> oraz <b>*:after</b> regułę
-              <b>box-sizing: inherit</b>.
-            </li>
-          </ul>
-        </article>
-        <article id="backgrounds" class="article">
-          <h2 class="article__heading">tła</h2>
-          <p class="article__text">
-            Skrótowa właściwość CSS związana z tłem:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>background</b> Zawiera 8 poniższych właściwości szczegółowych.
-              Nadpisuje wszystkie właściwości szegółowe zdefiniowane powyżej
-              niej dla danego elementu. Zaleca się używanie właściwości
-              szczegółowych zamiast właściwości skrótowej ze względu na większą
-              czytelność kodu.
-            </li>
-          </ul>
-          <p class="article__text">
-            Szczegółowe właściwości CSS związane z tłem:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>background-image</b> Pozawala zaaplikować tło z poziomu stylów.
-              Ścieżkę do obrazka należy podać względem pliku CSS.
-            </li>
-            <li class="article__list-item">
-              <b>background-position</b> Ustawia tło względem elementu, który je
-              dostaje.
-            </li>
-            <li class="article__list-item">
-              <b>background-repeat</b> Pozwala na sterowanie powtarzaniem tła.
-            </li>
-            <li class="article__list-item">
-              <b>background-attachment</b> Pozwala na sterowanie tłem podczas
-              scrollowania strony.
-            </li>
-            <li class="article__list-item">
-              <b>background-origin</b> Definiuje w którym miejscu tło powinno
-              się zaczynać.
-            </li>
-            <li class="article__list-item">
-              <b>background-clip</b> Definiuje w którym miejscu tło powinno być
-              cięte.
-            </li>
-            <li class="article__list-item">
-              <b>background-color</b> Definiuje kolor tła.
-            </li>
-            <li class="article__list-item">
-              <b>background-size</b> Definiuje wielkość tła.
-            </li>
-          </ul>
-          <p class="article__text">
-            Przejścia między kolorami można utworzyć z wykorzystaniem
-            gradientów. Na stronie
+      <h1 class="theory-main__heading">CSS</h1>
+      <section class="theory-main__links">
+        <a href="#css" class="theory-main__link">css</a>
+        <a href="#css-ii" class="theory-main__link">css ii</a>
+        <a href="#display" class="theory-main__link"
+          >display, wymiary i overflow</a
+        >
+        <a href="#units" class="theory-main__link">jednostki</a>
+        <a href="#box-model" class="theory-main__link">box model</a>
+        <a href="#box-sizing" class="theory-main__link">box-sizing</a>
+        <a href="#position" class="theory-main__link">position</a>
+        <a href="#float" class="theory-main__link">float</a>
+        <a href="#flexbox" class="theory-main__link">flexbox</a>
+        <a href="#grid" class="theory-main__link">grid</a>
+        <a href="#backgrounds" class="theory-main__link">tła</a>
+        <a href="#styles-reset" class="theory-main__link"
+          >normalizacja vs reset</a
+        >
+        <a href="#media" class="theory-main__link"
+          >media queries & mobile first</a
+        >
+      </section>
+      <div class="theory-main__image"></div>
+      <article id="css" class="article">
+        <h2 class="article__heading">css</h2>
+        <p class="article__text">
+          Budowa reguły CSS:<br />
+          selektor {<br />
+          właściwość: wartość;<br />
+          }<br />
+        </p>
+        <p class="article__text">
+          Różne przeglądarki potrafią różnie interpretować CSS.
+        </p>
+      </article>
+      <article id="css-ii" class="article">
+        <h2 class="article__heading">css ii</h2>
+        <p class="article__text">
+          Specyficzność w CSS<br />
+          Szeregując selektory pod względem ważności można oprzeć się o
+          klasyfikację medalową, gdzie odpowiednio poszczególnymi kolorami
+          medalów są następujące style:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            !important (niezalecane)
+          </li>
+          <li class="article__list-item">style="" (niezalecane)</li>
+          <li class="article__list-item">#name</li>
+          <li class="article__list-item">.name</li>
+          <li class="article__list-item">element</li>
+        </ul>
+        <p class="article__text">
+          W przypadku równej ważności stylów, ważniejszy będzie ten, który jest
+          niżej w kodzie, ponieważ kod jest interpretowany od góry do dołu.<br />
+          Powinno się dodawać klasę do wszystkich elementów na stronie oraz
+          unikać zagnieżdżeń.<br />
+          Zasady nazewnictwa klas:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Używaj pojedynczych angielskich słów.
+          </li>
+          <li class="article__list-item">
+            Nazywaj rzeczy zgodnie z ich funkcją na stronie.
+          </li>
+          <li class="article__list-item">
+            Nazwy klas zaczynaj małą literą.
+          </li>
+          <li class="article__list-item">Nie zaczynaj od cyfry.</li>
+          <li class="article__list-item">
+            Skorzystaj z kebab case, kiedy musisz użyć większej ilości słów.
+          </li>
+          <li class="article__list-item">
+            Staraj się, aby element miał jedną klasę.
+          </li>
+        </ul>
+        <p class="article__text">
+          <a class="article__link" href="https://coolors.co/generate">Strona</a>
+          dobierająca pasujące do siebie kolory.
+        </p>
+      </article>
+      <article id="display" class="article">
+        <h2 class="article__heading">display, wymiary i overflow</h2>
+        <p class="article__text">
+          <b>&lt;div></b> Nie ma znaczenia semantycznego. Używamy go tylko w
+          celu stylowania, gdy nie istnieje odpowiedni semantyczny znacznik.
+        </p>
+        <p class="article__text">Reguły/właściwości CSS:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>display: block</b> Powoduje, że elementy zajmują całą szerokość
+            rodzica i ustawiają się jeden pod drugim.
+          </li>
+          <li class="article__list-item">
+            <b>display: inline</b> Powoduje, że elementy zajmują na szerokość
+            tyle miejsca ile potrzebują i ustawiają się obok siebie.
+          </li>
+          <li class="article__list-item">
+            <b>display: inline-block</b> Powoduje, że elementy ustawiają się
+            obok siebie, jednak otrzymują właściwości charakterystyczne dla
+            elementów blokowych, np. 'width', 'height'.
+          </li>
+          <li class="article__list-item">
+            <b>min-width</b> Ustala minimalną szerokość elementu.
+          </li>
+          <li class="article__list-item">
+            <b>min-height</b> Ustala minimalną wysokość elementu.
+          </li>
+          <li class="article__list-item">
+            <b>max-width</b> Ustala maksymalną szerokość elementu.
+          </li>
+          <li class="article__list-item">
+            <b>max-height</b> Ustala maksymalną wysokość elementu.
+          </li>
+          <li class="article__list-item">
+            <b>overflow</b> Steruje widocznością treści znajdującą się poza
+            elementem.
+          </li>
+        </ul>
+      </article>
+      <article id="units" class="article">
+        <h2 class="article__heading">jednostki</h2>
+        <p class="article__text">
+          Jednostki służące do zapisu wymiarów w CSS:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>0</b> Nie wymaga dopisywania jednostki.
+          </li>
+          <li class="article__list-item"><b>px</b> Piksele.</li>
+          <li class="article__list-item">
+            <b>%</b> Procenty. Liczone są względem rodzica.
+          </li>
+          <li class="article__list-item">
+            <b>vw</b> Viewport width. Szekokość względem szerokości okna.
+          </li>
+          <li class="article__list-item">
+            <b>vh</b> Viewport height. Wysokość względem wysokości okna.
+          </li>
+        </ul>
+      </article>
+      <article id="box-model" class="article">
+        <h2 class="article__heading">box model</h2>
+        <p class="article__text">Box model - elementy:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>padding</b> Margines wewnętrzny.
+          </li>
+          <li class="article__list-item">
+            <b>border</b> Obramowanie elementu oraz paddingu. Wchodzi w skład
+            elementu.
+          </li>
+          <li class="article__list-item">
+            <b>margin</b> Margines zewnętrzny. Informuje o odległościach, które
+            muszą być zachowane od elementu. Działa jeynie dla wartości
+            blokowych.
+          </li>
+        </ul>
+        <p class="article__text">
+          W przypadku powyższych własności (oraz innych kierunkowych) można
+          nadać wartość jedynie dla jednej z krawędzi, np. 'margin-bottom'.<br />
+          W celu nadania wartości dla wszystkich krawędzi, można wykorzystać
+          zapis skrótowy (shorthand) i podać je odpowiednio dla krawędzi górnej,
+          prawej, dolnej i lewej, np. 'padding: 20px 10px 0 10px;'.<br />
+          Jeśli zostaną podane jedynie dwie wartości, pierwsza będzie się
+          odnosić do krawędzi górnej i dolnej, a druga do lewej i prawej, np.
+          'margin: 10px 30px;'.<br />
+          Jeśli zostanie podana jedynie jedna wartość, będzie się ona odnosić do
+          wszystkich krawędzi, np.'padding: 5px;'.<br />
+          Zapis skrótowy dla własności 'border' może mieć również postać, gdzie
+          jako wartości podajemy kolejno: szerokość, styl i kolor, np. 'border:
+          2px solid #000;'.<br />
+          Własność 'border-radius' umożliwia zaokrąglenie narożników poprzez
+          podanie promienia zaokrąglenia (najczęściej w pikselach lub
+          procentach).<br />
+          Margines automatyczny zadziała tylko wtedy, gdy blokowy element będzie
+          miał nadaną szerokość. W innym wypadku element zjmie całą szerokość
+          rodzica i nie będzie już miejsca na umieszczenie marginesu po obu
+          stronach elementu.
+        </p>
+      </article>
+      <article id="box-sizing" class="article">
+        <h2 class="article__heading">box-sizing</h2>
+        <p class="article__text">
+          Właściwość 'box-sizing' decyduje o tym, co wchodzi w skład
+          zdefiniowanych wymiarów elementu:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>content-box</b> Wartość domyślna. W skład zdefiniowanych wymiarów
+            elemetnu wchodzi jedynie jego zawartość, a ewentualny padding i
+            obramowanie są doliczane do tej wartości, powodując powiększenie
+            elementu.
+          </li>
+          <li class="article__list-item">
+            <b>border-box</b> W skład zdefiniowanych wymiarów elemetnu wchodzi
+            zarówno zawartość, padding i obramowanie. Pozwala to na
+            zdefiniowanie wymiarów elementu, gdzie w przypadku ewentualnego
+            paddingu i obramowania zawartość zostanie odpowiednio pomniejszona,
+            co nie spowoduje powiększenia elementu i będzie on miał nadal
+            zdefiniowane wymiary.
+          </li>
+        </ul>
+      </article>
+      <article id="position" class="article">
+        <h2 class="article__heading">position</h2>
+        <p class="article__text">
+          Właściwość 'position' określa sposób pozycjonowania elementu na
+          stronie:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><b>static</b> Wartość domyślna.</li>
+          <li class="article__list-item">
+            <b>relative</b> Tworzy z elementu układ odniesienia dla elementów
+            posiadających wartość tej własności ustawioną na 'absolute'.
+          </li>
+          <li class="article__list-item">
+            <b>absolute</b> Pozwala na nadawanie elementowi konkretnej pozycji
+            wraz z wykorzystaniem własności: 'top', 'right', 'bottom', 'left'.
+          </li>
+          <li class="article__list-item">
+            <b>fixed</b> Działa na podobnej zasadzie jak 'absolute', jednak
+            element jest pozycjonowany względem ekranu a nie względem dokumentu
+            (w czasie scrollowania nie zmienia swojej pozycji).
+          </li>
+          <li class="article__list-item">
+            <b>sticky</b> Pozycja elementu zmienia się względem rodzica (który
+            nie może posiadać właściwości 'overflow') wraz ze scrollowaniem,
+            jednak nie wychodzi on poza obszar rodzica, lecz przykleja się do
+            niego, kiedy rodzic przestaje być widoczny.
+          </li>
+          <li class="article__list-item">
+            <b>z-index</b> Pozwala na sterowanie widocznością elementów
+            nachodzących na siebie. Im większa wartość własności, tym jest on
+            wyżej na osi Z.
+          </li>
+        </ul>
+      </article>
+      <article id="float" class="article">
+        <h2 class="article__heading">float</h2>
+        <p class="article__text">
+          Właściwość 'float' służy do opływania elementów:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>left</b> Element znajduje się z lewej strony, a treść opływa go z
+            prawej.
+          </li>
+          <li class="article__list-item">
+            <b>right</b> Element znajduje się z prawej strony, a treść opływa go
+            z lewej.
+          </li>
+        </ul>
+        <p class="article__text">
+          Element z właściwością 'float' nie jest ograniczony przez rodzica. Aby
+          nie wykraczał poza granice rodzica, można dodać rodzicowi na końcu
+          pusty element posiadający właściwość 'clear', która dostosuje rozmiar
+          rodzica do pływającego elementu.<br />
+          Drugą metodą jest dodanie rodzicowi reguły 'overflow: hidden', jednak
+          należy pamiętać, że określenie wysokości rodzica może spowodować
+          przysłonięcie pewnej części pływającego elementu.<br />
+          Właściwości 'float' nie należy stosować do budowania wyglądu strony.
+        </p>
+      </article>
+      <article id="flexbox" class="article">
+        <h2 class="article__heading">flexbox</h2>
+        <p class="article__text">
+          Właściwości CSS Flexbox nadawane kontenerowi:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>display</b> Służy do zmiany systemu rozmieszczania i
+            pozycjonowania elementów.
+          </li>
+          <li class="article__list-item">
+            <b>flex-direction</b> Odpowiada za zawijanie wiersza/kolumny.
+          </li>
+          <li class="article__list-item">
+            <b>flex-wrap</b> Ustala główną oś CSS Flexbox.
+          </li>
+          <li class="article__list-item">
+            <b>flex-flow</b> Skrót zawierający: 'flex-direction' i 'flex-wrap'.
+          </li>
+          <li class="article__list-item">
+            <b>justify-content</b> Ustawia elementy wzdłuż osi głównej CSS
+            Flexbox.
+          </li>
+          <li class="article__list-item">
+            <b>align-content</b> Ustawia elementy wzdłuż osi prostopadłej do osi
+            głównej CSS Flexbox.
+          </li>
+          <li class="article__list-item">
+            <b>align-items</b> Ustawia elementy wzdłuż osi prostopadłej do osi
+            głównej CSS Flexbox, ale w obrębie pojedynczego wiersza.
+          </li>
+        </ul>
+        <p class="article__text">
+          Właściwości CSS Flexbox nadawane elementom:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>align-self</b> Ustawia element wzdłuż osi prostopadłej do osi
+            głównej CSS Flexbox.
+          </li>
+          <li class="article__list-item">
+            <b>order</b> Ustala kolejość elementu.
+          </li>
+          <li class="article__list-item">
+            <b>flex-grow</b> Odpowiada za wzrost elementu w celu wypełnienia
+            pozostałego wolnego miejsca.
+          </li>
+          <li class="article__list-item">
+            <b>flex-shrink</b> Odpowiada za kurczenie się elementu.
+          </li>
+          <li class="article__list-item">
+            <b>flex-basis</b> Minimalny rozmiar bazowy elementu wewnątrz
+            kontenera. Określa szerokość elementu - kiedy główną osią CSS
+            Flexbox jest oś pozioma lub wysokość elementu - kiedy główną osią
+            CSS Flexbox jest oś pionowa.
+          </li>
+          <li class="article__list-item">
+            <b>flex</b> Skrót zawierający: 'flex-grow', 'flex-shrink' i
+            'flex-basis'.
+          </li>
+        </ul>
+      </article>
+      <article id="grid" class="article">
+        <h2 class="article__heading">grid</h2>
+        <p class="article__text">
+          CSS Grid jest to oparty na siatce prostokątów sposób pozycjonowania
+          elementów na stronie.<br />
+          Pozycjonowanie tego typu działa jedynie na elementy znajdujące się
+          bezpośrednio w kontenerze.<br />
+          CSS Grid posiada następujące elementy:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>Grid Line</b> Linia gridowe. Linie są numerowane od wartości 1.
+          </li>
+          <li class="article__list-item">
+            <b>Grid Track (Column)</b> Pojedyncza kolumna.
+          </li>
+          <li class="article__list-item">
+            <b>Grid Track (Row)</b> Pojedynczy rząd.
+          </li>
+          <li class="article__list-item">
+            <b>Grid Cell</b> Pojedyncza, prostokątna komórka.
+          </li>
+          <li class="article__list-item">
+            <b>Grid Area</b> Prostokątny obszar składający się z wielu komórek.
+          </li>
+        </ul>
+        <p class="article__text">
+          Właściwości CSS Grid nadawane kontenerowi:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>display</b> Służy do zmiany systemu rozmieszczania i
+            pozycjonowania elementów.
+          </li>
+          <li class="article__list-item">
+            <b>grid-template-columns</b> Tworzy kolumny.
+          </li>
+          <li class="article__list-item">
+            <b>grid-template-rows</b> Tworzy wiersze.
+          </li>
+          <li class="article__list-item">
+            <b>column-gap</b> Tworzy odstępy między kolumnami.
+          </li>
+          <li class="article__list-item">
+            <b>row-gap</b> Tworzy odstępy między wierszami.
+          </li>
+          <li class="article__list-item">
+            <b>grid-template-areas</b> Określa nazwy obszarów siatki. Jako
+            wartość należy podać nazwy obszarów (każdy wiersz zdefiniowany w
+            osobnym cudzysłowie, zawierający tyle nazw obszarów, ile wynosi
+            liczba kolumn). Pojedynczy obszar może przybierać jedynie kształt
+            prostokąta (tyle samo kolumn w każdym wierszu dla konkretnej nazwy
+            obszaru). Zamiast nazwy obszaru można podać '.', co stworzy
+            nienazwany obszar, który może zostać wykorzystany np. do
+            zdefiniowania odstępu między wierszami / kolumnami.
+          </li>
+        </ul>
+        <p class="article__text">
+          Właściwości CSS Grid nadawane elementom:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>grid-area</b> Przypisanie nazwy obszaru zdefiniowanej we
+            właściwości 'grid-template-areas'. Nazwę należy podać bez
+            cudzysłowu.
+          </li>
+          <li class="article__list-item">
+            <b>grid-row-start</b> Rząd początkowy obszaru. Jako argument może
+            przyjąć numer wiersza lub nazwę zdefiniowaną podczas nadawania
+            wysokości wierszom (przed wartością w nawiasie kwadratowym).
+          </li>
+          <li class="article__list-item">
+            <b>grid-row-end</b> Rząd końcowy obszaru. Jako argument może przyjąć
+            numer wiersza, nazwę zdefiniowaną podczas nadawania wysokości
+            wierszom (przed wartością w nawiasie kwadratowym) lub słowo 'span'
+            oraz liczbę mówiącą ile kolejnych rzędów ma obejmować obszar.
+          </li>
+          <li class="article__list-item">
+            <b>grid-column-start</b> Kolumna początkowa obszaru. Jako argument
+            może przyjąć numer kolumny lub nazwę zdefiniowaną podczas nadawania
+            szerokości kolumnom (przed wartością w nawiasie kwadratowym).
+          </li>
+          <li class="article__list-item">
+            <b>grid-column-end</b> Kolumna końcowa obszaru. Jako argument może
+            przyjąć numer kolumny, nazwę zdefiniowaną podczas nadawania
+            szerokości kolumnom (przed wartością w nawiasie kwadratowym) lub
+            słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma obejmować
+            obszar.
+          </li>
+          <li class="article__list-item">
+            <b>grid-column-end</b> Kolumna końcowa obszaru. Jako argument może
+            przyjąć numer kolumny, nazwę zdefiniowaną podczas nadawania
+            szerokości kolumnom (przed wartością w nawiasie kwadratowym) lub
+            słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma obejmować
+            obszar.
+          </li>
+          <li class="article__list-item">
+            <b>grid-area</b> Skrót zawierający odpowiednio: 'grid-row-start',
+            'grid-column-start', 'grid-row-end', 'grid-column-end'. Każdą z
+            wartości należy oddzielić znakiem '/'.
+          </li>
+          <li class="article__list-item">
+            <b>grid-row</b> Skrót zawierający odpowiednio: 'grid-row-start',
+            'grid-row-end'. Każdą z wartości należy oddzielić znakiem '/'.
+          </li>
+          <li class="article__list-item">
+            <b>grid-column</b> Skrót zawierający odpowiednio:
+            'grid-column-start', 'grid-column-end'. Każdą z wartości należy
+            oddzielić znakiem '/'.
+          </li>
+        </ul>
+        <p class="article__text">
+          Jednostka 'fr' działa jak ułamek, gdzie licznikiem jest ilość 'fr'
+          konkretnego elementu a mianownikiem suma 'fr' wszystkich elemetnów.
+          Ułamek ten pokazuje jaką część wolnej przestrzeni zajmie dany
+          element.<br />
+          Funkcą 'repeat' pozwala na natychmiastowe stworzenie większej ilości
+          kolumn/wierszy. Jako argumenty przyjmuje ilość wystąpień oraz wielkość
+          danego elementu.<br />
+          Funkcja 'minmax' pozwala na określenie minimalnego i maksymalnego
+          rozmiaru kolumny/wiersza. Jako argumenty przyjmuje minimalny i
+          maksymalny rozmiar obiektu.<br />
+          CSS Grid nie zastępuje CSS Flexbox, lecz są dla siebie uzupełnieniem.
+          CSS Grid powinien być wyorzystywany do budowania całych layoutów
+          (kiedy na stronie występują wiersze, kolumny), natomiast CSS Flexbox
+          do pozycjonowania elementów wewnątrz pojedynczego elementu.
+        </p>
+      </article>
+      <article id="backgrounds" class="article">
+        <h2 class="article__heading">tła</h2>
+        <p class="article__text">
+          Skrótowa właściwość CSS związana z tłem:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>background</b> Zawiera 8 poniższych właściwości szczegółowych.
+            Nadpisuje wszystkie właściwości szegółowe zdefiniowane powyżej niej
+            dla danego elementu. Zaleca się używanie właściwości szczegółowych
+            zamiast właściwości skrótowej ze względu na większą czytelność kodu.
+          </li>
+        </ul>
+        <p class="article__text">
+          Szczegółowe właściwości CSS związane z tłem:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>background-image</b> Pozawala zaaplikować tło z poziomu stylów.
+            Ścieżkę do obrazka należy podać względem pliku CSS.
+          </li>
+          <li class="article__list-item">
+            <b>background-position</b> Ustawia tło względem elementu, który je
+            dostaje.
+          </li>
+          <li class="article__list-item">
+            <b>background-repeat</b> Pozwala na sterowanie powtarzaniem tła.
+          </li>
+          <li class="article__list-item">
+            <b>background-attachment</b> Pozwala na sterowanie tłem podczas
+            scrollowania strony.
+          </li>
+          <li class="article__list-item">
+            <b>background-origin</b> Definiuje w którym miejscu tło powinno się
+            zaczynać.
+          </li>
+          <li class="article__list-item">
+            <b>background-clip</b> Definiuje w którym miejscu tło powinno być
+            cięte.
+          </li>
+          <li class="article__list-item">
+            <b>background-color</b> Definiuje kolor tła.
+          </li>
+          <li class="article__list-item">
+            <b>background-size</b> Definiuje wielkość tła.
+          </li>
+        </ul>
+        <p class="article__text">
+          Przejścia między kolorami można utworzyć z wykorzystaniem gradientów.
+          Na stronie
+          <a
+            class="article__link"
+            href="https://cssgradient.io/gradient-backgrounds/"
+            >cssgradient.io</a
+          >
+          można skorzystać z gotowych gradientów jak również stworzyć własne.
+        </p>
+      </article>
+      <article id="styles-reset" class="article">
+        <h2 class="article__heading">normalizacja vs reset</h2>
+        <p class="article__text">Reset:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Przeglądarka posiada domyślne style 'user agent stylesheet'.
+          </li>
+          <li class="article__list-item">
+            Reset wyłącza wszystkie domyślne style przeglądarki.
+          </li>
+          <li class="article__list-item">
+            Selektorem uniwersalnym, wybierającym wszystkie elementy na stronie
+            jest '*'. Selektor ten jest najczęściej wykorzystywany podczas
+            resetu.
+          </li>
+          <li class="article__list-item">
+            Nie należy wyłączać domyślnej właściwości 'outline', ponieważ
+            ułatwia ona nawigację po stronie osobom niepełnosprawnym. Reset nie
+            jest zatem dobrym rozwiązaniem i należy go unikać.
+          </li>
+        </ul>
+        <p class="article__text">Normalizacja:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Normalizacja usprawnia wyświetlanie elementów pomiędzy różnymi
+            przeglądarkami, ponieważ style domyślne nie są identyczne dla każdej
+            z nich.
+          </li>
+          <li>
+            Powstał specjalny
             <a
               class="article__link"
-              href="https://cssgradient.io/gradient-backgrounds/"
-              >cssgradient.io</a
-            >
-            można skorzystać z gotowych gradientów jak również stworzyć własne.
-          </p>
-        </article>
-        <article id="css-grid" class="article">
-          <h2 class="article__heading">css: grid</h2>
-          <p class="article__text">
-            CSS Grid jest to oparty na siatce prostokątów sposób pozycjonowania
-            elementów na stronie.<br />
-            Pozycjonowanie tego typu działa jedynie na elementy znajdujące się
-            bezpośrednio w kontenerze.<br />
-            CSS Grid posiada następujące elementy:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>Grid Line</b> Linia gridowe. Linie są numerowane od wartości 1.
-            </li>
-            <li class="article__list-item">
-              <b>Grid Track (Column)</b> Pojedyncza kolumna.
-            </li>
-            <li class="article__list-item">
-              <b>Grid Track (Row)</b> Pojedynczy rząd.
-            </li>
-            <li class="article__list-item">
-              <b>Grid Cell</b> Pojedyncza, prostokątna komórka.
-            </li>
-            <li class="article__list-item">
-              <b>Grid Area</b> Prostokątny obszar składający się z wielu
-              komórek.
-            </li>
-          </ul>
-          <p class="article__text">
-            Właściwości CSS Grid nadawane kontenerowi:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>display</b> Służy do zmiany systemu rozmieszczania i
-              pozycjonowania elementów.
-            </li>
-            <li class="article__list-item">
-              <b>grid-template-columns</b> Tworzy kolumny.
-            </li>
-            <li class="article__list-item">
-              <b>grid-template-rows</b> Tworzy wiersze.
-            </li>
-            <li class="article__list-item">
-              <b>column-gap</b> Tworzy odstępy między kolumnami.
-            </li>
-            <li class="article__list-item">
-              <b>row-gap</b> Tworzy odstępy między wierszami.
-            </li>
-            <li class="article__list-item">
-              <b>grid-template-areas</b> Określa nazwy obszarów siatki. Jako
-              wartość należy podać nazwy obszarów (każdy wiersz zdefiniowany w
-              osobnym cudzysłowie, zawierający tyle nazw obszarów, ile wynosi
-              liczba kolumn). Pojedynczy obszar może przybierać jedynie kształt
-              prostokąta (tyle samo kolumn w każdym wierszu dla konkretnej nazwy
-              obszaru). Zamiast nazwy obszaru można podać '.', co stworzy
-              nienazwany obszar, który może zostać wykorzystany np. do
-              zdefiniowania odstępu między wierszami / kolumnami.
-            </li>
-          </ul>
-          <p class="article__text">
-            Właściwości CSS Grid nadawane elementom:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>grid-area</b> Przypisanie nazwy obszaru zdefiniowanej we
-              właściwości 'grid-template-areas'. Nazwę należy podać bez
-              cudzysłowu.
-            </li>
-            <li class="article__list-item">
-              <b>grid-row-start</b> Rząd początkowy obszaru. Jako argument może
-              przyjąć numer wiersza lub nazwę zdefiniowaną podczas nadawania
-              wysokości wierszom (przed wartością w nawiasie kwadratowym).
-            </li>
-            <li class="article__list-item">
-              <b>grid-row-end</b> Rząd końcowy obszaru. Jako argument może
-              przyjąć numer wiersza, nazwę zdefiniowaną podczas nadawania
-              wysokości wierszom (przed wartością w nawiasie kwadratowym) lub
-              słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma obejmować
-              obszar.
-            </li>
-            <li class="article__list-item">
-              <b>grid-column-start</b> Kolumna początkowa obszaru. Jako argument
-              może przyjąć numer kolumny lub nazwę zdefiniowaną podczas
-              nadawania szerokości kolumnom (przed wartością w nawiasie
-              kwadratowym).
-            </li>
-            <li class="article__list-item">
-              <b>grid-column-end</b> Kolumna końcowa obszaru. Jako argument może
-              przyjąć numer kolumny, nazwę zdefiniowaną podczas nadawania
-              szerokości kolumnom (przed wartością w nawiasie kwadratowym) lub
-              słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma obejmować
-              obszar.
-            </li>
-            <li class="article__list-item">
-              <b>grid-column-end</b> Kolumna końcowa obszaru. Jako argument może
-              przyjąć numer kolumny, nazwę zdefiniowaną podczas nadawania
-              szerokości kolumnom (przed wartością w nawiasie kwadratowym) lub
-              słowo 'span' oraz liczbę mówiącą ile kolejnych rzędów ma obejmować
-              obszar.
-            </li>
-            <li class="article__list-item">
-              <b>grid-area</b> Skrót zawierający odpowiednio: 'grid-row-start',
-              'grid-column-start', 'grid-row-end', 'grid-column-end'. Każdą z
-              wartości należy oddzielić znakiem '/'.
-            </li>
-            <li class="article__list-item">
-              <b>grid-row</b> Skrót zawierający odpowiednio: 'grid-row-start',
-              'grid-row-end'. Każdą z wartości należy oddzielić znakiem '/'.
-            </li>
-            <li class="article__list-item">
-              <b>grid-column</b> Skrót zawierający odpowiednio:
-              'grid-column-start', 'grid-column-end'. Każdą z wartości należy
-              oddzielić znakiem '/'.
-            </li>
-          </ul>
-          <p class="article__text">
-            Jednostka 'fr' działa jak ułamek, gdzie licznikiem jest ilość 'fr'
-            konkretnego elementu a mianownikiem suma 'fr' wszystkich elemetnów.
-            Ułamek ten pokazuje jaką część wolnej przestrzeni zajmie dany
-            element.<br />
-            Funkcą 'repeat' pozwala na natychmiastowe stworzenie większej ilości
-            kolumn/wierszy. Jako argumenty przyjmuje ilość wystąpień oraz
-            wielkość danego elementu.<br />
-            Funkcja 'minmax' pozwala na określenie minimalnego i maksymalnego
-            rozmiaru kolumny/wiersza. Jako argumenty przyjmuje minimalny i
-            maksymalny rozmiar obiektu.<br />
-            CSS Grid nie zastępuje CSS Flexbox, lecz są dla siebie
-            uzupełnieniem. CSS Grid powinien być wyorzystywany do budowania
-            całych layoutów (kiedy na stronie występują wiersze, kolumny),
-            natomiast CSS Flexbox do pozycjonowania elementów wewnątrz
-            pojedynczego elementu.
-          </p>
-        </article>
-        <article id="css-media" class="article">
-          <h2 class="article__heading">
-            css: media queries & mobile first
-          </h2>
-          <p class="article__text">
-            Responsiwe Web Design - projektowanie stron responsywnych
-            (dostosowanych do ekranów o różnych wielkościach/formatach).<br />
-            Media queries:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Słowo kluczowe <b>@media</b> pozwala określić w jakich przypadkach
-              zastosowane zostaną konkretne style.
-            </li>
-            <li class="article__list-item">
-              <b>Media type</b> wskazują ekran, urządzenie na którym zastosowane
-              zostaną konkretne style, np. screen, print, all.
-            </li>
-            <li class="article__list-item">
-              <b>Media feature</b> wskazują warunki dla których zastosowane
-              zostaną konkretne style, np. min-width, max-width, min-height,
-              max-height, color, ascpect-ratio, orientation.
-            </li>
-            <li class="article__list-item">
-              Selektory zawarte wewnątrz 'media queries' nie posiadają
-              zwiększonej specyficzności, dlatego należy dodawać je poniżej
-              wcześniej zdefiniowanego elementu.
-            </li>
-            <li class="article__list-item">
-              Wykorzystując 'media queries' należy nadpisywać jedynie własności,
-              które ulegają zmianie (a nie wszystkie własności danego elementu).
-            </li>
-          </ul>
-          <p class="article__text">
-            Podejście 'mobile-first' polega na nadaniu stylów obowiązujących na
-            całej stronie włącznie z wersją mobilną, a następnie dopasowanie
-            elementów strony do większych ekranów poprzez dodanie 'breakpointów'
-            oraz stylów wewnątrz nich. <b>Breakpoint</b> to szerokość ekranu
-            gdzie następuje zmiana stylów.
-          </p>
-        </article>
-      </section>
+              href="https://necolas.github.io/normalize.css/"
+              >plik normalizujący</a
+            >, który można dodać do strony (oraz każdej z podstron). Nnajlepiej
+            dodać go jako osobny plik 'normalize.css' przed plikiem z własnymi
+            stylami.
+          </li>
+          <li class="article__list-item">
+            Normalizacja to bardzo dobra alternatywa dla niezalecanego resetu.
+          </li>
+        </ul>
+        <p class="article__text">
+          Najlepszą praktyką jest miks: normalizacja oraz dodanie własnego
+          resetu:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Dodaj plik 'normalize.css' do strony (oraz każdej z podstron).
+          </li>
+          <li class="article__list-item">
+            Na górze pliku z własnymi stylami dodaj dla elementu
+            <b>html</b> regułę <b>box-sizing: border-box</b>, a dla elementów
+            <b>*</b>, <b>*:before</b> oraz <b>*:after</b> regułę
+            <b>box-sizing: inherit</b>.
+          </li>
+        </ul>
+      </article>
+      <article id="media" class="article">
+        <h2 class="article__heading">media queries & mobile first</h2>
+        <p class="article__text">
+          Responsiwe Web Design - projektowanie stron responsywnych
+          (dostosowanych do ekranów o różnych wielkościach/formatach).<br />
+          Media queries:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Słowo kluczowe <b>@media</b> pozwala określić w jakich przypadkach
+            zastosowane zostaną konkretne style.
+          </li>
+          <li class="article__list-item">
+            <b>Media type</b> wskazują ekran, urządzenie na którym zastosowane
+            zostaną konkretne style, np. screen, print, all.
+          </li>
+          <li class="article__list-item">
+            <b>Media feature</b> wskazują warunki dla których zastosowane
+            zostaną konkretne style, np. min-width, max-width, min-height,
+            max-height, color, ascpect-ratio, orientation.
+          </li>
+          <li class="article__list-item">
+            Selektory zawarte wewnątrz 'media queries' nie posiadają zwiększonej
+            specyficzności, dlatego należy dodawać je poniżej wcześniej
+            zdefiniowanego elementu.
+          </li>
+          <li class="article__list-item">
+            Wykorzystując 'media queries' należy nadpisywać jedynie własności,
+            które ulegają zmianie (a nie wszystkie własności danego elementu).
+          </li>
+        </ul>
+        <p class="article__text">
+          Podejście 'mobile-first' polega na nadaniu stylów obowiązujących na
+          całej stronie włącznie z wersją mobilną, a następnie dopasowanie
+          elementów strony do większych ekranów poprzez dodanie 'breakpointów'
+          oraz stylów wewnątrz nich. <b>Breakpoint</b> to szerokość ekranu gdzie
+          następuje zmiana stylów.
+        </p>
+      </article>
     </main>
     <footer class="footer">
       <p class="footer__text">
         Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
-        <a class="footer__link" href="#topdwa">Wróć na górę</a>
+        <a class="footer__link" href="#top">Wróć na górę</a>
       </p>
       <p class="footer__text">Maciej Ryszka - 2020</p>
     </footer>

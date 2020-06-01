@@ -10,21 +10,61 @@
     />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9e22ac749d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <header id="top" class="header">
+    <header class="header">
       <nav class="header-navigation">
-        <div class="header-navigation__links-wrapper">
-          <a class="header-navigation__link" href="index.html">Strona główna</a>
-          <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
-          <a class="header-navigation__link" href="teoria.html">Teoria</a>
-        </div>
+        <section class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="index.html"
+                >strona główna</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="html.html">html</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="css.html">css</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="js.html">js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="git.html">git</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="przegladarka.html"
+                >przeglądarka</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="pozostale.html"
+                >pozostałe</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
+            </li>
+          </ul>
+        </section>
+        <button class="header-navigation__menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+        <p class="header-navigation__text">WTF: Co Ten Frontend?</p>
       </nav>
     </header>
     <main class="main">
       <header class="main__header">
-        <p class="main__text">WTF: Co Ten Frontend?</p>
+        <p class="main__text">
+          Na stronie znajdziesz notatki zawierające teorię przedstawioną podczas
+          kursu.
+        </p>
       </header>
     </main>
     <footer class="footer">

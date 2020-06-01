@@ -1,53 +1,65 @@
-HTML DONE
-wtf: html
-wtf: html ii
+HTML +++
+html
+html ii
 block – element – modifier
-html: listy, tabele, definicje
-formularze: form, input, label, fieldset, radio, checkbox, number, tel, email, range, password, file, select, textarea, submit
+listy, tabele, definicje
+formularze: podstawy
 formularze: get i post
 formularze: walidacja
 
-CSS DONE
-wtf: css
-wtf: css ii
-życie w pudełku: display, wymiary i overflow
-życie w pudełku: jednostki
-życie w pudełku: box model (padding/border/margin)
-życie w pudełku: box-sizing
-życie w pudełku: position
-życie w pudełku: float
-css: flexbox
+CSS +++
+css
+css ii
+display, wymiary i overflow
+jednostki
+box model
+box-sizing
+position
+float
+flexbox
+grid
 tła
 normalizacja vs reset
-css: grid
-css: media queries & mobile first
+media queries & mobile first
 
-JS DONE
-wtf: javascript
-js: typy danych i immutability
-js: funkcje
-js: obiekt
-js: immutability w obiektach
-js: logika
-js: eventy
+JS +++
+javascript
+typy danych i immutability
+funkcje
+obiekt
+immutability w obiektach
+logika
+eventy
 
-GIT DONE
-jest git!
+GIT +++
+git
 github
 github pages: statyczny hosting
 
-PRZEGLĄDARKA DONE
-devtools: podglądamy!
-jak działa Internet i przeglądarka
-domowe przedszkole
-wtf: klan
+PRZEGLĄDARKA +++
+devtools
+jak działa internet i przeglądarka
+dom
+klan
 
-POZOSTAŁE DONE
+POZOSTAŁE +++
 warstwy strony internetowej
 magia programowania
 kanban
-opowieść o wężu, kebabie, wielbłądzie i Pascalu
+nazewnictwo
 terminal
-code: formatowanie kodu i lokalny serwer
-grafik cięcie – też zajęcie
+formatowanie kodu i lokalny serwer
+cięcie grafik
 hamburger menu
+
++article names/ids correction
+++hamburger menu adding
++++nav links adding (above the image)
+
+tylko hambuks z poszczegolnymi a szczegolowe na kazdej wypisane z mozliwosia klijkniecia wheadere
+
+wywalone klasy- wywal ze stylów:
+
+theory main header
+header-navigation__links-wrapper
+header-navigation__link

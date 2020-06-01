@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maciej Ryszka - WTF</title>
+    <title>Teoria - HTML</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
@@ -21,452 +21,476 @@
       <nav class="header-navigation">
         <section class="hamburger-menu hamburger-menu--js">
           <ul class="hamburger-menu__list">
-            <li>
-              <a href="#website-layers" class="hamburger-menu__list-item"
-                >warstwy strony internetowej</a
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="index.html"
+                >strona główna</a
               >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="html.html">html</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="css.html">css</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="js.html">js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="git.html">git</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="przegladarka.html"
+                >przeglądarka</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="pozostale.html"
+                >pozostałe</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
             </li>
           </ul>
         </section>
         <button class="header-navigation__menu-button">
           <i class="fas fa-bars"></i>
         </button>
-        <div class="header-navigation__links-wrapper">
-          <a class="header-navigation__link" href="index.html">Strona główna</a>
-          <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
-          <a class="header-navigation__link" href="teoria.html">Teoria</a>
-        </div>
+        <p class="header-navigation__text">WTF: Co Ten Frontend?</p>
       </nav>
     </header>
     <main id="top" class="theory-main">
-      <header class="theory-main__header">
-        <p class="theory-main__text">WTF: Co Ten Frontend?</p>
-      </header>
-      <section class="theory-main__section">
-        <h1 class="theory-main__heading">teoria</h1>
-        <div class="theory-main__image"></div>
-        <article id="wtf-html" class="article">
-          <h2 class="article__heading">wtf: html</h2>
-          <p class="article__text">
-            Budowa znacznika HTML: &lt;znacznik
-            atrybut=”wartość”>treść&lt;/znacznik>
-          </p>
-          <p class="article__text">
-            Semantyczny HTML – mający znaczenie – tagi HTML nadają znaczenie,
-            dlatego nazywane są też znaczikami.
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>&lt;!DOCTYPE html></b> Mówi o tym jakiego typu jest to
-              dokument. W dawnych czasach definiowało się dokładny standard
-              HTML. Obecnie nie należy wpisywać niczego więcej.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;html lang="en"></b> Należy tutaj umieścić kod języka, w
-              którym jest strona. Przykładowo strona będzie czytana w tym języku
-              przez asystenta głosowego dla osób niewidomych.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;main>&lt;/main></b> Główna część dokumentu. Wewnątrz
-              znacznika powinna zostać zawarta główna część dokumentu.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;section>&lt;/section></b> Sekcja dokumentu. Część logicznie
-              podzielonego dokumentu.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;article>&lt;/article></b> Artykuł. Może istnieć
-              samodzielnie i zawiera większą treść.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;aside>&lt;/aside></b> Treść mniej istotna od treści
-              głównej. Notatka boczna.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;header>&lt;/header></b> Nagłówek. Opisuje nagłówek
-              dokumentu/sekcji/artykułu.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;footer>&lt;/footer></b> Stopka. Zawiera stopkę
-              dokumentu/sekcji.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;p>&lt;/p></b> Paragraf. Akapit.
-            </li>
-          </ul>
-          <p class="article__text">
-            Tekstowe nagłówki tytułowe. Im mniejszy numer ma znacznik nagłówka,
-            tym większa jego ważność:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item"><b>&lt;h1>&lt;/h1></b></li>
-            <li class="article__list-item"><b>&lt;h2>&lt;/h2></b></li>
-            <li class="article__list-item"><b>&lt;h3>&lt;/h3></b></li>
-            <li class="article__list-item"><b>&lt;h4>&lt;/h4></b></li>
-            <li class="article__list-item"><b>&lt;h5>&lt;/h5></b></li>
-            <li class="article__list-item"><b>&lt;h6>&lt;/h6></b></li>
-          </ul>
-          <p class="article__text">
-            Dobrą praktyką jest manualne domykanie znaczników. <br />
-            Każda sekcja powinna mieć tekstowy nagłówek tytułowy.<br />
-            Doskonałym sposobem na sprawdzenie poprawności pliku .html jest
-            strona:
-            <a
-              class="article__link"
-              href="https://validator.w3.org/nu/#textarea"
-              >validator.w3.org</a
-            >
-          </p>
-        </article>
-        <article id="wtf-html-ii" class="article">
-          <h2 class="article__heading">wtf: html ii</h2>
-          <p class="article__text">Pozostałe znaczniki:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>&lt;br></b> Nowa linia. Nie należy używać tego znacznika
-              kilkukrotnie po sobie.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;b></b> Pogrubienia tekst (efekt wizualny).
-            </li>
-            <li class="article__list-item">
-              <b>&lt;i></b> Nadaje kursywę tekstowi (efekt wizualny).
-            </li>
-            <li class="article__list-item">
-              <b>&lt;strong></b> Podkreśla wysokią istotność tekstu.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;em></b> Podkreśla, że tekst może mieć inne znaczenie.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;a href="" target="">opis łącza&lt;/a></b> Linki/łącza
-              wewnątrz dokumentu.
-            </li>
-            <li class="article__list-item"><b>&lt;nav></b> Nawigacja.</li>
-            <li class="article__list-item">
-              <b>&lt;img/></b> Obrazek o podanym adresie.
-            </li>
-            <li class="article__list-item"><b>&lt;button></b> Przycisk.</li>
-          </ul>
-          <p class="article__text">Niektóre atrybuty:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>id</b> Identyfikuje element. Przydaje się do nawigacji w
-              obrębie dokumentu.
-            </li>
-            <li class="article__list-item">
-              <b>src</b> Źródło (obrazka, pliku .js, etc.).
-            </li>
-            <li class="article__list-item">
-              <b>alt</b> Tekst alternatywny. Informuje wyszukiwarkę o zawartości
-              obrazka. Wykorzystywany również przez syntezatory mowy dla
-              niewidomych.
-            </li>
-          </ul>
-          <p class="article__text">
-            Aby przejść na stronie do elementu o określonym 'id', należy
-            atrybutowi 'href' znacznika 'a' nadać wartość:
-            '#id_elementu_docelowego'.<br />
-            W nazwach plików nie należy używać dużych liter, polskich znaków i
-            spacji (w celu oddzielenia słów należy użyć myślnika).<br />
-            Elementy powtarzalne na wielu podstronach, należy umieszczać poza
-            znacznikiem 'main' (jedynie treść znajdująca się wewnątrz znacznika
-            'main' jest brana pod uwagę przez analizatory).<br />
-            Atrybury pozwalają na identyfikowanie elementów (id), grupowanie
-            elementów (class) lub nadanie im dodatkowych właściwości (href, src,
-            alt). Lista globalnych atrybutów na
-            <a
-              class="article__link"
-              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
-              >MDN web docs</a
-            >.
-          </p>
-        </article>
-        <article id="bem" class="article">
-          <h2 class="article__heading">block – element – modifier</h2>
-          <p class="article__text">
-            Dlaczego powstał sposób nazywania klas BEM?:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Świat stylowania doszedł do wysokiego stopnia skomplikowania.
-            </li>
-            <li class="article__list-item">
-              Problem z logicznym nazywaniem klas.
-            </li>
-            <li class="article__list-item">
-              Brak ujenoliconego sposobu stylowania.
-            </li>
-            <li class="article__list-item">
-              Importanty, nadpisywanie rzeczy.
-            </li>
-            <li class="article__list-item">
-              Brak odwzorowania struktury HTML w CSS.
-            </li>
-            <li class="article__list-item">
-              Stylowanie kilkoma klasami, powtarzające się nazwy.
-            </li>
-          </ul>
-          <p class="article__text">Elementy BEM:</p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>Block</b> Nadrzędny element. Ogranicza treść.
-            </li>
-            <li class="article__list-item">
-              <b>Element</b> Część bloku, która nie musi być jego bezpośrednim
-              dzieckiem.
-            </li>
-            <li class="article__list-item">
-              <b>Modifier</b> Modyfikator. Jeśli element występuje w kilku
-              wariacjach, tworzymy dodatkową klasę.
-            </li>
-          </ul>
-          <p class="article__text">
-            Sposób nazywania klasy to: <b>block__element--modifier</b>.<br />
-            Nazwa klasy nie musi być zgodna ze znacznikiem HTML, staramy się nią
-            nią opisać, czym jest element pod kątem treści.<br />
-            Możliwe jest wydzielenie bloku w bloku. Jest to przydatne, kiedy
-            występuje wiele zagnieżdżeń w strukturze strony. Dobrą praktyką
-            jest, aby pierwszym członem nazwy klasy bloku podrzędnego była nazwa
-            klasy bloku nadrzędnego (np. 'article' i 'article-footer').<br />
-            Dwie klasy dla jednego elementu stosujemy tylko wtedy, kiedy
-            występuje modyfikator.<br />
-            Dobrą praktyką jest grupowanie elementów w zależności od bloku i
-            ustawianie ich w kolejności alfabetycznej w pliku ze stylami.<br />
-            Należy stylować pojedyncze klasy.<br />
-            Nie należy używać skrótów podczas nazywania klas.<br />
-            Modyfikator może dotyczyć zarówno elementu jak i bloku.<br />
-            W przypadku użycia klasy z modyfikatorem, element musi posiadać
-            również klasę bazową.<br />
-            W modyfikatorze należy zmienić jedynie unikalne dla niego wartości i
-            nie przepisywać reguł z klasy bazowej.<br />
-            Podział strony na bloki należy wykonać w oparciu o analizę pliku
-            HTML.
-          </p>
-        </article>
-        <article id="html-lists-tables" class="article">
-          <h2 class="article__heading">
-            html: listy, tabele, definicje
-          </h2>
-          <p class="article__text">
-            Znaczniki dotyczące list i tabel:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>&lt;ul></b> Nieuporządkowana lista.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;ol></b> Uporządkowana lista, która jest automatycznie
-              numerowana.
-            </li>
-            <li class="article__list-item"><b>&lt;li></b> Element listy.</li>
-            <li class="article__list-item"><b>&lt;dl></b> Lista opisów.</li>
-            <li class="article__list-item">
-              <b>&lt;dt></b> Termin, który chcemy opisać.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;dd></b> Szczegóły dotyczące terminu.
-            </li>
-            <li class="article__list-item"><b>&lt;table></b> Tabela.</li>
-            <li class="article__list-item"><b>&lt;tr></b> Wiersz tabeli.</li>
-            <li class="article__list-item"><b>&lt;td></b> Komórka tabeli.</li>
-            <li class="article__list-item">
-              <b>&lt;thead></b> Nagłówek tabeli.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;th></b> Komórka w nagłówku tabeli.
-            </li>
-            <li class="article__list-item"><b>&lt;tbody></b> Ciało tabeli.</li>
-            <li class="article__list-item"><b>&lt;caption></b> Opis.</li>
-          </ul>
-          <p class="article__text">
-            Rodzaj listy można wybrać używając własności 'list-style' w CSS.<br />
-            Aby zagnieździć listę, należy umieścić ją wewnątrz elementu innej
-            listy.<br />
-            Nie używamy tabel do budowania layoutów.
-          </p>
-        </article>
-        <article id="forms-basics" class="article">
-          <h2 class="article__heading">
-            formularze: form, input, label, fieldset, radio, checkbox, number,
-            tel, email, range, password, file, select, textarea, submit
-          </h2>
-          <p class="article__text">
-            Znaczniki dotyczące formularzy:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>&lt;form></b> Opakowanie dla formularza.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;input id="" name="" type="" value="" placeholder=""></b>
-              Podstawowy element budujący formularz. Zgodnie z dokumentacją
-              znacznik 'input' powinien być 'opakowany' w paragraf wraz z
-              opisującym go znacznikiem 'label'. 'Id' służy do odniesienia się
-              do etykiety i może posiadać wartość taką jak nazwa. 'Name' służy
-              do identyfikacji wartości w miejscu, do którego wysyłamy dane za
-              pomocą formularza. 'Type' określa typ pola. 'Value' to domyślna
-              wartość pola, wyświetlana zanim wpiszemy tam cokolwiek.
-              'Placeholder' przechowuje podpowieź dotyczącą pola, która
-              wyświetlana jest, kiedy pole jest puste. Właściwość 'placeholder'
-              nie zastępuje znacznika 'label', ponieważ czytniki jako opis pola
-              zawsze odczytują etykietę.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;label for=""></b> Etykieta tworząca opis pola. Aby przypiąć
-              ją do konkretnego pola, atrybut 'for' musi przyjąć wartość
-              atrybutu 'id' tego pola. Jeśli znacznik 'input' znajduje się zaś
-              wewnątrz znacznika 'label', takie przypięcie nie jest konieczne.
-            </li>
-            <li class="article__list-item"><b>&lt;fieldset></b> Grupa pól.</li>
-            <li class="article__list-item">
-              <b>&lt;legend></b> Opis grupy pól znajdującej się wewnątrz
-              znacznika 'fieldset'.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;select></b> Umożliwia wybór elementu z rozwijanej listy.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;option></b> Element rozwijanej listy. Znajduje się wewnątrz
-              znacznika 'select'. Można zdefiniować wartość pola w atrybucie
-              'value' w przypadku gdy ma być ona inna niż wyświetlana w polu.
-            </li>
-            <li class="article__list-item">
-              <b>&lt;textarea></b> Służy do wprowadzania dłuższej treści. Nie
-              posiada atrybutu 'value', w związku z czym jego wartość należy
-              umieścić jako treść znacznika.
-            </li>
-          </ul>
-          <p class="article__text">
-            Typy pól:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>text</b> Służy do wpisywania widocznego tekstu.
-            </li>
-            <li class="article__list-item">
-              <b>radio</b> Służy do wyboru jednej wartości z grupy. Wszystkie
-              pola danej grupy muszą posiadać taką samą wartość znacznika
-              'name'. Dodanie nieposiadającego wartości atrybutu 'checked' dla
-              pola tego typu, spowoduje domyślny wybór tego pola.
-            </li>
-            <li class="article__list-item">
-              <b>checkbox</b> Służy do wyboru większej ilości wartości. Gdy pole
-              nie będzie posiadało parametru 'value', w momencie przesłania
-              formularza zostanie przesłana wartość 'on', kiedy pole było
-              zaznaczone lub brak tej wartości, kiedy pole nie było zaznaczone.
-              Dodanie nieposiadającego wartości atrybutu 'checked' dla pola tego
-              typu, spowoduje domyślny wybór tego pola.
-            </li>
-            <li class="article__list-item">
-              <b>number</b> Umożliwia wpisywanie jedynie cyfr do pola.
-            </li>
-            <li class="article__list-item">
-              <b>tel</b> Sygnalizuje, że podane pole zawiera numer telefonu. Ze
-              względu na różne formaty numerów telefonicznych, nie posiada
-              ograniczeń.
-            </li>
-            <li class="article__list-item">
-              <b>email</b> Sygnalizuje, że podane pole zawiera adres e-mail.
-            </li>
-            <li class="article__list-item">
-              <b>range</b> Służy do wyboru konkretnej wartości z danego zakresu
-              za pomocą suwaka. Wartość minimalną, maksymalną oraz skok
-              określają odpowiednio atrybuty pola: 'min', 'max' oraz 'step'. Do
-              aktualnie wskazywanej wartości można dostać się z poziomu
-              JavaScript, odwołując się do własności 'value' znacznika 'input'.
-            </li>
-            <li class="article__list-item">
-              <b>password</b> Służy do wpisywania hasła. Wpisywane znaki są
-              ukryte na ekranie.
-            </li>
-            <li class="article__list-item">
-              <b>file</b> Służy do wyboru pliku (z pamięci urządzenia) do
-              przesłania.
-            </li>
-            <li class="article__list-item">
-              <b>submit</b> Służy do wysyłania formularza. Nie posiada etykiety,
-              a jego nazwa jest zdefiniowana w atrybucie 'value'.
-            </li>
-          </ul>
-        </article>
-        <article id="forms-get-post" class="article">
-          <h2 class="article__heading">
-            formularze: get i post
-          </h2>
-          <p class="article__text">
-            Formularz posiada atrybut 'action', który jako wartość przyjmuje
-            adres URL miejsca, gdzie wysłąny będzie formularz. Domyślnie jest
-            wysyłany do strony, na której się znajduje.<br />
-            Atrybut 'enctype' mówi o tym czy jest to zwykły formularz (domyślna
-            wartość: "application/x-www-form-urlencoded") czy zawiera inne
-            treści poza tekstowymi, np. kiedy wysyłane są pliki (wartość
-            "multipart/form-data").<br />
-            Atrybut 'method' pozwala na wybór metody wysłania żądania:
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              <b>GET</b> Domyślna metoda. Przekazuje parametry i wartości w
-              adresie URL strony. Wysyłane są wartości atrybutu 'value' pola,
-              niezależnie od tego co znajduje się w etykiecie pola. Ze względu
-              na limitowaną liczbę znaków w adresie, plików nie wysyła się tą
-              metodą. Używa Query String Parameters (zakładka 'Network' w
-              przeglądarce).
-            </li>
-            <li class="article__list-item">
-              <b>POST</b> Nie umieszcza w adresie URL żadnych dodatkowych
-              znaków. Jest metodą bezpieczniejszą. Używa Form Data (zakładka
-              'Network' w przeglądarce).
-            </li>
-          </ul>
-          <p class="article__text">
-            Metoda GET służy zazwyczaj do pobierania danych, a metoda POST do
-            ich wysyłania.
-          </p>
-        </article>
-        <article id="forms-validation" class="article">
-          <h2 class="article__heading">
-            formularze: walidacja
-          </h2>
-          <p class="article__text">
-            Walidacja, to sprawdzenie poprawności danych wprowadzanych do
-            formularza.
-          </p>
-          <ul class="article__list">
-            <li class="article__list-item">
-              Nadanie atrybutu 'required' dla konkretnego pola nie pozwoli
-              wysłać formularza, dopóki pole to pozostanie nieuzupełnione.
-            </li>
-            <li class="article__list-item">
-              Sprawdzenie następuje także pod kątem typu pola (np. pole typu
-              'email' musi być uzupełnione treścią posiadającą odpowiedni
-              format).
-            </li>
-            <li class="article__list-item">
-              Nadanie atrybutu 'pattern' pozwoli zwalidować pole z
-              wykorzystaniem wyrażenia regularnego (regular expression). Jest to
-              specjalny sposób zapisu pozwalający na wykrywanie pewnych ciągów
-              znaków. Należy umieścić wyrażenia jako wartość atrybutu. Zbiór
-              gotowych wyrażeń regularnych znajduje się na stronie
-              <a class="article__link" href="http://html5pattern.com/"
-                >html5pattern.com</a
-              >.
-            </li>
-            <li class="article__list-item">
-              Walidacja po stronie frontendu nie zastępuje walidacji po stronie
-              backendu. Możliwa jest na przykład zmiana wartości parametrów w
-              adresie URL bezpośrednio przed wysłaniem formularza metodą GET. W
-              takim wypadku zmienione w ten sposób wartości nie zostaną
-              zwalidowane po stronie frontendu.
-            </li>
-          </ul>
-        </article>
+      <h1 class="theory-main__heading">html</h1>
+      <section class="theory-main__links">
+        <a href="#html" class="theory-main__link">html</a>
+        <a href="#html-ii" class="theory-main__link">html ii</a>
+        <a href="#bem" class="theory-main__link">block – element – modifier</a>
+        <a href="#lists-tables-definitions" class="theory-main__link"
+          >listy, tabele, definicje</a
+        >
+        <a href="#forms-basics" class="theory-main__link"
+          >formularze: podstawy</a
+        >
+        <a href="#forms-get-post" class="theory-main__link"
+          >formularze: get i post</a
+        >
+        <a href="#forms-validation" class="theory-main__link"
+          >formularze: walidacja</a
+        >
       </section>
+      <div class="theory-main__image"></div>
+      <article id="html" class="article">
+        <h2 class="article__heading">html</h2>
+        <p class="article__text">
+          Budowa znacznika HTML: &lt;znacznik
+          atrybut=”wartość”>treść&lt;/znacznik>
+        </p>
+        <p class="article__text">
+          Semantyczny HTML – mający znaczenie – tagi HTML nadają znaczenie,
+          dlatego nazywane są też znaczikami.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>&lt;!DOCTYPE html></b> Mówi o tym jakiego typu jest to dokument.
+            W dawnych czasach definiowało się dokładny standard HTML. Obecnie
+            nie należy wpisywać niczego więcej.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;html lang="en"></b> Należy tutaj umieścić kod języka, w
+            którym jest strona. Przykładowo strona będzie czytana w tym języku
+            przez asystenta głosowego dla osób niewidomych.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;main>&lt;/main></b> Główna część dokumentu. Wewnątrz
+            znacznika powinna zostać zawarta główna część dokumentu.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;section>&lt;/section></b> Sekcja dokumentu. Część logicznie
+            podzielonego dokumentu.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;article>&lt;/article></b> Artykuł. Może istnieć samodzielnie
+            i zawiera większą treść.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;aside>&lt;/aside></b> Treść mniej istotna od treści głównej.
+            Notatka boczna.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;header>&lt;/header></b> Nagłówek. Opisuje nagłówek
+            dokumentu/sekcji/artykułu.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;footer>&lt;/footer></b> Stopka. Zawiera stopkę
+            dokumentu/sekcji.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;p>&lt;/p></b> Paragraf. Akapit.
+          </li>
+        </ul>
+        <p class="article__text">
+          Tekstowe nagłówki tytułowe. Im mniejszy numer ma znacznik nagłówka,
+          tym większa jego ważność:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><b>&lt;h1>&lt;/h1></b></li>
+          <li class="article__list-item"><b>&lt;h2>&lt;/h2></b></li>
+          <li class="article__list-item"><b>&lt;h3>&lt;/h3></b></li>
+          <li class="article__list-item"><b>&lt;h4>&lt;/h4></b></li>
+          <li class="article__list-item"><b>&lt;h5>&lt;/h5></b></li>
+          <li class="article__list-item"><b>&lt;h6>&lt;/h6></b></li>
+        </ul>
+        <p class="article__text">
+          Dobrą praktyką jest manualne domykanie znaczników. <br />
+          Każda sekcja powinna mieć tekstowy nagłówek tytułowy.<br />
+          Doskonałym sposobem na sprawdzenie poprawności pliku .html jest
+          strona:
+          <a class="article__link" href="https://validator.w3.org/nu/#textarea"
+            >validator.w3.org</a
+          >
+        </p>
+      </article>
+      <article id="html-ii" class="article">
+        <h2 class="article__heading">html ii</h2>
+        <p class="article__text">Pozostałe znaczniki:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>&lt;br></b> Nowa linia. Nie należy używać tego znacznika
+            kilkukrotnie po sobie.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;b></b> Pogrubienia tekst (efekt wizualny).
+          </li>
+          <li class="article__list-item">
+            <b>&lt;i></b> Nadaje kursywę tekstowi (efekt wizualny).
+          </li>
+          <li class="article__list-item">
+            <b>&lt;strong></b> Podkreśla wysokią istotność tekstu.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;em></b> Podkreśla, że tekst może mieć inne znaczenie.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;a href="" target="">opis łącza&lt;/a></b> Linki/łącza
+            wewnątrz dokumentu.
+          </li>
+          <li class="article__list-item"><b>&lt;nav></b> Nawigacja.</li>
+          <li class="article__list-item">
+            <b>&lt;img/></b> Obrazek o podanym adresie.
+          </li>
+          <li class="article__list-item"><b>&lt;button></b> Przycisk.</li>
+        </ul>
+        <p class="article__text">Niektóre atrybuty:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>id</b> Identyfikuje element. Przydaje się do nawigacji w obrębie
+            dokumentu.
+          </li>
+          <li class="article__list-item">
+            <b>src</b> Źródło (obrazka, pliku .js, etc.).
+          </li>
+          <li class="article__list-item">
+            <b>alt</b> Tekst alternatywny. Informuje wyszukiwarkę o zawartości
+            obrazka. Wykorzystywany również przez syntezatory mowy dla
+            niewidomych.
+          </li>
+        </ul>
+        <p class="article__text">
+          Aby przejść na stronie do elementu o określonym 'id', należy
+          atrybutowi 'href' znacznika 'a' nadać wartość:
+          '#id_elementu_docelowego'.<br />
+          W nazwach plików nie należy używać dużych liter, polskich znaków i
+          spacji (w celu oddzielenia słów należy użyć myślnika).<br />
+          Elementy powtarzalne na wielu podstronach, należy umieszczać poza
+          znacznikiem 'main' (jedynie treść znajdująca się wewnątrz znacznika
+          'main' jest brana pod uwagę przez analizatory).<br />
+          Atrybury pozwalają na identyfikowanie elementów (id), grupowanie
+          elementów (class) lub nadanie im dodatkowych właściwości (href, src,
+          alt). Lista globalnych atrybutów na
+          <a
+            class="article__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
+            >MDN web docs</a
+          >.
+        </p>
+      </article>
+      <article id="bem" class="article">
+        <h2 class="article__heading">block – element – modifier</h2>
+        <p class="article__text">
+          Dlaczego powstał sposób nazywania klas BEM?:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Świat stylowania doszedł do wysokiego stopnia skomplikowania.
+          </li>
+          <li class="article__list-item">
+            Problem z logicznym nazywaniem klas.
+          </li>
+          <li class="article__list-item">
+            Brak ujenoliconego sposobu stylowania.
+          </li>
+          <li class="article__list-item">
+            Importanty, nadpisywanie rzeczy.
+          </li>
+          <li class="article__list-item">
+            Brak odwzorowania struktury HTML w CSS.
+          </li>
+          <li class="article__list-item">
+            Stylowanie kilkoma klasami, powtarzające się nazwy.
+          </li>
+        </ul>
+        <p class="article__text">Elementy BEM:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>Block</b> Nadrzędny element. Ogranicza treść.
+          </li>
+          <li class="article__list-item">
+            <b>Element</b> Część bloku, która nie musi być jego bezpośrednim
+            dzieckiem.
+          </li>
+          <li class="article__list-item">
+            <b>Modifier</b> Modyfikator. Jeśli element występuje w kilku
+            wariacjach, tworzymy dodatkową klasę.
+          </li>
+        </ul>
+        <p class="article__text">
+          Sposób nazywania klasy to: <b>block__element--modifier</b>.<br />
+          Nazwa klasy nie musi być zgodna ze znacznikiem HTML, staramy się nią
+          nią opisać, czym jest element pod kątem treści.<br />
+          Możliwe jest wydzielenie bloku w bloku. Jest to przydatne, kiedy
+          występuje wiele zagnieżdżeń w strukturze strony. Dobrą praktyką jest,
+          aby pierwszym członem nazwy klasy bloku podrzędnego była nazwa klasy
+          bloku nadrzędnego (np. 'article' i 'article-footer').<br />
+          Dwie klasy dla jednego elementu stosujemy tylko wtedy, kiedy występuje
+          modyfikator.<br />
+          Dobrą praktyką jest grupowanie elementów w zależności od bloku i
+          ustawianie ich w kolejności alfabetycznej w pliku ze stylami.<br />
+          Należy stylować pojedyncze klasy.<br />
+          Nie należy używać skrótów podczas nazywania klas.<br />
+          Modyfikator może dotyczyć zarówno elementu jak i bloku.<br />
+          W przypadku użycia klasy z modyfikatorem, element musi posiadać
+          również klasę bazową.<br />
+          W modyfikatorze należy zmienić jedynie unikalne dla niego wartości i
+          nie przepisywać reguł z klasy bazowej.<br />
+          Podział strony na bloki należy wykonać w oparciu o analizę pliku HTML.
+        </p>
+      </article>
+      <article id="lists-tables-definitions" class="article">
+        <h2 class="article__heading">
+          listy, tabele, definicje
+        </h2>
+        <p class="article__text">
+          Znaczniki dotyczące list i tabel:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>&lt;ul></b> Nieuporządkowana lista.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;ol></b> Uporządkowana lista, która jest automatycznie
+            numerowana.
+          </li>
+          <li class="article__list-item"><b>&lt;li></b> Element listy.</li>
+          <li class="article__list-item"><b>&lt;dl></b> Lista opisów.</li>
+          <li class="article__list-item">
+            <b>&lt;dt></b> Termin, który chcemy opisać.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;dd></b> Szczegóły dotyczące terminu.
+          </li>
+          <li class="article__list-item"><b>&lt;table></b> Tabela.</li>
+          <li class="article__list-item"><b>&lt;tr></b> Wiersz tabeli.</li>
+          <li class="article__list-item"><b>&lt;td></b> Komórka tabeli.</li>
+          <li class="article__list-item"><b>&lt;thead></b> Nagłówek tabeli.</li>
+          <li class="article__list-item">
+            <b>&lt;th></b> Komórka w nagłówku tabeli.
+          </li>
+          <li class="article__list-item"><b>&lt;tbody></b> Ciało tabeli.</li>
+          <li class="article__list-item"><b>&lt;caption></b> Opis.</li>
+        </ul>
+        <p class="article__text">
+          Rodzaj listy można wybrać używając własności 'list-style' w CSS.<br />
+          Aby zagnieździć listę, należy umieścić ją wewnątrz elementu innej
+          listy.<br />
+          Nie używamy tabel do budowania layoutów.
+        </p>
+      </article>
+      <article id="forms-basics" class="article">
+        <h2 class="article__heading">
+          formularze: podstawy
+        </h2>
+        <p class="article__text">
+          Znaczniki dotyczące formularzy:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>&lt;form></b> Opakowanie dla formularza.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;input id="" name="" type="" value="" placeholder=""></b>
+            Podstawowy element budujący formularz. Zgodnie z dokumentacją
+            znacznik 'input' powinien być 'opakowany' w paragraf wraz z
+            opisującym go znacznikiem 'label'. 'Id' służy do odniesienia się do
+            etykiety i może posiadać wartość taką jak nazwa. 'Name' służy do
+            identyfikacji wartości w miejscu, do którego wysyłamy dane za pomocą
+            formularza. 'Type' określa typ pola. 'Value' to domyślna wartość
+            pola, wyświetlana zanim wpiszemy tam cokolwiek. 'Placeholder'
+            przechowuje podpowieź dotyczącą pola, która wyświetlana jest, kiedy
+            pole jest puste. Właściwość 'placeholder' nie zastępuje znacznika
+            'label', ponieważ czytniki jako opis pola zawsze odczytują etykietę.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;label for=""></b> Etykieta tworząca opis pola. Aby przypiąć
+            ją do konkretnego pola, atrybut 'for' musi przyjąć wartość atrybutu
+            'id' tego pola. Jeśli znacznik 'input' znajduje się zaś wewnątrz
+            znacznika 'label', takie przypięcie nie jest konieczne.
+          </li>
+          <li class="article__list-item"><b>&lt;fieldset></b> Grupa pól.</li>
+          <li class="article__list-item">
+            <b>&lt;legend></b> Opis grupy pól znajdującej się wewnątrz znacznika
+            'fieldset'.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;select></b> Umożliwia wybór elementu z rozwijanej listy.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;option></b> Element rozwijanej listy. Znajduje się wewnątrz
+            znacznika 'select'. Można zdefiniować wartość pola w atrybucie
+            'value' w przypadku gdy ma być ona inna niż wyświetlana w polu.
+          </li>
+          <li class="article__list-item">
+            <b>&lt;textarea></b> Służy do wprowadzania dłuższej treści. Nie
+            posiada atrybutu 'value', w związku z czym jego wartość należy
+            umieścić jako treść znacznika.
+          </li>
+        </ul>
+        <p class="article__text">
+          Typy pól:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>text</b> Służy do wpisywania widocznego tekstu.
+          </li>
+          <li class="article__list-item">
+            <b>radio</b> Służy do wyboru jednej wartości z grupy. Wszystkie pola
+            danej grupy muszą posiadać taką samą wartość znacznika 'name'.
+            Dodanie nieposiadającego wartości atrybutu 'checked' dla pola tego
+            typu, spowoduje domyślny wybór tego pola.
+          </li>
+          <li class="article__list-item">
+            <b>checkbox</b> Służy do wyboru większej ilości wartości. Gdy pole
+            nie będzie posiadało parametru 'value', w momencie przesłania
+            formularza zostanie przesłana wartość 'on', kiedy pole było
+            zaznaczone lub brak tej wartości, kiedy pole nie było zaznaczone.
+            Dodanie nieposiadającego wartości atrybutu 'checked' dla pola tego
+            typu, spowoduje domyślny wybór tego pola.
+          </li>
+          <li class="article__list-item">
+            <b>number</b> Umożliwia wpisywanie jedynie cyfr do pola.
+          </li>
+          <li class="article__list-item">
+            <b>tel</b> Sygnalizuje, że podane pole zawiera numer telefonu. Ze
+            względu na różne formaty numerów telefonicznych, nie posiada
+            ograniczeń.
+          </li>
+          <li class="article__list-item">
+            <b>email</b> Sygnalizuje, że podane pole zawiera adres e-mail.
+          </li>
+          <li class="article__list-item">
+            <b>range</b> Służy do wyboru konkretnej wartości z danego zakresu za
+            pomocą suwaka. Wartość minimalną, maksymalną oraz skok określają
+            odpowiednio atrybuty pola: 'min', 'max' oraz 'step'. Do aktualnie
+            wskazywanej wartości można dostać się z poziomu JavaScript,
+            odwołując się do własności 'value' znacznika 'input'.
+          </li>
+          <li class="article__list-item">
+            <b>password</b> Służy do wpisywania hasła. Wpisywane znaki są ukryte
+            na ekranie.
+          </li>
+          <li class="article__list-item">
+            <b>file</b> Służy do wyboru pliku (z pamięci urządzenia) do
+            przesłania.
+          </li>
+          <li class="article__list-item">
+            <b>submit</b> Służy do wysyłania formularza. Nie posiada etykiety, a
+            jego nazwa jest zdefiniowana w atrybucie 'value'.
+          </li>
+        </ul>
+      </article>
+      <article id="forms-get-post" class="article">
+        <h2 class="article__heading">
+          formularze: get i post
+        </h2>
+        <p class="article__text">
+          Formularz posiada atrybut 'action', który jako wartość przyjmuje adres
+          URL miejsca, gdzie wysłąny będzie formularz. Domyślnie jest wysyłany
+          do strony, na której się znajduje.<br />
+          Atrybut 'enctype' mówi o tym czy jest to zwykły formularz (domyślna
+          wartość: "application/x-www-form-urlencoded") czy zawiera inne treści
+          poza tekstowymi, np. kiedy wysyłane są pliki (wartość
+          "multipart/form-data").<br />
+          Atrybut 'method' pozwala na wybór metody wysłania żądania:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>GET</b> Domyślna metoda. Przekazuje parametry i wartości w
+            adresie URL strony. Wysyłane są wartości atrybutu 'value' pola,
+            niezależnie od tego co znajduje się w etykiecie pola. Ze względu na
+            limitowaną liczbę znaków w adresie, plików nie wysyła się tą metodą.
+            Używa Query String Parameters (zakładka 'Network' w przeglądarce).
+          </li>
+          <li class="article__list-item">
+            <b>POST</b> Nie umieszcza w adresie URL żadnych dodatkowych znaków.
+            Jest metodą bezpieczniejszą. Używa Form Data (zakładka 'Network' w
+            przeglądarce).
+          </li>
+        </ul>
+        <p class="article__text">
+          Metoda GET służy zazwyczaj do pobierania danych, a metoda POST do ich
+          wysyłania.
+        </p>
+      </article>
+      <article id="forms-validation" class="article">
+        <h2 class="article__heading">
+          formularze: walidacja
+        </h2>
+        <p class="article__text">
+          Walidacja, to sprawdzenie poprawności danych wprowadzanych do
+          formularza.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Nadanie atrybutu 'required' dla konkretnego pola nie pozwoli wysłać
+            formularza, dopóki pole to pozostanie nieuzupełnione.
+          </li>
+          <li class="article__list-item">
+            Sprawdzenie następuje także pod kątem typu pola (np. pole typu
+            'email' musi być uzupełnione treścią posiadającą odpowiedni format).
+          </li>
+          <li class="article__list-item">
+            Nadanie atrybutu 'pattern' pozwoli zwalidować pole z wykorzystaniem
+            wyrażenia regularnego (regular expression). Jest to specjalny sposób
+            zapisu pozwalający na wykrywanie pewnych ciągów znaków. Należy
+            umieścić wyrażenia jako wartość atrybutu. Zbiór gotowych wyrażeń
+            regularnych znajduje się na stronie
+            <a class="article__link" href="http://html5pattern.com/"
+              >html5pattern.com</a
+            >.
+          </li>
+          <li class="article__list-item">
+            Walidacja po stronie frontendu nie zastępuje walidacji po stronie
+            backendu. Możliwa jest na przykład zmiana wartości parametrów w
+            adresie URL bezpośrednio przed wysłaniem formularza metodą GET. W
+            takim wypadku zmienione w ten sposób wartości nie zostaną
+            zwalidowane po stronie frontendu.
+          </li>
+        </ul>
+      </article>
     </main>
     <footer class="footer">
       <p class="footer__text">
         Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
-        <a class="footer__link" href="#topdwa">Wróć na górę</a>
+        <a class="footer__link" href="#top">Wróć na górę</a>
       </p>
       <p class="footer__text">Maciej Ryszka - 2020</p>
     </footer>

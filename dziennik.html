@@ -17,22 +17,49 @@
   </head>
 
   <body>
-    <header id="top" class="header">
+    <header class="header">
       <nav class="header-navigation">
+        <section class="hamburger-menu hamburger-menu--js">
+          <ul class="hamburger-menu__list">
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="index.html"
+                >strona główna</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="html.html">html</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="css.html">css</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="js.html">js</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="git.html">git</a>
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="przegladarka.html"
+                >przeglądarka</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="pozostale.html"
+                >pozostałe</a
+              >
+            </li>
+            <li class="hamburger-menu__list-item">
+              <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
+            </li>
+          </ul>
+        </section>
         <button class="header-navigation__menu-button">
           <i class="fas fa-bars"></i>
         </button>
-        <div class="header-navigation__links-wrapper">
-          <a class="header-navigation__link" href="index.html">Strona główna</a>
-          <a class="header-navigation__link" href="dziennik.html">Dziennik</a>
-          <a class="header-navigation__link" href="teoria.html">Teoria</a>
-        </div>
+        <p class="header-navigation__text">WTF: Co Ten Frontend?</p>
       </nav>
     </header>
     <main class="diary-main">
-      <header class="diary-main__header">
-        <p class="diary-main__text">WTF: Co Ten Frontend?</p>
-      </header>
       <section class="diary-main__section">
         <h1 class="diary-main__heading">dziennik</h1>
         <div class="diary-main__image"></div>
@@ -341,11 +368,28 @@
             <h2 class="article__heading">25.05.2020</h2>
             <ul class="article__list">
               <li class="article__list-item">
-                Wykorzystałem CSS Grid do zbudowania layoutu strony
+                Wykorzystałem CSS Grid do zbudowania layoutu strony.
               </li>
               <li class="article__list-item">
                 Dostosowałem stronę do wyświetlenia na różnych urządzeniach z
                 wykorzystaniem 'media queries'.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">30.05.2020</h2>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Przebudowałem stronę, dzieląc podstronę z teorią na bardziej
+                szczegółowe podstrony pogrupowane pod względem treści.
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h2 class="article__heading">01.06.2020</h2>
+            <ul class="article__list">
+              <li class="article__list-item">
+                Przebudowywałem stronę w dalszym ciągu.
               </li>
             </ul>
           </article>
