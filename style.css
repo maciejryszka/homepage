@@ -28,7 +28,7 @@ body {
   color: #beb0a7;
   text-align: center;
   text-transform: uppercase;
-  background-color: #6a7b7680;
+  background-color: #6b7b76e6;
 }
 
 .header-navigation {
@@ -51,12 +51,12 @@ body {
   position: absolute;
   top: 38px;
   left: 0;
-  background-color: #6a7b7680;
-  transition: 0.3s;
+  background-color: #6b7b76e6;
+  text-align: left;
 }
 
 .hamburger-menu--active {
-  width: auto;
+  width: 190px;
   position: absolute;
 }
 
@@ -80,22 +80,6 @@ body {
   color: #beb0a7;
 }
 
-.header-navigation__link {
-  margin: 0 20px;
-  padding: 5px 15px;
-  border-radius: calc(29px / 2);
-  font-weight: bold;
-  text-decoration: none;
-  color: #6a7b76;
-  background-color: #beb0a7;
-}
-
-.header-navigation__links-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .header-navigation__menu-button {
   position: fixed;
   left: 0px;
@@ -112,12 +96,6 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 38px;
-}
-
-.diary-main__header,
-.theory-main__header,
-.main__header {
-  text-align: center;
 }
 
 .diary-main__heading,
@@ -142,6 +120,18 @@ body {
 
 .theory-main__image {
   background-image: url("img/knowledge.jpg");
+}
+
+.theory-main__links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.theory-main__link {
+  text-transform: uppercase;
+  /* text-decoration: none; */
+  color: #beb0a7;
+  offset-anchor: 38px;
 }
 
 .diary-articles-wrapper {
@@ -344,13 +334,6 @@ body {
     width: 400px;
   }
 
-  .header-navigation__link {
-    margin: 0 10px;
-    padding: 5px 10px;
-    border-radius: calc(28px / 2);
-    font-size: 14px;
-  }
-
   .diary-main,
   .theory-main,
   .main {
@@ -413,15 +396,9 @@ body {
 
 @media screen and (orientation: portrait) and (max-width: 320px) {
   .header-navigation {
-    width: 300px;
+    width: 100vw;
   }
-
-  .header-navigation__link {
-    margin: 0 5px;
-    padding: 2px 6=5px;
-    border-radius: calc(23px / 2);
-    font-size: 12px;
-  }
+  /* change for the biggest mobile resolution as above (w=100vw) and delete other props for smaller resolutions */
 
   .diary-main,
   .theory-main,
