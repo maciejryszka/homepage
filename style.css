@@ -83,6 +83,7 @@ body {
 .header-navigation__menu-button {
   position: fixed;
   left: 0px;
+  margin-left: 10px;
   background: none;
   border: none;
   color: #beb0a7;
@@ -96,6 +97,10 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 38px;
+}
+
+.main__text {
+  text-align: center;
 }
 
 .diary-main__heading,
@@ -129,9 +134,7 @@ body {
 
 .theory-main__link {
   text-transform: uppercase;
-  /* text-decoration: none; */
   color: #beb0a7;
-  offset-anchor: 38px;
 }
 
 .diary-articles-wrapper {
@@ -166,9 +169,15 @@ body {
   text-align: center;
 }
 
+@media screen and (orientation: landscape) and (max-width: 1366px) {
+  .header-navigation {
+    width: 100vw;
+  }
+}
+
 @media screen and (orientation: landscape) and (max-width: 823px) {
   .header-navigation {
-    width: 800px;
+    width: 100vw;
   }
 
   .diary-main,
@@ -192,9 +201,9 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 812px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 720px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -213,9 +222,9 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 736px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 700px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -228,10 +237,18 @@ body {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 667px) {
-  .header-navigation {
-    width: 650px;
+@media screen and (orientation: landscape) and (max-width: 680px) {
+  .diary-main,
+  .theory-main,
+  .main {
+    max-width: 670px;
   }
+}
+
+@media screen and (orientation: landscape) and (max-width: 667px) {
+  /* .header-navigation {
+    width: 650px;
+  } */
 
   .diary-main,
   .theory-main,
@@ -245,9 +262,9 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 640px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 600px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -264,9 +281,9 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 568px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 550px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -276,9 +293,9 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 533px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 520px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -289,7 +306,7 @@ body {
 
 @media screen and (orientation: portrait) and (max-width: 1024px) {
   .header-navigation {
-    width: 900px;
+    width: 100vw;
   }
 
   .diary-main,
@@ -313,9 +330,9 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 700px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -330,9 +347,9 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 414px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 400px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -361,9 +378,9 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 393px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 380px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -378,9 +395,9 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 375px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 350px;
-  }
+  } */
 
   .diary-main,
   .theory-main,
@@ -395,9 +412,9 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 320px) {
-  .header-navigation {
+  /* .header-navigation {
     width: 100vw;
-  }
+  } */
   /* change for the biggest mobile resolution as above (w=100vw) and delete other props for smaller resolutions */
 
   .diary-main,
