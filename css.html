@@ -81,6 +81,9 @@
         <a href="#media" class="theory-main__link"
           >media queries & mobile first</a
         >
+        <a href="#pseudoelements" class="theory-main__link"
+          >pseudoelemeny & pseudoklasy</a
+        >
       </section>
       <div class="theory-main__image"></div>
       <article id="css" class="article">
@@ -668,6 +671,78 @@
           elementów strony do większych ekranów poprzez dodanie 'breakpointów'
           oraz stylów wewnątrz nich. <b>Breakpoint</b> to szerokość ekranu gdzie
           następuje zmiana stylów.
+        </p>
+      </article>
+      <article id="pseudoelements" class="article">
+        <h2 class="article__heading">pseudoelementy & pseudoklasy</h2>
+        <p class="article__text">
+          Pseudoelement pozwala stylować określoną część elementu i wpływać na
+          jego treść z poziomu CSS.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Treść utowrzona przez pseudoelementy nie jest częścią DOM (nie można
+            jej więc zaznaczyć/skopiować).
+          </li>
+          <li class="article__list-item">
+            Nazwę pseudoelementu należy podać w regule CSS na końcu selektora,
+            poprzedzając ją podwójnym dwukropkiem (np. element::pseudoelement).
+            W starszych przegladarkach pseudoelement był poprzedzany pojedynczym
+            dwukropkiem, dlatego też taki zapis jest nadal wspierany.
+          </li>
+          <li class="article__list-item">
+            Pseudoelement 'before' zostaje dodany na początku danego elementu,
+            zaś pseudoelement 'after' na jego końcu.
+          </li>
+          <li class="article__list-item">
+            Właściwość <b>content</b> pozwala na zdefiniowanie treści
+            pseudoelementu.
+          </li>
+          <li class="article__list-item">
+            Pseudoelement może przyjmować także inne style.
+          </li>
+        </ul>
+        <p class="article__text">
+          Pseudoklasa to modyfikator elementu, którego działanie wynika z innego
+          działania.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Nazwę pseudoklasy należy podać w regule CSS na końcu selektora,
+            poprzedzając ją pojedynczym dwukropkiem (np. element:pseudoklasa).
+          </li>
+          <li class="article__list-item">
+            Pseudoklasa <b>hover</b> modyfikuje element w momencie, kiedy kursor
+            myszki znajduje się nad nim.
+          </li>
+          <li class="article__list-item">
+            Pseudoklasa <b>visited</b> modyfikuje linki, które zostały już
+            odwiedzone.
+          </li>
+          <li class="article__list-item">
+            Pseudoklasa <b>focus</b> modyfikuje wybieralny element, który jest
+            aktualnie zaznaczony.
+          </li>
+          <li class="article__list-item">
+            Pseudoklasa <b>first-child</b> modyfikuje element, jeśli jest on
+            pierwszym z kolei elementem wewnątrz elementu nadrzędnego.
+          </li>
+          <li class="article__list-item">
+            Pseudoklasa <b>last-child</b> modyfikuje element, jeśli jest on
+            ostatnim z kolei elementem wewnątrz elementu nadrzędnego.
+          </li>
+          <li class="article__list-item">
+            Pseudoklasa <b>not()</b> modyfikuje element, który nie posiada klasy
+            podanej w nawiasie.
+          </li>
+        </ul>
+        <p class="article__text">
+          Więcej przykładów pseudoklas znajduje się w
+          <a
+            class="article__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            >dokumentacji</a
+          >.
         </p>
       </article>
     </main>
