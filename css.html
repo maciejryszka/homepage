@@ -84,6 +84,7 @@
         <a href="#pseudoelements" class="theory-main__link"
           >pseudoelemeny & pseudoklasy</a
         >
+        <a href="#sass" class="theory-main__link">sass/scss</a>
       </section>
       <div class="theory-main__image"></div>
       <article id="css" class="article">
@@ -744,6 +745,73 @@
             >dokumentacji</a
           >.
         </p>
+      </article>
+      <article id="sass" class="article">
+        <h2 class="article__heading">sass/scss</h2>
+        <p class="article__text">
+          Problemy z CSS:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Porozrzucane klasy (bałagan w plikach).
+          </li>
+          <li class="article__list-item">
+            @media oddzielone od elementu (konieczność ponownego definiowania).
+          </li>
+          <li class="article__list-item">
+            Kiepska czytelność plików (szczególnie przy zagnieżdżeniach).
+          </li>
+          <li class="article__list-item">
+            Brak możliwości definiowania funkcji do robienia podobnych rzeczy.
+          </li>
+        </ul>
+        <p class="article__text">
+          SASS to preprocesor CSS, który zamienia swoją składnię na kod CSS
+          rozumiany przez przeglądarkę. Wymaga do działania narzędzia. Istnieją
+          dwa rodzaje składni preprocesorów CSS: SASS (wykorzystujący wcięcia)
+          oraz SCSS (wykorzystujący nawiasy klamrowe). Programista korzysta z
+          plików .sass/.scss, które są zamieniane przez preprocesor na plik
+          .css, który jest interpretowany przez przeglądarkę. W przypadku
+          korzystania z preprocesorów nie wolno edytować plików wynikowych .css,
+          ponieważ każda zmiana dokonana w plikach .sass/.scss wygeneruje plik
+          .css od nowa. Strona
+          <a class="article__link" href="https://www.sassmeister.com/"
+            >sassmeister.com</a
+          >
+          pozwala na podgląd kodu CSS dla kodu napisanego w składni SASS/SCSS.
+          Wszystko czego można użyć w składni CSS, może zostać również użyte w
+          SASS/SCSS.
+        </p>
+        <p class="article__text">
+          Zalety SASS/SCSS:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>zmienna</b> Definiowana za pomocą znaku <b>$</b> i nazwy
+            znajdującej się bezpośrednio po nim. Preprocesor w pliku CSS
+            podmienia zmienną na wartość jaką ona przechowuje.
+          </li>
+          <li class="article__list-item">
+            <b>@mixin</b>, <b>@include</b> Domieszki, które pozwalają na
+            grupowanie własności i wartości oraz reużywanie ich w kodzie.
+            Domieszki mogą przyjmować parametry w postaci zmiennych SASS/SCSS.
+            @mixin służy do zdefiniowania domieszki, natomiast @include do jej
+            użycia w kodzie.
+          </li>
+          <li class="article__list-item">
+            <b>@extend</b> Domieszka pozwalająca roszerzyć regułę o własności i
+            wartości innych selektorów. W takim wypadku dodatkowe własności i
+            wartości nie są dopisywane na końcu wewnątrz rozszerzanego selektora
+            (jak w przypadku @mixin), lecz tworzą dla niego osobną regułę na
+            początku pliku CSS.
+          </li>
+          <li class="article__list-item">
+            <b>&</b> 'Parent selector' ułatwiający tworzenie zagnieżdżeń w
+            SASS/SCSS. W pliku CSS w jego miejsce w selektorze podstawiany jest
+            selektor elementu nadrzędnego. Dzięki niemu kod SASS/SCSS jest
+            znacznie krótszy i bardziej przejrzysty.
+          </li>
+        </ul>
       </article>
     </main>
     <footer class="footer">
