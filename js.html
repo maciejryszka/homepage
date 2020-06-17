@@ -73,6 +73,9 @@
         >
         <a href="#logic" class="theory-main__link">logika</a>
         <a href="#events" class="theory-main__link">eventy</a>
+        <a href="#node" class="theory-main__link">node.js</a>
+        <a href="#npm" class="theory-main__link">npm i npx</a>
+        <a href="#npm-scripts" class="theory-main__link">npm scripts</a>
       </section>
       <div class="theory-main__image"></div>
       <article id="javascript" class="article">
@@ -412,6 +415,150 @@
           Wywoływaną funkcją może być również funkcja strzałkowa, przyjmująca
           jako argument dowolną nazwę. W takim przypadku nazwa ta będzie odnosić
           się do 'eventu'.
+        </p>
+      </article>
+      <article id="node" class="article">
+        <h2 class="article__heading">
+          node.js
+        </h2>
+        <p class="article__text">
+          Node można potraktować jako JavaScript uruchamiany poza przeglądarką.
+          Z tego powodu nie ma dostępu do DOM i wszystkich API związanych z nim
+          oraz przeglądarką.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Node.js jest do pobrania na oficjalnej
+            <a class="article__link" href="https://nodejs.org">stronie</a>.
+            Zalecana jest instalacja wersji wspieranej długoterminowo (LTS -
+            Long Time Support).
+          </li>
+          <li class="article__list-item">
+            Polecenie <b>node -v</b> pozwala na sprawdzenie w konsoli aktualnie
+            zainstalowanej wersji Node.js.
+          </li>
+          <li class="article__list-item">
+            Polecenie <b>node &lt;nazwa_pliku.rozszerzenie></b> pozwala
+            uruchominie skryptu w Node.js. Skrypt taki nie może używać niczego,
+            co bezpośrednio oddziałuje z elementami DOM (np. metoda
+            addEventListener).
+          </li>
+          <li class="article__list-item">
+            Zastosowanie Node.js jest bardzo szerokie. Moliwe jest napisanie w
+            nim całego backendu aplikacji.
+          </li>
+        </ul>
+      </article>
+      <article id="npm" class="article">
+        <h2 class="article__heading">
+          npm i npx
+        </h2>
+        <p class="article__text">
+          Npm jest managerem pakietów Node.js, chociaż jego nazwa nie pochodzi
+          od 'node package manager'. Jest to repozytorium, z którego można
+          pobrać paczki, pozwalające na szybszą i łatwiejszą pracę z
+          projektem.Oficjalna
+          <a class="article__link" href="https://www.npmjs.com/">strona</a>
+          npm.
+        </p>
+        <p class="article__text">Zalety npm:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Pozwala na dodawanie do projektu bibliotek, skryptów i narzędzi
+            (jest odpowiednikiem App Store/Google Play dla frontendowca).
+          </li>
+          <li class="article__list-item">
+            Pozwala skonfigurować projekt tak, aby uniezależnić go od innych
+            konfiguracji, np. edytora.
+          </li>
+          <li class="article__list-item">
+            Jest na bieżąco aktualizowanym uniwersalnym źródłem ze wszystkimi
+            informacjami.
+          </li>
+          <li class="article__list-item">
+            Zawiera narzędzia, które można podzielić na dwie grupy: narzędzia
+            obsługujące projekt (np. wtyczka Live Server) oraz narzędzia
+            wykorzystywane wewnątrz projektu (np. plik normalizujący style).
+          </li>
+        </ul>
+        <p class="article__text">Polecenia npm/npx:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>npm init</b> Inicjalizuje projekt, aby można było korzystać w nim
+            z npm. Polecenie wykonywane jedynie raz w projekcie.
+          </li>
+          <li class="article__list-item">
+            <b>npm init -y</b> Inicjalizuje projekt podobnie do powyższej
+            metody, jednak bez zadawania pytań o informację o projekcie.
+          </li>
+          <li class="article__list-item">
+            <b>npm install &lt;nazwa_paczki> --save</b> Instaluje paczkę
+            zawierającą plik/narzędzie wykorzystywane wewnątrz projektu/w
+            przeglądarce. W pliku <b>package.json</b> dodaje daną zależność do
+            'dependencies'.
+          </li>
+          <li class="article__list-item">
+            <b>npm install &lt;nazwa_paczki> --save-dev</b> Instaluje paczkę
+            zawierającą plik/narzędzie obsługujące projekt. W pliku
+            <b>package.json</b> dodaje daną zależność do 'dev-dependencies'.
+          </li>
+          <li class="article__list-item">
+            <b>npm install</b> Instaluje paczki zdefiniowane w pliku
+            <b>package.json</b> jeśli nie są aktualnie zainstalowane.
+          </li>
+          <li class="article__list-item">
+            <b>npx nazwa_narzędzia</b> Pozwala na skorzystanie z konsolowego
+            narzędzia bez konieczności jego instalacji. W przypadku gdy
+            narzędzie nie jest zainstalowane, pliki przy każdorazowym
+            uruchomieniu są pobierane do katalogu tymczasowego, skąd następuje
+            uruchomienie. Kiedy natomiast narzędzie jest już zainstalowane,
+            uruchomienie go z wykorzystaniem tego polecenia następuje
+            natychmiastowo.
+          </li>
+        </ul>
+        <p class="article__text">Pliki/katalogi związane z npm:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>package.json</b> Plik generowany przez polecenie <b>npm init</b>.
+            Zawiera strukturę obiektu z informacjami o projekcie.
+          </li>
+          <li class="article__list-item">
+            <b>package-lock.json</b> Plik, który przechowuje informacje o
+            zainstalowanych paczkach i jego głównym zadaniem jest blokowanie
+            wersji (pilnowanie ich zbieżności). Nie należy edydować tego pliku,
+            lecz można go dodać do repozytorium.
+          </li>
+          <li class="article__list-item">
+            <b>node_modules</b> Katalog, który przechowuje pobrane paczki. Nie
+            należy umieszczać tego katalogu w repozytorium, ponieważ z reguły
+            paczki te posiadają duży rozmiar. Inny użytkownik pracujący na danym
+            projekcie może pobrać i zainstalować wymagane paczki zdefiniowane w
+            pliku <b>package.json</b> samodzielnie. Jeśli projekt nie jest
+            aktualnie rozwijany, można usunąć ten katalog w celu zaoszczędzenia
+            miejsca, a w razie potrzeby zainstalować paczki ponownie.
+          </li>
+        </ul>
+        <p class="article__text">
+          Alternatywą dla npm jest korzystający z tej samej bazy pakietów
+          <a class="article__link" href="https://yarnpkg.com/">Yarn</a>.
+        </p>
+      </article>
+      <article id="npm-scripts" class="article">
+        <h2 class="article__heading">
+          npm scripts
+        </h2>
+        <p class="article__text">
+          Skrypty npm to skróty, które można zdefiniować w projekcie. Skrót taki
+          należy dodać jako kolejną wartość dla klucza 'scripts' w pliku
+          <b>package.json</b>. Wartość ta tworzy zagnieżdżenie, gdyż sama składa
+          się z klucza - nazwy skrótu, oraz wartości - polecenia, które zostanie
+          wywołane.
+        </p>
+        <p class="article__text">
+          Polecenie <b>npm run nazwa_skrótu</b> powoduje wywołanie skrótu. W
+          przypadku uruchomienia narzędzia konsolowego nie ma konieczności
+          umieszczania 'npx' na początku polecenia, ponieważ katalog
+          <b>node_modules</b> zostaje przeszukiwany domyślnie.
         </p>
       </article>
     </main>
