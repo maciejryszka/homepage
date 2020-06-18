@@ -19,7 +19,7 @@
   <body>
     <header class="header">
       <nav class="header-navigation">
-        <section class="hamburger-menu hamburger-menu--js">
+        <nav class="hamburger-menu hamburger-menu--js">
           <ul class="hamburger-menu__list">
             <li class="hamburger-menu__list-item">
               <a class="hamburger-menu__link" href="index.html"
@@ -52,7 +52,7 @@
               <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
             </li>
           </ul>
-        </section>
+        </nav>
         <button class="header-navigation__menu-button">
           <i class="fas fa-bars"></i>
         </button>
@@ -61,7 +61,7 @@
     </header>
     <main id="top" class="theory-main">
       <h1 class="theory-main__heading">JS</h1>
-      <section class="theory-main__links">
+      <nav class="theory-main__links">
         <a href="#javascript" class="theory-main__link">javascript</a>
         <a href="#types-of-data" class="theory-main__link"
           >typy danych i immutability</a
@@ -76,7 +76,8 @@
         <a href="#node" class="theory-main__link">node.js</a>
         <a href="#npm" class="theory-main__link">npm i npx</a>
         <a href="#npm-scripts" class="theory-main__link">npm scripts</a>
-      </section>
+        <a href="#node-sass" class="theory-main__link">node-sass</a>
+      </nav>
       <div class="theory-main__image"></div>
       <article id="javascript" class="article">
         <h2 class="article__heading">javascript</h2>
@@ -507,13 +508,12 @@
             <b>package.json</b> jeśli nie są aktualnie zainstalowane.
           </li>
           <li class="article__list-item">
-            <b>npx nazwa_narzędzia</b> Pozwala na skorzystanie z konsolowego
-            narzędzia bez konieczności jego instalacji. W przypadku gdy
-            narzędzie nie jest zainstalowane, pliki przy każdorazowym
-            uruchomieniu są pobierane do katalogu tymczasowego, skąd następuje
-            uruchomienie. Kiedy natomiast narzędzie jest już zainstalowane,
-            uruchomienie go z wykorzystaniem tego polecenia następuje
-            natychmiastowo.
+            <b>npx nazwa_narzędzia</b> Uruchamia konsolowe narzędzia (nawet
+            jeśli nie jest zainstalowane). W przypadku gdy narzędzie nie jest
+            zainstalowane, pliki przy każdorazowym uruchomieniu są pobierane do
+            katalogu tymczasowego, skąd następuje uruchomienie. Kiedy natomiast
+            narzędzie jest już zainstalowane, uruchomienie go z wykorzystaniem
+            tego polecenia następuje natychmiastowo.
           </li>
         </ul>
         <p class="article__text">Pliki/katalogi związane z npm:</p>
@@ -560,6 +560,31 @@
           umieszczania 'npx' na początku polecenia, ponieważ katalog
           <b>node_modules</b> zostaje przeszukiwany domyślnie.
         </p>
+      </article>
+      <article id="node-sass" class="article">
+        <h2 class="article__heading">
+          node-sass
+        </h2>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Paczka 'node-sass' służy do zamiany pliku .sass/.scss na plik .css.
+            Należy ją zainstalować jako paczkę zawierającą plik/narzędzie
+            obsługujące projekt (paczkę deweloperską).
+          </li>
+          <li class="article__list-item">
+            Aby wykonać zamianę pliku ze stylami należy uruchomić paczkę
+            poleceniem 'npx', a jako parametry podać nazwy plików: źródłowego i
+            docelowego wraz z rozszerzeniami.
+          </li>
+          <li class="article__list-item">
+            Aby narzędzie po uruchomieniu nasłuchiwało i nadpisywało plik .css
+            po każdym zapisie, należy uruchomić je z dodatkowym parametrem '-w'
+            (watch). Narzędzie w trakcie nasłuchiwania wyświetla także wszelkie
+            błędy w składni zapisanego pliku .sass/.scss. Aby wyjść z trybu
+            nasłuchiwania, należy skorzystać w terminalu z kombinacji klawiszy
+            'Ctrl + c'.
+          </li>
+        </ul>
       </article>
     </main>
     <footer class="footer">
