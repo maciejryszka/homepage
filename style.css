@@ -110,6 +110,16 @@ body {
   text-transform: uppercase;
 }
 
+.theory-main__heading::before {
+  content: "☺ ";
+  color: #48e496;
+}
+
+.theory-main__heading::after {
+  content: "☺ ";
+  color: #48e496;
+}
+
 .diary-main__image,
 .theory-main__image {
   margin: 0 auto;
@@ -201,10 +211,6 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 812px) {
-  /* .header-navigation {
-    width: 720px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -222,10 +228,6 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 736px) {
-  /* .header-navigation {
-    width: 700px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -246,10 +248,6 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 667px) {
-  /* .header-navigation {
-    width: 650px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -262,10 +260,6 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 640px) {
-  /* .header-navigation {
-    width: 600px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -281,10 +275,6 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 568px) {
-  /* .header-navigation {
-    width: 550px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -293,10 +283,6 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-width: 533px) {
-  /* .header-navigation {
-    width: 520px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -330,10 +316,6 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
-  /* .header-navigation {
-    width: 700px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -347,10 +329,6 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 414px) {
-  /* .header-navigation {
-    width: 400px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -378,10 +356,6 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 393px) {
-  /* .header-navigation {
-    width: 380px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -395,10 +369,6 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 375px) {
-  /* .header-navigation {
-    width: 350px;
-  } */
-
   .diary-main,
   .theory-main,
   .main {
@@ -412,11 +382,6 @@ body {
 }
 
 @media screen and (orientation: portrait) and (max-width: 320px) {
-  /* .header-navigation {
-    width: 100vw;
-  } */
-  /* change for the biggest mobile resolution as above (w=100vw) and delete other props for smaller resolutions */
-
   .diary-main,
   .theory-main,
   .main {
