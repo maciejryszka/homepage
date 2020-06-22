@@ -77,6 +77,7 @@
         <a href="#npm" class="theory-main__link">npm i npx</a>
         <a href="#npm-scripts" class="theory-main__link">npm scripts</a>
         <a href="#node-sass" class="theory-main__link">node-sass</a>
+        <a href="#import" class="theory-main__link">import/export</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="javascript" class="article">
@@ -583,6 +584,76 @@
             wszelkie błędy w składni zapisanego pliku .sass/.scss. Aby wyjść z
             trybu nasłuchiwania, należy skorzystać w terminalu z kombinacji
             klawiszy 'Ctrl + c'.
+          </li>
+        </ul>
+      </article>
+      <article id="import" class="article">
+        <h2 class="article__heading">
+          import/export
+        </h2>
+        <p class="article__text">
+          W przypadku modułów w JS najbardziej popularne są dwie koncepcje:
+          CommonJS (domyślnie wykorzystywany w skryptach Node.js, nie wymagający
+          użycia dodatkowych narzędzi w Node.js) oraz ES6 Modules (nie wymaga
+          użycia dodatkowych narzędzi w przegladarce).
+        </p>
+        <p class="article__text">
+          Import ES6 Modules:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Import modułu JS wykonuje się z wykorzystaniem znacznika
+            <b>&lt;script type="module"></b>
+          </li>
+          <li class="article__list-item">
+            <b>Eksport nazwany</b> (definiowany z użyciem słowa kluczowego
+            <b>export</b>) używany jest przed konkretną rzeczą, która ma być
+            udostępniona na zewnątrz pliku (np. przed definicją funkcji, która
+            będzie wywołana w innym pliku). Import elementu wyeksportowanego w
+            ten sposób odbywa się z użyciem słowa kluczowego <b>import</b>,
+            nazwy importowanych elementów podanych w klamrach oraz ścieżki i
+            nazwy do pliku źródłowego/modułu poprzedzonej słowem kluczowym
+            <b>from</b>, np.
+            <b
+              >import {nazwaFunkcji1, nazwaFunkcji2} from
+              'katalog/nazwaPliku.js'</b
+            >.
+          </li>
+          <li class="article__list-item">
+            <b>Eksport domyślny</b> (definiowany z użyciem słów kluczowych
+            <b>export default</b>) nie wymaga takiej samej nazwy elementu
+            podczas importu do pliku docelowego, lecz pozwala na swobodny jej
+            wybór w przeciwieństwie do eksportu nazwanego. Import elementru
+            wyeksportowanego w ten sposób odbywa się również z użyciem słowa
+            kluczowego <b>import</b>, nazwy importowanego elementów (lecz tym
+            razem bez podawania jej w nawiasie klamrowym) oraz ścieżki i nazwy
+            do pliku źródłowego/modułu poprzedzonej słowem kluczowym
+            <b>from</b>, np.
+            <b>import nazwaImportowanegoElementu from 'katalog/nazwaPliku.js'</b
+            >.
+          </li>
+          <li class="article__list-item">
+            Słowo kluczowe <b>as</b> pozwala na zmianę nazwy zaimportowanego
+            elementu w pliku docelowym, np.
+            <b
+              >import {nazwaFunkcjiPlikZrodlowy as nazwaFunkcjiPlikDocelowy}
+              from 'katalog/nazwaPliku.js'</b
+            >. Jest to zabieg najczęściej przydatny w przypadku wystąpienia
+            konfliktu nazw lub zbyt długich nazw elementów.
+          </li>
+          <li class="article__list-item">
+            <b>*</b> pozwala na zbiorowy import wszystkich elementów
+            wyeksportowanych w pliku źródłowym, np.
+            <b>import * as mojImport from 'katalog/nazwaPliku.js'</b>. Tworzony
+            jest wtedy obiekt o zdefiniowanej nazwie zawierający wszystkie
+            wyeksportowane elementy. Odwołanie do konkretnego elementu następuje
+            w sposób analogiczny dla obiektów, np.
+            <b>mojImport.nazwaElementu</b>.
+          </li>
+          <li class="article__list-item">
+            Importowanie z Node.js Modules z wykorzystaniem powyższych metod
+            jest bardzo trudne i może powodować wiele konfliktów. Nie należy
+            wykonywać takich importów bez użycia oprogramowania wspomagającego.
           </li>
         </ul>
       </article>

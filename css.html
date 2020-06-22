@@ -85,6 +85,7 @@
           >pseudoelemeny & pseudoklasy</a
         >
         <a href="#sass" class="theory-main__link">sass/scss</a>
+        <a href="#import" class="theory-main__link">import/export</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="css" class="article">
@@ -812,6 +813,45 @@
             znacznie krótszy i bardziej przejrzysty.
           </li>
         </ul>
+      </article>
+      <article id="import" class="article">
+        <h2 class="article__heading">import/export</h2>
+        <p class="article__text">
+          Projekt najczęściej podzielony jest na moduły, ponieważ:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Aplikacje szybko rosną i trudno utrzymać wszystko w jednym pliku.
+          </li>
+          <li class="article__list-item">
+            Chcemy korzystać z wybranych funkcji w różnych plikach.
+          </li>
+          <li class="article__list-item">
+            Chcemy mieć porządek w projekcie.
+          </li>
+          <li class="article__list-item">
+            Chcemy korzystać z kodu udostępnionego przez innych developerów
+            (albo udostępnić swój).
+          </li>
+        </ul>
+        <p class="article__text">
+          Importu stylów dokonuje się z wykorzystaniem słowa kluczowego
+          <b>@import</b>, podając po nim w apostrofach nazwę importowanego pliku
+          (jeśli znajduje się w innym katalogu - także ścieżkę). W powyższy
+          sposób można również importować pliki z serwera zewnętrznego, podając
+          link do pliku w miejsce nazwy pliku/ścieżki.
+        </p>
+        <p class="article__text">
+          Eksport pliku jest wykonowany domyślnie i nie ma potrzeby definiowania
+          go. Utworzony plik może zostać importowany w innym miejscu.
+        </p>
+        <p class="article__text">
+          Dobrą praktyką jest utworzenie w folderze <b>sass/scss</b> folderu
+          <b>modules</b> oraz umieszczenie w nim oddzielnych plików sass/scss
+          dla każdego bloku (na podstawie podziału zgodnego z metodologią BEM).
+          Następnie należy wykonać import poszczególnych plików do głównego
+          pliku ze stylami, znajdującego się w folderze <b>sass/scss</b>.
+        </p>
       </article>
     </main>
     <footer class="footer">
