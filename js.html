@@ -78,6 +78,7 @@
         <a href="#npm-scripts" class="theory-main__link">npm scripts</a>
         <a href="#node-sass" class="theory-main__link">node-sass</a>
         <a href="#import" class="theory-main__link">import/export</a>
+        <a href="#webpack" class="theory-main__link">webpack</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="javascript" class="article">
@@ -654,6 +655,54 @@
             Importowanie z Node.js Modules z wykorzystaniem powyższych metod
             jest bardzo trudne i może powodować wiele konfliktów. Nie należy
             wykonywać takich importów bez użycia oprogramowania wspomagającego.
+          </li>
+        </ul>
+      </article>
+      <article id="webpack" class="article">
+        <h2 class="article__heading">
+          webpack
+        </h2>
+        <p class="article__text">
+          <a class="article__link" href="https://webpack.js.org">Webpack</a>
+          jest pakietem modułów JavaScript na liecencji open-source, który
+          ułatwia development, może automatyzować procesy oraz jest używany
+          przez wiodące frameworki i biblioteki. Jego możliwości rozszerzane są
+          za pomocą paczek z npm.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Może zostać zainstalowany za pomocą narzędzi npm.
+          </li>
+          <li class="article__list-item">
+            Działa bez żadnego pliku konfiguracyjnego.
+          </li>
+          <li class="article__list-item">
+            Domyślnym plikiem wejściowym jest plik <b>index.js</b>, znajdujący
+            się w katalogu <b>src</b>.
+          </li>
+          <li class="article__list-item">
+            Domyślnym plikiem wyjściowym jest plik <b>main.js</b>, znajdujący
+            się w katalogu <b>dist</b>, który może zostać załączony bezpośrednio
+            do pliku .html.
+          </li>
+          <li class="article__list-item">
+            Pozwala na wykonanie standardowego importu (z wykorzystaniem ekportu
+            domyślnego) z Node.js Modules oraz wykorzystanie importowanych
+            elementów w pliku wejściowym, które po odpowiednim przetworzeniu
+            zostaną prawidłowo wykonane w pliku wyjściowym, uzupełnionym
+            automatycznie o inne wymagane elementy (np. funkcje z biblioteki).
+          </li>
+          <li class="article__list-item">
+            Posiada <b>loadery</b>, czyli dodatkowe opcje pozwalające na
+            wykonywanie operacji na plikach innych niż pliki .js (np. pliki ze
+            stylami SCSS).
+          </li>
+          <li class="article__list-item">
+            Posiada <b>pluginy</b>, pozwalające na wykonywanie operacji na
+            plikach (np. kopiowanie).
+          </li>
+          <li class="article__list-item">
+            Posiada dwa <b>tryby pracy (mode)</b>: deweloperski i produkcyjny.
           </li>
         </ul>
       </article>
