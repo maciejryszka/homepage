@@ -705,6 +705,139 @@
             Posiada dwa <b>tryby pracy (mode)</b>: deweloperski i produkcyjny.
           </li>
         </ul>
+        <p class="article__text">
+          Stworzona na potrzeby kursu konfiguracja webpack
+          <a
+            class="article__link"
+            href="https://github.com/maciejkorsan/wtf-webpack-starter/generate"
+            >WTF Webpack Starter Kit</a
+          >
+          zawiera:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">Serwer lokalny z autoodświeżaniem.</li>
+          <li class="article__list-item">Wsparcie dla SCSS i sourcemap.</li>
+          <li class="article__list-item">Minifikację.</li>
+          <li class="article__list-item">
+            Babel - pozwala na korzystanie z najnowszych funkcji ECMAScript.
+          </li>
+          <li class="article__list-item">Publikację na github pages.</li>
+        </ul>
+        <p class="article__text">
+          Aby zacząć pracę z konfiguracją webpacka WTF Webpack Starter Kit,
+          należy utworzyć nowe repozytorium na github korzystając z
+          <a
+            class="article__link"
+            href="https://github.com/maciejkorsan/wtf-webpack-starter/generate"
+            >linka</a
+          >
+          do konfiguracji (zostaje utworzona kopia repozytorium, na której można
+          swobodnie pracować bez obaw o wprowadzenie zmian w oryginalnej
+          konfiguracji). Kolejnym krokiem jest sklonowanie utworzonego
+          repozytorium (tworząc repozytorium lokalne należy pamiętać, aby wejść
+          uprzednio do katalogu przechowującego projekty). Ścieżki do plików
+          należy podawać względem plików źródłowych, a nie serwerowych (za
+          wyjątkiem ścieżek z sekcji 'head').
+        </p>
+        <p class="article__text">
+          Komendy pozwalające na rozpoczęcie pracy z konfiguracją oraz jej
+          używanie:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>npm install</b> Instaluje składniki konfiguracji (instalację
+            należy wykonać tylko raz - na początku projektu oraz ewentualnie w
+            momencie gdy ściągamy nową wersję lub dokładamy coś od siebie).
+          </li>
+          <li class="article__list-item">
+            <b>npm run start</b> Uruchamia projekt w trybue deweloperskim (adres
+            serwera znajduje się w terminalu). Aby zamknąć ten tryb, należy
+            skorzystać w terminalu z kombinacji klawiszy 'Ctrl + c'.
+          </li>
+          <li class="article__list-item">
+            <b>npm run build</b> Buduje projekt w trybie produkcyjnym.
+          </li>
+          <li class="article__list-item">
+            <b>npm run publish</b> Buduje projekt i kopiuje pliki z katalogu
+            <b>dist</b> na gałąź <b>gh-pages</b>, które następnie mogą zostać
+            opublikowane w serwisie 'GitHub Pages'. Postępy w pracy z kodem na
+            plikach źródłowych mogą być w dalszym ciągu commitowane i pushowane
+            w standardowy sposób, natomiast strona nie zostanie opublikowana bez
+            użycia tej komendy, ponieważ repozytorium nie będzie miało dostępu
+            do plików docelowych.
+          </li>
+        </ul>
+        <p class="article__text">
+          Aby dodać nową stronę do projektu, należy oprócz utworzenia samego
+          pliku .html dodać ją także do konfiguracji w pliku
+          'webpack.common.js', a następnie zrestartować serwer lokalny.
+        </p>
+        <p class="article__text">
+          Aby dołączyć plik .js tylko do jednej strony, należy go zdefiniować w
+          pliku 'webpack.common.js' w obiekcie 'entry', a następnie dodać go do
+          tablicy 'chunks' konkretnej strony. Dobrą praktyką jest nazywanie
+          plików .html tak jak plików .js, ponieważ zwiększa to porządek w
+          projekcie oraz w pliku konfiguracyjnym.
+        </p>
+        <p class="article__text">
+          Dzięki loaderowi do SCSS dostępnemu w konfiguracji, możliwy jest
+          import plików .scss do pliku .js, np.
+          <b>import '../scss/main.scss'</b>. Nie oznacza to, że plik ze stylami
+          znajdzie się w pliku .js - finalnie zostanie on utworzony jako
+          oddzielny plik .css.
+        </p>
+        <p class="article__text">
+          Pliki ze stylami można również importować z node_modules (np. plik
+          normalizujący). Import należy wtedy wykonać w głównym pliku .scss z
+          użyciem znaku '~' przed nazwą importowanego elementu, np.
+          <b>@import "~normalize.css"</b>.
+        </p>
+        <p class="article__text">
+          Pliki ze stylami można również importować z node_modules (np. plik
+          normalizujący). Import należy wtedy wykonać w głównym pliku .scss z
+          użyciem znaku '~' przed nazwą importowanego elementu, np.
+          <b>@import "~normalize.css"</b>.
+        </p>
+        <p class="article__text">
+          Dzięki source mapie dostępnej w konfiguracji, style w narzędziach
+          deweloperskich przeglądarki będą wyświetlane na postawie pliku .scss
+          zaiast na podstawie finalnej wersji pliku .css, jaki jest
+          interpretowany przez przeglądarkę. Pozwala to na natychmiastową
+          identyfikację konkretnej reguły w edytorze. Source mapa zachowuje się
+          podobnie również w odniesieniu do skryptów, wyświetlając je również na
+          podstawie pliku źródłowego zamiast docelowego. Source mapa
+          wykorzystywana jest jedynie na produkcji, aby nikt nie zobaczył plików
+          źródłowych (np. ze stylami strony).
+        </p>
+        <p class="article__text">
+          Po zbudowaniu projektu w trybie produkcyjnym wynikiem pracy jest
+          katalog <b>dist</b>, którego zawartość należy opublikować na serwerze.
+          Katalog ten nie jest z reguły commitowany (dlatego znajduje się w
+          pliku .gitignore), ponieważ jest on budowany. Nie należy zmieniać jego
+          zawartości manualnie, poniważ każde kolejne zbudowanie projektu
+          nadpisze dokonane tan zmiany i zostaną one utracone. Do katalogu
+          <b>dist</b> trafiają bez żadnych zmian wszystkie źródłowe pliki .html.
+          Pliki .scss, .saas są zamieniane na plik .css (który finalnie zostaje
+          umieszczony w pliku .html) oraz otrzymuje unikalny hash. Pliki .js
+          oraz obrazki również po skopiowaniu do katalogu <b>dist</b> otrzymują
+          unikalną nazwę. Jest to zabieg stosowany w celu uniknięcia sytuacji,
+          kiedy pamięć podręczna przeglądarki posiada już element o danej nazwie
+          i podmiana tego elementu na inny nie spowoduje jego ponownego
+          pobrania, kiedy będzie on miał ponowinie taką samą nazwę.
+        </p>
+        <p class="article__text">
+          Katalog <b>public</b> zawiera dodatkowe pliki, które powinny zostać
+          umieszczone na serwerze i nie są w żaden sposób modyfikowane przez
+          webpack, np. favicony. Zawartość tego katalogu zostaje skopiowana bez
+          żadnych zmian do katalogu <b>dist</b>. Należy pamiętać o odpowiednich
+          ścieżkach do plików znajdujących się w katalogu <b>public</b>.
+        </p>
+        <p class="article__text">
+          Webpack wyświetla błędy w terminalu ze wskazaniem, w którym miejscu
+          wystąpiły. Kontroluje on zarówno składnię kodu, poprawność użytych
+          ścieżek oraz sprawdza, czy zasoby do których wystąpiło odwołanie
+          istnieją.
+        </p>
       </article>
     </main>
     <footer class="footer">
