@@ -86,6 +86,7 @@
         >
         <a href="#sass" class="theory-main__link">sass/scss</a>
         <a href="#import" class="theory-main__link">import/export</a>
+        <a href="#custom-properties" class="theory-main__link">zmienne</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="css" class="article">
@@ -852,6 +853,46 @@
           Następnie należy wykonać import poszczególnych plików do głównego
           pliku ze stylami, znajdującego się w folderze <b>sass/scss</b>.
         </p>
+      </article>
+      <article id="custom-properties" class="article">
+        <h2 class="article__heading">zmienne</h2>
+        <p class="article__text">
+          <b>Custom properties</b> pełnią funkcję zmiennych w CSS. Definiowane
+          są w pseudoselektorze <b>:root</b>, który jest głównym węzłem
+          dokumentu (zazwyczaj jest to 'html', jenak pseudoselektor ':root' jest
+          wykorzystywany ze względu na wyższą specyficzność).
+        </p>
+        <p class="article__text">
+          Zmienną w CSS deklaruje się w podobny sposób jak pozostałe własności,
+          jednak nazwę zmiennej poprzedzają dwa myślniki:
+          <b>--nazwa-zmiennej: wartość</b>. Zmienna może przyjmować dowolne
+          wartości wykorzystywane w CSS.
+        </p>
+        <p class="article__text">
+          Odwołanie do zmiennej w regule CSS:
+          <b>właściwość: var(--nazwa-zmiennej)</b>.
+        </p>
+        <p>
+          Zmienne CSS działają podobnie do zmiennych SCSS z tą różnicą, że
+          zmienne SCSS są wywoływane jedynie raz (w momencie zamiany kodu SCSS
+          na CSS), natomiast zmienne CSS mogą być modyfikowane za pomocą
+          JavaScript z wykorzystaniem metody 'setProperty':
+          <b
+            >document.documentElement.style.setProperty('--zmienna',
+            'wartość')</b
+          >.
+        </p>
+        <p>
+          Zmienne CSS pozwalają na modyfikację stylów w JavaScript bez dodawania
+          klasy. Wykorzystanie metody bez modyfikacji klas jest zalecane w
+          przypadku zmiany stylu całej strony (np. dark mode). Wartości
+          zmiennych CSS można także nadpisywać z wykorzystaniem 'media querries'
+          poprzez nadpisanie reguł pseudoselektora ':root' dla poszczególnych
+          reguł '@media'.
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"></li>
+        </ul>
       </article>
     </main>
     <footer class="footer">
