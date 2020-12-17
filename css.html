@@ -87,6 +87,7 @@
         <a href="#sass" class="theory-main__link">sass/scss</a>
         <a href="#import" class="theory-main__link">import/export</a>
         <a href="#custom-properties" class="theory-main__link">zmienne</a>
+        <a href="#prefixes" class="theory-main__link">prefixy</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="css" class="article">
@@ -110,9 +111,7 @@
           medalów są następujące style:
         </p>
         <ul class="article__list">
-          <li class="article__list-item">
-            !important (niezalecane)
-          </li>
+          <li class="article__list-item">!important (niezalecane)</li>
           <li class="article__list-item">style="" (niezalecane)</li>
           <li class="article__list-item">#name</li>
           <li class="article__list-item">.name</li>
@@ -132,9 +131,7 @@
           <li class="article__list-item">
             Nazywaj rzeczy zgodnie z ich funkcją na stronie.
           </li>
-          <li class="article__list-item">
-            Nazwy klas zaczynaj małą literą.
-          </li>
+          <li class="article__list-item">Nazwy klas zaczynaj małą literą.</li>
           <li class="article__list-item">Nie zaczynaj od cyfry.</li>
           <li class="article__list-item">
             Skorzystaj z kebab case, kiedy musisz użyć większej ilości słów.
@@ -189,9 +186,7 @@
       </article>
       <article id="units" class="article">
         <h2 class="article__heading">jednostki</h2>
-        <p class="article__text">
-          Jednostki służące do zapisu wymiarów w CSS:
-        </p>
+        <p class="article__text">Jednostki służące do zapisu wymiarów w CSS:</p>
         <ul class="article__list">
           <li class="article__list-item">
             <b>0</b> Nie wymaga dopisywania jednostki.
@@ -363,9 +358,7 @@
             głównej CSS Flexbox, ale w obrębie pojedynczego wiersza.
           </li>
         </ul>
-        <p class="article__text">
-          Właściwości CSS Flexbox nadawane elementom:
-        </p>
+        <p class="article__text">Właściwości CSS Flexbox nadawane elementom:</p>
         <ul class="article__list">
           <li class="article__list-item">
             <b>align-self</b> Ustawia element wzdłuż osi prostopadłej do osi
@@ -419,9 +412,7 @@
             <b>Grid Area</b> Prostokątny obszar składający się z wielu komórek.
           </li>
         </ul>
-        <p class="article__text">
-          Właściwości CSS Grid nadawane kontenerowi:
-        </p>
+        <p class="article__text">Właściwości CSS Grid nadawane kontenerowi:</p>
         <ul class="article__list">
           <li class="article__list-item">
             <b>display</b> Służy do zmiany systemu rozmieszczania i
@@ -450,9 +441,7 @@
             zdefiniowania odstępu między wierszami / kolumnami.
           </li>
         </ul>
-        <p class="article__text">
-          Właściwości CSS Grid nadawane elementom:
-        </p>
+        <p class="article__text">Właściwości CSS Grid nadawane elementom:</p>
         <ul class="article__list">
           <li class="article__list-item">
             <b>grid-area</b> Przypisanie nazwy obszaru zdefiniowanej we
@@ -523,9 +512,7 @@
       </article>
       <article id="backgrounds" class="article">
         <h2 class="article__heading">tła</h2>
-        <p class="article__text">
-          Skrótowa właściwość CSS związana z tłem:
-        </p>
+        <p class="article__text">Skrótowa właściwość CSS związana z tłem:</p>
         <ul class="article__list">
           <li class="article__list-item">
             <b>background</b> Zawiera 8 poniższych właściwości szczegółowych.
@@ -750,9 +737,7 @@
       </article>
       <article id="sass" class="article">
         <h2 class="article__heading">sass/scss</h2>
-        <p class="article__text">
-          Problemy z CSS:
-        </p>
+        <p class="article__text">Problemy z CSS:</p>
         <ul class="article__list">
           <li class="article__list-item">
             Porozrzucane klasy (bałagan w plikach).
@@ -784,9 +769,7 @@
           Wszystko czego można użyć w składni CSS, może zostać również użyte w
           SASS/SCSS.
         </p>
-        <p class="article__text">
-          Zalety SASS/SCSS:
-        </p>
+        <p class="article__text">Zalety SASS/SCSS:</p>
         <ul class="article__list">
           <li class="article__list-item">
             <b>zmienna</b> Definiowana za pomocą znaku <b>$</b> i nazwy
@@ -827,9 +810,7 @@
           <li class="article__list-item">
             Chcemy korzystać z wybranych funkcji w różnych plikach.
           </li>
-          <li class="article__list-item">
-            Chcemy mieć porządek w projekcie.
-          </li>
+          <li class="article__list-item">Chcemy mieć porządek w projekcie.</li>
           <li class="article__list-item">
             Chcemy korzystać z kodu udostępnionego przez innych developerów
             (albo udostępnić swój).
@@ -872,7 +853,7 @@
           Odwołanie do zmiennej w regule CSS:
           <b>właściwość: var(--nazwa-zmiennej)</b>.
         </p>
-        <p>
+        <p class="article__text">
           Zmienne CSS działają podobnie do zmiennych SCSS z tą różnicą, że
           zmienne SCSS są wywoływane jedynie raz (w momencie zamiany kodu SCSS
           na CSS), natomiast zmienne CSS mogą być modyfikowane za pomocą
@@ -882,13 +863,43 @@
             'wartość')</b
           >.
         </p>
-        <p>
+        <p class="article__text">
           Zmienne CSS pozwalają na modyfikację stylów w JavaScript bez dodawania
           klasy. Wykorzystanie metody bez modyfikacji klas jest zalecane w
           przypadku zmiany stylu całej strony (np. dark mode). Wartości
           zmiennych CSS można także nadpisywać z wykorzystaniem 'media querries'
           poprzez nadpisanie reguł pseudoselektora ':root' dla poszczególnych
           reguł '@media'.
+        </p>
+      </article>
+      <article id="prefixes" class="article">
+        <h2 class="article__heading">prefixy</h2>
+        <p class="article__text">
+          Poszczególne przeglądarki implementują nowe feature'y w różnym czasie
+          (każda także często w unikalny sposób). W celu prawidłowego
+          wyświetlania takich feature'ów na różnych przeglądarkach powstały
+          <b>prefixy</b>, czyli dodatkowe właściwości dla poszczególnych
+          selektorów. Dzięki nim przeglądarka może wybrać wspieraną przez siebie
+          wersję danego feature'a.
+        </p>
+        <p class="article__text">
+          Poszczególne przeglądarki implementują nowe feature'y w różnym czasie
+          (każda także często w unikalny sposób). W celu prawidłowego
+          wyświetlania takich feature'ów na różnych przeglądarkach powstały
+          <b>prefixy</b>, czyli dodatkowe właściwości dla poszczególnych
+          selektorów. Dzięki nim przeglądarka może wybrać wspieraną przez siebie
+          wersję danego feature'a.
+        </p>
+        <p class="article__text">
+          Strona
+          <a class="article__link" href="https://caniuse.com">Can I use</a>
+          pozwala sprawdzić czy i w jakim stopniu konkretna właściwość jest
+          wspierana przez daną przeglądarkę. Narzędzie
+          <a class="article__link" href="https://autoprefixer.github.io"
+            >Autoprefixer</a
+          >
+          automatycznie dobiera do napisanych reguł wymagane prefixy i dodaje je
+          do arkusza stylów.
         </p>
       </article>
     </main>
