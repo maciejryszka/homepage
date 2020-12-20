@@ -68,6 +68,7 @@
           >github pages: statyczny hosting</a
         >
         <a href="#gitignore" class="theory-main__link">gitignore</a>
+        <a href="#branches" class="theory-main__link">branche</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="git" class="article">
@@ -94,12 +95,8 @@
           Dane użytkownika można sprawdzić z użyciem poleceń:
         </p>
         <ul class="article__list">
-          <li class="article__list-item">
-            git config --get user.name
-          </li>
-          <li class="article__list-item">
-            git config --get user.email
-          </li>
+          <li class="article__list-item">git config --get user.name</li>
+          <li class="article__list-item">git config --get user.email</li>
         </ul>
         <p class="article__text">Polecenia GITa:</p>
         <ul class="article__list">
@@ -160,18 +157,14 @@
         </p>
       </article>
       <article id="github-pages" class="article">
-        <h2 class="article__heading">
-          github pages: statyczny hosting
-        </h2>
+        <h2 class="article__heading">github pages: statyczny hosting</h2>
         <p class="article__text">
           Serwis 'GitHub Pages' umożliwia publikację strony. Opcja taka znajduje
           się w ustawieniach repozytorium zdalnego w sekcji 'GitHub Pages'.
         </p>
       </article>
       <article id="gitignore" class="article">
-        <h2 class="article__heading">
-          gitignore
-        </h2>
+        <h2 class="article__heading">gitignore</h2>
         <p class="article__text">
           Plik <b>gitignore</b> zawiara zestaw reguł, pozwalających na
           zdefiniowanie listy plików/katalogów, które będą znajdowały się w
@@ -180,6 +173,45 @@
           <b>.gitignore</b>, a następnie umieścić w nim nazwy plików/katalogów,
           które chcemy wyłączyć ze śledzenia przez Git.
         </p>
+      </article>
+      <article id="branches" class="article">
+        <h2 class="article__heading">branche</h2>
+        <p class="article__text">Zalety gałęzi w GIT:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Pozwalają na bezkarne testowanie.</li>
+          <li class="article__list-item">
+            Służą do bardziej efektywnego rozwijania oprogramowania.
+          </li>
+          <li class="article__list-item">Pozwalają zrównoleglić pracę.</li>
+          <li class="article__list-item">
+            Zwiększają czytelność postępu prac nad projektem.
+          </li>
+          <li class="article__list-item">
+            Ułatwiają wypuszczanie rzeczy na świat.
+          </li>
+        </ul>
+        <p class="article__text">
+          Polecenia w GIT służące do zarządzania gałęziami:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>git branch</b> Wyświetlenie aktywnej gałęzi.
+          </li>
+          <li class="article__list-item">
+            <b>git branch nazwaGałęzi</b> Utworzenie nowej gałęzi.
+          </li>
+          <li class="article__list-item">
+            <b>git checkout nazwaGałęzi</b> Przełączenie na wybraną gałąź.
+          </li>
+          <li class="article__list-item">
+            <b>git push --set-upstream origin nazwaGałęzi</b> Ustawienie gałęzi
+            utworzonej lokalnie w repozytorium zdalnym.
+          </li>
+          <li class="article__list-item">
+            <b>git merge nazwaGałęzi</b> Przyłączenie wybranej gałęzi do
+            aktywnej.
+          </li>
+        </ul>
       </article>
     </main>
     <footer class="footer">

@@ -76,6 +76,8 @@
         >
         <a href="#graphics-cutting" class="theory-main__link">cięcie grafik</a>
         <a href="#hamburger-menu" class="theory-main__link">hamburger menu</a>
+        <a href="#google-fonts" class="theory-main__link">google fonts</a>
+        <a href="#markdown" class="theory-main__link">markdown</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="website-layers" class="article">
@@ -125,21 +127,15 @@
         </p>
       </article>
       <article id="naming" class="article">
-        <h2 class="article__heading">
-          nazewnictwo
-        </h2>
+        <h2 class="article__heading">nazewnictwo</h2>
         <p class="article__text">Nazywanie rzeczy:</p>
         <ul class="article__list">
           <li class="article__list-item">
             Nazwy zapisujemy bez polskich znaków.
           </li>
           <li class="article__list-item">Nie używamy spacji.</li>
-          <li class="article__list-item">
-            Używamy języka angielskiego.
-          </li>
-          <li class="article__list-item">
-            Trzymamy się jednego schematu.
-          </li>
+          <li class="article__list-item">Używamy języka angielskiego.</li>
+          <li class="article__list-item">Trzymamy się jednego schematu.</li>
         </ul>
         <p class="article__text">
           Sposoby zastąpienia spacji w nazewnictwie (dwie pierwsze
@@ -204,9 +200,7 @@
         </ul>
       </article>
       <article id="local-server" class="article">
-        <h2 class="article__heading">
-          formatowanie kodu i lokalny serwer
-        </h2>
+        <h2 class="article__heading">formatowanie kodu i lokalny serwer</h2>
         <p class="article__text">
           Narzędziem służącym do automatycznego formatowania kodu jest Prettier.
           Wyboru narzędzia do formatowania spośród zainstalowanych można dokonać
@@ -275,6 +269,102 @@
             tego czy element posiada klasę o danej nazwie.
           </li>
         </ul>
+      </article>
+      <article id="google-fonts" class="article">
+        <h2 class="article__heading">google fonts</h2>
+        <p class="article__text">
+          Zbiór krojów czcionek, które można załączyć do projektu, znajduje się
+          na stronie
+          <a class="article__link" href="https://fonts.google.com/"
+            >Google Fonts</a
+          >. Aby wyświetlić kroje czcionek posiadające polskie znaki, należy
+          wybrać język 'Latin extended'.<br />
+          Po kliknięciu odpowiednigo kroju należy również wybrać dla niego
+          grubości, jakie będą potrzebne w projekcie. Następnie import kroju
+          czcionki jest możliwy na dwa sposoby: dodanie wygenerowanego znacznika
+          w nagłówku strony lub import czcionki bezpośrednio do akrusza
+          stylów.<br />
+          Aby wykorzystać zaimportowany krój czcionki na stronie, należy
+          ostylować jej treść z wykorzystaniem właściwości <b>font-family</b>,
+          która wraz z odpowiednią wartością jest wypisana na stronie, z której
+          wykonowany był import. Aby użyć wybranych grubości, należy ostylować
+          treść strony z wykorzystaniem właściwości <b>font-weight</b>.<br />
+          Słowo kluczowe <b>@font-face</b> pozwala na dołączenie plików z
+          krojami czcionek, jednak popularniejszym rozwiązaniem jest import
+          kroju czcionki z zewnętrznego serwera.
+        </p>
+      </article>
+      <article id="markdown" class="article">
+        <h2 class="article__heading">markdown</h2>
+        <p class="article__text">Markdown to język charakteryzujący się:</p>
+        <ul class="article__list">
+          <li class="article__list-item">Uniwersalnym formatowaniem tekstu.</li>
+          <li class="article__list-item">
+            Czytelnością zarówno w formie źródła jak i wyniku.
+          </li>
+          <li class="article__list-item">
+            Bezpiecznym wprowadzaniem treści bez konieczności korzystania z
+            HTML.
+          </li>
+        </ul>
+        <p class="article__text">Przykłady użycia języka markdown:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b># treść</b> przedstawienie treści jako nagłówka 'h1'.
+          </li>
+          <li class="article__list-item">
+            <b>## treść</b> przedstawienie treści jako nagłówka 'h2'.
+          </li>
+          <li class="article__list-item">
+            <b>### treść</b> przedstawienie treści jako nagłówka 'h3'.
+          </li>
+          <li class="article__list-item">
+            <b>[opis odnośnika](łącze)</b> przedstawienie treści jako linku.
+          </li>
+          <li class="article__list-item">
+            <b>![tekst aleternatywny](odnośnik do obrazka)</b> wstawienie
+            obrazka.
+          </li>
+          <li class="article__list-item">
+            <b>`treść`</b> przedstawienie treści jako polecenia /
+            jednolinijkowego kodu.
+          </li>
+          <li class="article__list-item">
+            <b>```treść blokowa```</b> przedstawienie treści jako bloku kodu.
+          </li>
+          <li class="article__list-item">
+            <b>```nazwaJęzykaProgramowania treść blokowa```</b> przedstawienie
+            treści jako bloku kodu wraz z kolorowaniem składni.
+          </li>
+          <li class="article__list-item">
+            <b>*treść*</b> wyróżnienie treści kursywą.
+          </li>
+          <li class="article__list-item">
+            <b>**treść**</b> wyróżnienie treści pogrubieniem.
+          </li>
+          <li class="article__list-item">
+            <b>***treść***</b> wyróżnienie treści pogrubieniem i kursywą.
+          </li>
+          <li class="article__list-item">
+            <b>> treść</b> przedstawienie treści cytatu.
+          </li>
+          <li class="article__list-item">
+            <b>- treść</b> przedstawienie treści jako elementu listy
+            nienumerowanej (wcięcie pozwala na utworzenie podlisty).
+          </li>
+          <li class="article__list-item">
+            <b>1. treść</b> przedstawienie treści jako elementu listy
+            numerowanej (wcięcie pozwala na utworzenie podlisty).
+          </li>
+        </ul>
+        <p class="article__text">
+          Markdown (rozszerzenie pliku: .md) pozwala na utworzenie czytelnego
+          pliku 'README'. Edycja pliku .md ze względu na szybki dostęp do
+          podglądu jest łatwiejsza do wykonania bezpośrednio na stronie
+          github.com. W takim wypadku należy jednak pamiętać, aby po commicie
+          wykonanym na stronie, wykonać polecenie <b>git pull</b> w konsoli, aby
+          zaktualizować repozytorium.
+        </p>
       </article>
     </main>
     <footer class="footer">
