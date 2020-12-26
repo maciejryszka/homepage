@@ -81,6 +81,9 @@
         <a href="#webpack" class="theory-main__link">webpack</a>
         <a href="#arrays" class="theory-main__link">tablice</a>
         <a href="#loops" class="theory-main__link">pętle</a>
+        <a href="#data-storage" class="theory-main__link"
+          >przechowywanie danych</a
+        >
       </nav>
       <div class="theory-main__image"></div>
       <article id="javascript" class="article">
@@ -138,8 +141,9 @@
           <li class="article__list-item">
             <b>var</b> Używany do deklaracji we wcześniejszych wersjach
             JavaScriptu. Teraz do deklaracji zmiennych należy używać słowa
-            kluczowego 'const', a jeśli połączenie między zmienną i jej
-            wartością będzie edytowane w trakcie działania programu - 'let'.
+            kluczowego <b>const</b>, a jeśli połączenie między zmienną i jej
+            wartością będzie edytowane w trakcie działania programu -
+            <b>let</b>.
           </li>
         </ul>
         <p class="article__text">Typy proste w JavaScript:</p>
@@ -168,7 +172,7 @@
         </ul>
         <p class="article__text">
           Do nazywania zmiennych należy używać schematu camelCase.<br />
-          Do sprawdzenia typu zmiennej służy słowo kluczowe 'typeof'.<br />
+          Do sprawdzenia typu zmiennej służy słowo kluczowe <b>typeof</b>.<br />
           Operator przypisania '=' nie tworzy nowych zmiennych, lecz tworzy i
           zwraca połączenie.<br />
           W przypadku połączenia zmiennej 'a' ze zmienną 'b', występuje
@@ -189,13 +193,13 @@
           <li class="article__list-item">Deklaracja.</li>
           <li class="article__list-item">Parametr (opcjonalnie).</li>
           <li class="article__list-item">
-            Słowo kluczowe 'return' (opcjonalnie).
+            Słowo kluczowe <b>return</b> (opcjonalnie).
           </li>
           <li class="article__list-item">Wynik.</li>
         </ul>
         <p class="article__text">
-          Wynikiem funkcji, która nie posiada słowa kluczowego 'return' jest
-          'undefined'.<br />
+          Wynikiem funkcji, która nie posiada słowa kluczowego undefinedst
+          <b>undefined</b>.<br />
           Funkcja może przyjmować dowolną ilość argumentów (może również nie
           przyjmować żadnego).<br />
           Typ zwracanej wartości może być inny niż typ argumetu/argumentów
@@ -208,11 +212,12 @@
         </p>
         <p class="article__text">
           Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
-          arrow function': const nazwaFunkcji = (parametr) => {ciało
-          funkcji}.<br />
-          Jeśli w ciele funkcji znajduje się tylko 'return' oraz zwracana
+          arrow function': <b>const</b> functionName <b>= (</b>parameter<b
+            >) => {</b
+          >functionBody<b>}.</b><br />
+          Jeśli w ciele funkcji znajduje się tylko <b>return</b> oraz zwracana
           wartość, można zapisać tę wartość bezpośrednio po strzałce z
-          pominięciem słowa kluczowego 'return'.<br />
+          pominięciem słowa kluczowego <b>return</b>.<br />
           Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa
           czytelność.<br />
           Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma
@@ -259,13 +264,13 @@
         <h2 class="article__heading">immutability w obiektach</h2>
         <ul class="article__list">
           <li class="article__list-item">
-            Jeśli obiekt został stworzony z użyciem słowa kluczowego 'const',
-            jedynie połączenie między nazwą zmiennej a obiektem jest stałe i nie
-            może zostać zmienione. Połączenia między własnościami obiektu i
-            wartościami na jakie wskazują mogą być jednak w dalszym ciągu
-            edytowane. Jest to tzw. mutowanie obiektów, czyli ich zmienianie.
-            Cecha ta odróżnia typy złożone (obiekty) od typów prostych, które
-            nie mogą być mutowane.
+            Jeśli obiekt został stworzony z użyciem słowa kluczowego
+            <b>const</b>, jedynie połączenie między nazwą zmiennej a obiektem
+            jest stałe i nie może zostać zmienione. Połączenia między
+            własnościami obiektu i wartościami na jakie wskazują mogą być jednak
+            w dalszym ciągu edytowane. Jest to tzw. mutowanie obiektów, czyli
+            ich zmienianie. Cecha ta odróżnia typy złożone (obiekty) od typów
+            prostych, które nie mogą być mutowane.
           </li>
           <li class="article__list-item">
             Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do
@@ -421,9 +426,9 @@
             zainstalowanej wersji Node.js.
           </li>
           <li class="article__list-item">
-            Polecenie <b>node &lt;nazwa_pliku.rozszerzenie></b> pozwala
-            uruchominie skryptu w Node.js. Skrypt taki nie może używać niczego,
-            co bezpośrednio oddziałuje z elementami DOM (np. metoda
+            Polecenie <b>node &lt;fileName.extenstion></b> pozwala uruchominie
+            skryptu w Node.js. Skrypt taki nie może używać niczego, co
+            bezpośrednio oddziałuje z elementami DOM (np. metoda
             addEventListener).
           </li>
           <li class="article__list-item">
@@ -473,13 +478,13 @@
             metody, jednak bez zadawania pytań o informację o projekcie.
           </li>
           <li class="article__list-item">
-            <b>npm install &lt;nazwa_paczki> --save</b> Instaluje paczkę
+            <b>npm install &lt;pacgakeName> --save</b> Instaluje paczkę
             zawierającą plik/narzędzie wykorzystywane wewnątrz projektu/w
             przeglądarce. W pliku <b>package.json</b> dodaje daną zależność do
             'dependencies'.
           </li>
           <li class="article__list-item">
-            <b>npm install &lt;nazwa_paczki> --save-dev</b> Instaluje paczkę
+            <b>npm install &lt;pacgakeName> --save-dev</b> Instaluje paczkę
             zawierającą plik/narzędzie obsługujące projekt. W pliku
             <b>package.json</b> dodaje daną zależność do 'dev-dependencies'.
           </li>
@@ -488,8 +493,8 @@
             <b>package.json</b> jeśli nie są aktualnie zainstalowane.
           </li>
           <li class="article__list-item">
-            <b>npx nazwa_narzędzia</b> Uruchamia konsolowe narzędzia (nawet
-            jeśli nie jest zainstalowane). W przypadku gdy narzędzie nie jest
+            <b>npx toolName</b> Uruchamia konsolowe narzędzia (nawet jeśli nie
+            jest zainstalowane). W przypadku gdy narzędzie nie jest
             zainstalowane, pliki przy każdorazowym uruchomieniu są pobierane do
             katalogu tymczasowego, skąd następuje uruchomienie. Kiedy natomiast
             narzędzie jest już zainstalowane, uruchomienie go z wykorzystaniem
@@ -533,7 +538,7 @@
           wywołane.
         </p>
         <p class="article__text">
-          Polecenie <b>npm run nazwa_skrótu</b> powoduje wywołanie skrótu. W
+          Polecenie <b>npm run shortcutName</b> powoduje wywołanie skrótu. W
           przypadku uruchomienia narzędzia konsolowego nie ma konieczności
           umieszczania 'npx' na początku polecenia, ponieważ katalog
           <b>node_modules</b> zostaje przeszukiwany domyślnie.
@@ -586,8 +591,8 @@
             nazwy do pliku źródłowego/modułu poprzedzonej słowem kluczowym
             <b>from</b>, np.
             <b
-              >import {nazwaFunkcji1, nazwaFunkcji2} from
-              'katalog/nazwaPliku.js'</b
+              >import {function1Name, function2Name} from
+              'directory/fileName.js'</b
             >.
           </li>
           <li class="article__list-item">
@@ -600,26 +605,24 @@
             razem bez podawania jej w nawiasie klamrowym) oraz ścieżki i nazwy
             do pliku źródłowego/modułu poprzedzonej słowem kluczowym
             <b>from</b>, np.
-            <b>import nazwaImportowanegoElementu from 'katalog/nazwaPliku.js'</b
-            >.
+            <b>import importedElementName from 'directory/fileName.js'</b>.
           </li>
           <li class="article__list-item">
             Słowo kluczowe <b>as</b> pozwala na zmianę nazwy zaimportowanego
             elementu w pliku docelowym, np.
             <b
-              >import {nazwaFunkcjiPlikZrodlowy as nazwaFunkcjiPlikDocelowy}
-              from 'katalog/nazwaPliku.js'</b
+              >import {sourceFileFunctionName as outputFileFunctionName} from
+              'directory/fileName.js'</b
             >. Jest to zabieg najczęściej przydatny w przypadku wystąpienia
             konfliktu nazw lub zbyt długich nazw elementów.
           </li>
           <li class="article__list-item">
             <b>*</b> pozwala na zbiorowy import wszystkich elementów
             wyeksportowanych w pliku źródłowym, np.
-            <b>import * as mojImport from 'katalog/nazwaPliku.js'</b>. Tworzony
+            <b>import * as myImport from 'directory/fileName.js'</b>. Tworzony
             jest wtedy obiekt o zdefiniowanej nazwie zawierający wszystkie
             wyeksportowane elementy. Odwołanie do konkretnego elementu następuje
-            w sposób analogiczny dla obiektów, np.
-            <b>mojImport.nazwaElementu</b>.
+            w sposób analogiczny dla obiektów, np. <b>myImport.elementName</b>.
           </li>
           <li class="article__list-item">
             Importowanie z Node.js Modules z wykorzystaniem powyższych metod
@@ -926,6 +929,35 @@
           <li class="article__list-item">
             <b>postdekrementacja (i--)</b> Zmniejsza wartość wyrażenia o 1 po
             wykonaniu pozostałych operacji.
+          </li>
+        </ul>
+      </article>
+      <article id="data-storage" class="article">
+        <h2 class="article__heading">przechowywanie danych</h2>
+        <p class="article__text">
+          Sposoby na przechowanie danych w przeglądarce po odświeżeniu strony:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>ciasteczka (cookies)</b><br />Są to małe fragmenty tekstu
+            wysyłane do przeglądarki, wykorzystywane przy następnych wejściach
+            na witrynę. Aby wyświetlić je dla poszczególnych stron, należy w
+            konsoli użyć polecenia<b>document.cookie</b> lub w narzędziach
+            deweloperskich w zakładce <b>Application</b>.<br />Format zapisu to
+            <b>"name = value"</b>, gdzie poszczególne ciasteczka oddzielone są
+            znakiem <b>;</b>.<br />Aby zdefiniować nowe ciasteczko należy
+            przypisać parę klucz i wartość do własności <b>cookie</b> dokumentu:
+            <b>document.cookie = "name = value"</b>. Ciasteczka po dodaniu
+            dostępne są aż do momentu zamknięcia okna przeglądarki (o ile nie
+            wybrano inaczej w ustawieniach przeglądarki).
+          </li>
+          <li class="article__list-item">
+            <b>local storage</b><br />Przechowuje dane w przeglądarce do momentu
+            ręcznego wyczyszczenia.
+          </li>
+          <li class="article__list-item">
+            <b>session storage</b><br />Przechowuje dane w przeglądarce do
+            momentu zamknięcia sesji (zakładki przeglądarki).
           </li>
         </ul>
       </article>
