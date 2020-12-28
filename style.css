@@ -13,7 +13,6 @@ html {
 body {
   min-height: 100vh;
   background: #202020;
-  background: linear-gradient(225deg, #202020 33%, #254441 66%);
   color: #6a7b76;
   font-family: "Roboto", sans-serif;
 }
