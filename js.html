@@ -877,41 +877,52 @@
         <ul class="article__list">
           <li class="article__list-item">
             <b>for(let</b> <u>i=0</u><b>;</b> <u>i&lt;10</u><b>;</b> <u>i++</u
-            ><b>) {</b>blockOfCode<b>}</b><br />
-            Składa się z inicjalizacji <u>iteratora</u>, <u>warunku</u> oraz
-            <u>wyrażenia inkrementacji/dekrementacji</u>. Blok kodu wewnątrz
-            pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą.
+            ><b>) {</b>blockOfCode<b>}</b>
           </li>
           <li class="article__list-item">
-            <b>while(</b><u>i&lt;10</u><b>) {</b>blockOfCode<b>}</b><br />
-            Zawiera <u>warunek</u>. Blok kodu wewnątrz pętli zostanie wykonany,
-            jeśli warunek zwróci wartość prawdziwą. Pętla najpierw sprawdza
-            warunek, a później wykonuje blok kodu, zatem jeśli początkowy
-            warunek zwróci wartość fałszywą, pętla nie wykona się ani razu.
+            <b>while(</b><u>i&lt;10</u><b>) {</b>blockOfCode<b>}</b>
           </li>
           <li class="article__list-item">
-            <b>do {</b>blockOfCode<b>} while(</b><u>i&lt;10</u><b>)</b><br />
-            Zawiera <u>warunek</u>. Blok kodu wewnątrz pętli zostanie wykonany,
-            jeśli warunek zwróci wartość prawdziwą. Pętla najpierw wykonuje blok
-            kodu, a później sprawdza warunek, zatem jeśli początkowy warunek
-            zwróci wartość fałszywą, pętla wykona się raz.
+            <b>do {</b>blockOfCode<b>} while(</b><u>i&lt;10</u><b>)</b>
           </li>
           <li class="article__list-item">
-            <b>for(let</b> <u>propertyName</u> <b>in</b> <u>object</u><b>)</b
-            ><br />
-            Składa się z inicjalizacji
-            <u>zmiennej określającej własność obiektu</u>
-            oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich
-            własnościach przekazanego obiektu.
+            <b>for(let</b> <u>propertyName</u> <b>in</b> <u>object</u><b>)</b>
           </li>
           <li class="article__list-item">
-            <b>for(let</b> <u>element</u> <b>of</b> <u>array</u><b>)</b><br />
-            Składa się z inicjalizacji
-            <u>zmiennej określającej element tablicy</u>
-            oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich
-            elementach tablicy.
+            <b>for(let</b> <u>element</u> <b>of</b> <u>array</u><b>)</b>
           </li>
         </ul>
+        <p class="article__text">
+          Pętla <b>for</b> składa się z inicjalizacji <u>iteratora</u>,
+          <u>warunku</u> oraz <u>wyrażenia inkrementacji/dekrementacji</u>. Blok
+          kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość
+          prawdziwą.
+        </p>
+        <p class="article__text">
+          Pętla <b>while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli
+          zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+          najpierw sprawdza warunek, a później wykonuje blok kodu, zatem jeśli
+          początkowy warunek zwróci wartość fałszywą, pętla nie wykona się ani
+          razu.
+        </p>
+        <p class="article__text">
+          Pętla <b>do ... while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz
+          pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+          najpierw wykonuje blok kodu, a później sprawdza warunek, zatem jeśli
+          początkowy warunek zwróci wartość fałszywą, pętla wykona się raz.
+        </p>
+        <p class="article__text">
+          Pętla <b>for ... in</b> składa się z inicjalizacji
+          <u>zmiennej określającej własność obiektu</u>
+          oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich
+          własnościach przekazanego obiektu.
+        </p>
+        <p class="article__text">
+          Pętla <b>for ... of</b> składa się z inicjalizacji
+          <u>zmiennej określającej element tablicy</u>
+          oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich elementach
+          tablicy.
+        </p>
         <p class="article__text">Rodzaje inkrementacji i dekrementacji:</p>
         <ul class="article__list">
           <li class="article__list-item">
@@ -935,31 +946,54 @@
       <article id="data-storage" class="article">
         <h2 class="article__heading">przechowywanie danych</h2>
         <p class="article__text">
-          Sposoby na przechowanie danych w przeglądarce po odświeżeniu strony:
+          Sposoby na przechowanie danych w przeglądarce:
         </p>
         <ul class="article__list">
           <li class="article__list-item">
-            <b>ciasteczka (cookies)</b><br />Są to małe fragmenty tekstu
-            wysyłane do przeglądarki, wykorzystywane przy następnych wejściach
-            na witrynę. Aby wyświetlić je dla poszczególnych stron, należy w
-            konsoli użyć polecenia<b>document.cookie</b> lub w narzędziach
-            deweloperskich w zakładce <b>Application</b>.<br />Format zapisu to
-            <b>"name = value"</b>, gdzie poszczególne ciasteczka oddzielone są
-            znakiem <b>;</b>.<br />Aby zdefiniować nowe ciasteczko należy
-            przypisać parę klucz i wartość do własności <b>cookie</b> dokumentu:
-            <b>document.cookie = "name = value"</b>. Ciasteczka po dodaniu
-            dostępne są aż do momentu zamknięcia okna przeglądarki (o ile nie
-            wybrano inaczej w ustawieniach przeglądarki).
+            <b>ciasteczka (cookies)</b>
           </li>
           <li class="article__list-item">
-            <b>local storage</b><br />Przechowuje dane w przeglądarce do momentu
-            ręcznego wyczyszczenia.
+            <b>local storage</b>
           </li>
           <li class="article__list-item">
-            <b>session storage</b><br />Przechowuje dane w przeglądarce do
-            momentu zamknięcia sesji (zakładki przeglądarki).
+            <b>session storage</b>
           </li>
         </ul>
+        <p class="article__text">
+          <b>Ciasteczka</b> to małe fragmenty tekstu wysyłane do przeglądarki,
+          wykorzystywane podczas kolejnych wejść na witrynę. Dostępne aż do
+          momentu zamknięcia okna przeglądarki (o ile nie wybrano inaczej w
+          ustawieniach przeglądarki).<br />Wyświetlenie zawartości ciasteczek na
+          stronie: zakładka <b>Application</b> w narzędziach deweloperskich lub
+          polecenie <b>document.cookie</b> w konsoli.<br />Format zapisu:
+          <b>"name = value"</b> (poszczególne ciasteczka oddzielone są znakiem
+          <b>;</b>).<br />Definiowanie nowego ciasteczka:
+          <b>document.cookie = "</b>name <b>=</b> value<b>"</b>.
+        </p>
+        <p class="article__text">
+          <b>Local storage</b> przechowuje dane w przeglądarce do momentu
+          ręcznego wyczyszczenia.<br />Wyświetlenie zawartośi local storage na
+          stronie: zakładka <b>Application</b> w narzędziach deweloperskich lub
+          polecenie <b>localStorage</b> w konsoli.<br />Dodawanie nowego
+          przechowywanego elementu: <b>localStorage.setItem('</b>key<b>', '</b
+          >value<b>')</b>.<br />Pobieranie przechowywanego elementu (w przypadku
+          podania nieistniejącego klucza, zwrócona zostanie wartość
+          <b>null</b>): <b>localStorage.getItem('</b>key<b>')</b>.<br />Usuwanie
+          przechowywanego elementu:
+          <b>localStorage.removeItem('</b>key<b>')</b>.<br />
+          W celu dodania obiektu do local storage, należy go najpierw
+          przekształcić na JSONString z wykorzystaniem metody:
+          <b>JSON.stringify(</b>object<b>)</b>.<br />
+          W celu pobrania z local storage obiektu przechowywanego jako
+          JSONString, należy go najpierw przekształcić na obiekt z
+          wykorzystaniem metody: <b>JSON.parse(</b>JSONString<b>)</b>.
+        </p>
+        <p class="article__text">
+          <b>Session storage</b> przechowuje dane w przeglądarce do momentu
+          zamknięcia sesji (zakładki przeglądarki).<br />
+          Dodawanie, pobieranie i usuwanie elementów jest analogiczne jak dla
+          local storage.
+        </p>
       </article>
     </main>
     <footer class="footer">
