@@ -88,6 +88,7 @@
         <a href="#import" class="theory-main__link">import/export</a>
         <a href="#custom-properties" class="theory-main__link">zmienne</a>
         <a href="#prefixes" class="theory-main__link">prefixy</a>
+        <a href="#animations" class="theory-main__link">animacje/przejścia</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="css" class="article">
@@ -884,15 +885,66 @@
         </p>
         <p class="article__text">
           Strona
-          <a class="article__link" href="https://caniuse.com">Can I use</a>
-          pozwala sprawdzić czy i w jakim stopniu konkretna właściwość jest
-          wspierana przez daną przeglądarkę. Narzędzie
+          <a class="article__link" href="https://caniuse.com">Can I use</a
+          >cdfdsxgvbfxcgbrdcvbf pozwala sprawdzić czy i w jakim stopniu
+          konkretna właściwość jest wspierana przez daną przeglądarkę. Narzędzie
           <a class="article__link" href="https://autoprefixer.github.io"
             >Autoprefixer</a
           >
           automatycznie dobiera do napisanych reguł wymagane prefixy i dodaje je
           do arkusza stylów.
         </p>
+      </article>
+      <article id="animations" class="article">
+        <h2 class="article__heading">animacje/przejścia</h2>
+        <p class="article__text">
+          Za pomocą własności CSS można animować elementy znajdujące się na
+          stronie (<a
+            class="article__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties"
+            >lista</a
+          >
+          takich elementów), jednak nie należy nadużywać animacji.
+        </p>
+        <p class="article__text">
+          <b>Transition</b> pozwala na zdefiniowanie przejścia pomiędzy dwiema
+          wartościami animowanej własności dla wybranego elementu strony.
+          Własności:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>name</b> Nazwa animowanej własności.
+          </li>
+          <li class="article__list-item">
+            <b>duration</b> Czas trwania animacji.
+          </li>
+          <li class="article__list-item">
+            <b>timing function</b> Funkcja czasowa animacji.
+          </li>
+          <li class="article__list-item">
+            <b>delay</b> Opóźnienie startu animacji.
+          </li>
+        </ul>
+        <p class="article__text">
+          <b>Will-change</b> przekazuje informacje przeglądarce, że określona
+          własność będzie animowana, co pozwala przeglądarce na zarezerwowanie
+          zasobów graficznych oraz płynne wyświetlenie animacji. Własność:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            <b>name</b> Nazwa animowanej własności.
+          </li>
+        </ul>
+        <p class="article__text">
+          <b>Transform</b> pozwala na transformację elementu strony (właściwość
+          'transform-origin' pozwala na zdefiniowanie punktu początkowego
+          transformacji). Własności:
+        </p>
+        <ul class="article__list">
+          <li class="article__list-item"><b>translate</b> Przemieszczenie.</li>
+          <li class="article__list-item"><b>rotate</b> Obrót.</li>
+          <li class="article__list-item"><b>scale</b> Zmiana rozmiaru.</li>
+        </ul>
       </article>
     </main>
     <footer class="footer">
