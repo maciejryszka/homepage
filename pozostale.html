@@ -86,6 +86,7 @@
         >
         <a href="#svg" class="theory-main__link">svg</a>
         <a href="#wcag" class="theory-main__link">wcag</a>
+        <a href="#pwa" class="theory-main__link">pwa</a>
       </nav>
       <div class="theory-main__image"></div>
       <article id="website-layers" class="article">
@@ -567,6 +568,49 @@
           >
           to rozszerzenie czytające treść oraz znaczniki na stronie
           internetowej.
+        </p>
+      </article>
+      <article id="pwa" class="article">
+        <h2 class="article__heading">pwa</h2>
+        <p class="article__text">
+          <b>PWA (Progressive Web Application)</b> jest to aplikacja
+          internetowa, umożliwiająca stworzenie wrażenia działania jak natywna
+          aplikacja mobilna (lub desktopowa).
+        </p>
+        <p class="article__text">Zalety PWA:</p>
+        <ul class="article__list">
+          <li class="article__list-item">
+            Dostęp do aparatu, powiadomień, itp.
+          </li>
+          <li class="article__list-item">Łatwa aktualizacja i dystrybucja.</li>
+          <li class="article__list-item">
+            Możliwość działania bez dostępu do internetu.
+          </li>
+          <li class="article__list-item">
+            Coraz więcej stabilnych fuknkcjonalności, silnie rozwijana
+            technologia.
+          </li>
+        </ul>
+        <p class="article__text">
+          Szkielet strony wykorzystującej technologię PWA jest identyczny jak
+          standardowy, jednak wymaga utworzenia pliku <b>manifest.json</b>,
+          dodania go do strony z wykorzystaniem znacznika <b>link</b>,
+          uruchomienia pliku <b>service worker.js</b> (<a
+            class="article__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+            >dokumentacja</a
+          >) oraz zarejestrowanie go za pomocą pliku <b>pwa.js</b> (funkcję do
+          rejestracji należy zaimportować oraz wywołać w pliku JS).<br />
+          Plik <b>manifest.json</b> opisuje aplikację. Zawiera on m.in.
+          informacje takie jak: nazwa, skrócona nazwa, kolor wiodący, kolor tła,
+          typ wyświetlania, orientacja, zakres działania technologii PWA
+          (najczęściej nazwa repozytorium), adres startowy aplikacji
+          (najczęściej nazwa repozytorium), ikony.<br />
+          Plik JS <b>service-worker</b> pozwala na prację w tle. Uruchamia się
+          wraz ze stroną, lecz działa niezależnie. Umożliwia także działanie
+          aplikacji bez dostępu do internetu. <b>Service-worker</b> posiada
+          tablicę, umożliwiającą dodanie do niej plików, które będą dostępne
+          offline.
         </p>
       </article>
     </main>
