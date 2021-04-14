@@ -612,6 +612,27 @@
           tablicę, umożliwiającą dodanie do niej plików, które będą dostępne
           offline.
         </p>
+        <p class="article__text">
+          Informacje o opcjonalnych plikach <b>manifest</b> oraz
+          <b>service worker</b> znajdują się w zakładce <b>Application</b> w
+          narzędziach deweloperskich przeglądarki. Aplikację wykorzystującą
+          technologię PWA można zainstalować na komputerze za pomocą znaku
+          <b>+</b>, znajdującego się po prawej stronie paska adresowego
+          przeglądarki. Możliwa jest także instalacja na smartfonie. Nazwa
+          instalowanej aplikacji pochodzi z pliku <b>manifest.js</b>. Podczas
+          instalacji należy pamiętać o prawidłowych ścieżkach (zakres działania
+          technologii PWA oraz adres startowy aplikacji) w pliku
+          <b>manifest.js</b>, gdyż są one różne dla aplikacji instalowanej
+          lokalnie oraz zdalnie.
+        </p>
+        <p class="article__text">
+          Ze względu na to, że działający <b>service worker</b> zapisuje dane do
+          pamięci podręcznej (aby nie trzeba było pobierać ich po każdym
+          odświeżeniu strony), często może okazać się konieczne manualne
+          odświeżenie strony podczas pracy przy jej tworzeniu na serwerze
+          lokalnym. Na czas tworzenia strony warto więc wyłączyć technologię PWA
+          lub często używać czyszczenia pamięci podręcznej.
+        </p>
       </article>
     </main>
     <footer class="footer">
