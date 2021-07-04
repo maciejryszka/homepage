@@ -1,1008 +1,974 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teoria - JS</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/9e22ac749d.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header class="header">
-      <nav class="header-navigation">
-        <nav class="hamburger-menu hamburger-menu--js">
-          <ul class="hamburger-menu__list">
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="index.html"
-                >strona główna</a
-              >
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="html.html">html</a>
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="css.html">css</a>
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="js.html">js</a>
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="git.html">git</a>
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="przegladarka.html"
-                >przeglądarka</a
-              >
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="pozostale.html"
-                >pozostałe</a
-              >
-            </li>
-            <li class="hamburger-menu__list-item">
-              <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="header-navigation__menu-button">
-          <i class="fas fa-bars"></i>
-        </button>
-        <p class="header-navigation__text">WTF: Co Ten Frontend?</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teoria - JS</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/9e22ac749d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header-navigation">
+      <nav class="hamburger-menu hamburger-menu--js">
+        <ul class="hamburger-menu__list">
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="index.html">strona główna</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="html.html">html</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="css.html">css</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="js.html">js</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="git.html">git</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="przegladarka.html">przeglądarka</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="pozostale.html">pozostałe</a>
+          </li>
+          <li class="hamburger-menu__list-item">
+            <a class="hamburger-menu__link" href="dziennik.html">dziennik</a>
+          </li>
+        </ul>
       </nav>
-    </header>
-    <main id="top" class="theory-main">
-      <h1 class="theory-main__heading">JS</h1>
-      <nav class="theory-main__links">
-        <a href="#javascript" class="theory-main__link">javascript</a>
-        <a href="#types-of-data" class="theory-main__link"
-          >typy danych i immutability</a
-        >
-        <a href="#functions" class="theory-main__link">funkcje</a>
-        <a href="#object" class="theory-main__link">obiekt</a>
-        <a href="#immutability" class="theory-main__link"
-          >immutability w obiektach</a
-        >
-        <a href="#logic" class="theory-main__link">logika</a>
-        <a href="#events" class="theory-main__link">eventy</a>
-        <a href="#node" class="theory-main__link">node.js</a>
-        <a href="#npm" class="theory-main__link">npm i npx</a>
-        <a href="#npm-scripts" class="theory-main__link">npm scripts</a>
-        <a href="#node-sass" class="theory-main__link">node-sass</a>
-        <a href="#import" class="theory-main__link">import/export</a>
-        <a href="#webpack" class="theory-main__link">webpack</a>
-        <a href="#arrays" class="theory-main__link">tablice</a>
-        <a href="#loops" class="theory-main__link">pętle</a>
-        <a href="#data-storage" class="theory-main__link"
-          >przechowywanie danych</a
-        >
-      </nav>
-      <div class="theory-main__image"></div>
-      <article id="javascript" class="article">
-        <h2 class="article__heading">javascript</h2>
-        <p class="article__text">Co to jest ECMAScript 6+</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            ECMAScript jest to ustandaryzowany przez organizację ECMA skryptowy
-            język programowania.
-          </li>
-          <li class="article__list-item">
-            JavaScript implementuje rzeczy ze specyfikacji ECMAScript.
-          </li>
-          <li class="article__list-item">
-            Rozwój ECMAScript mocno przyspieszył przez szerokie wykorzystanie
-            JavaScriptu.
-          </li>
-          <li class="article__list-item">
-            ES6 (i nowsze) wprowadzają wiele udogodnień dla developerów.
-          </li>
-          <li class="article__list-item">
-            Nowe feature'y mogą nie być wspierane we wszystkich przeglądarkach,
-            ale są na to sposoby.
-          </li>
-        </ul>
-        <p class="article__text">Składowe JavaScript:</p>
-        <ul class="article__list">
-          <li class="article__list-item">Wartości</li>
-          <li class="article__list-item">Operacje porównania</li>
-          <li class="article__list-item">Zmienne</li>
-          <li class="article__list-item">Literały</li>
-          <li class="article__list-item">Funkcje</li>
-          <li class="article__list-item">Obiekty</li>
-        </ul>
-        <p class="article__text">
-          Skrypty należy umieszczać na końcu znacznika 'body'.<br />
-          Kod JS uruchamia się raz (po załadowaniu strony).<br />
-          JavaScript to frontendowe programowanie.
-        </p>
-      </article>
-      <article id="types-of-data" class="article">
-        <h2 class="article__heading">typy danych i immutability</h2>
-        <p class="article__text">
-          Słowa kluczowe służące do deklaracji zmiennych w JavaScript:
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>const</b> Deklaruje zmienną. Połączenie między zmienną i jej
-            wartością nie może być zmieniane w trakcie działania programu.
-          </li>
-          <li class="article__list-item">
-            <b>let</b> Deklaruje zmienną. Połączenie między zmienną i jej
-            wartością może być zmieniane w trakcie działania programu.
-          </li>
-          <li class="article__list-item">
-            <b>var</b> Używany do deklaracji we wcześniejszych wersjach
-            JavaScriptu. Teraz do deklaracji zmiennych należy używać słowa
-            kluczowego <b>const</b>, a jeśli połączenie między zmienną i jej
-            wartością będzie edytowane w trakcie działania programu -
-            <b>let</b>.
-          </li>
-        </ul>
-        <p class="article__text">Typy proste w JavaScript:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>String</b> Tekst. Należy podać go w apostrofach (zalecany
-            pojedynczy).
-          </li>
-          <li class="article__list-item"><b>Number</b> Liczba.</li>
-          <li class="article__list-item">
-            <b>Bigint</b> Duża liczba. Większa niż 2^53.
-          </li>
-          <li class="article__list-item"><b>boolean</b> True lub false.</li>
-          <li class="article__list-item">
-            <b>null</b> Wartość celowo niezdefiniowana. Na etapie deklaracji
-            jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo, że zmienna
-            będzie wykorzystana w trakcie działania programu.
-          </li>
-          <li class="article__list-item">
-            <b>undefinied</b> Brak definicji. Przy próbie odwołania do
-            nieistniejącej zmiennej występuje błąd.
-          </li>
-          <li class="article__list-item">
-            <b>*symbol</b> Tworzy "unikalne opakowanie".
-          </li>
-        </ul>
-        <p class="article__text">
-          Do nazywania zmiennych należy używać schematu camelCase.<br />
-          Do sprawdzenia typu zmiennej służy słowo kluczowe <b>typeof</b>.<br />
-          Operator przypisania '=' nie tworzy nowych zmiennych, lecz tworzy i
-          zwraca połączenie.<br />
-          W przypadku połączenia zmiennej 'a' ze zmienną 'b', występuje
-          połączenie z wartością zmiennej 'b' a nie bezpośrednio z samą zmienną
-          'b'.<br />
-          Koncept <b>immutability</b> polega na tym, że nie możemy zmieniać
-          wartości 'primitive values' (wartości typów prostych, do których
-          podłączamy się za pomocą zmiennych) w JavaScript. To co zmieniamy, to
-          połączenia między nimi a zmiennymi. Wartości już istnieją, są
-          niezmienne. Na przykład nie można sobie zmienić 'true' na 'false' lub
-          na odwrót.
-        </p>
-      </article>
-      <article id="functions" class="article">
-        <h2 class="article__heading">funkcje</h2>
-        <p class="article__text">Składowe funkcji w JavaScript:</p>
-        <ul class="article__list">
-          <li class="article__list-item">Deklaracja.</li>
-          <li class="article__list-item">Parametr (opcjonalnie).</li>
-          <li class="article__list-item">
-            Słowo kluczowe <b>return</b> (opcjonalnie).
-          </li>
-          <li class="article__list-item">Wynik.</li>
-        </ul>
-        <p class="article__text">
-          Wynikiem funkcji, która nie posiada słowa kluczowego undefinedst
-          <b>undefined</b>.<br />
-          Funkcja może przyjmować dowolną ilość argumentów (może również nie
-          przyjmować żadnego).<br />
-          Typ zwracanej wartości może być inny niż typ argumetu/argumentów
-          przyjmowanych przez funkcję.<br />
-          Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu w
-          wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa jego
-          czytelność oraz ułatwia wyszukiwanie i poprawę błędów.<br />
-          Dobrą praktyką jest nazywanie funkcji podczas deklaracji.<br />
-          Wewnątrz funkcji wykowywane są obliczenia/zadania.<br />
-        </p>
-        <p class="article__text">
-          Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
-          arrow function': <b>const</b> functionName <b>= (</b>parameter<b
-            >) => {</b
-          >functionBody<b>}.</b><br />
-          Jeśli w ciele funkcji znajduje się tylko <b>return</b> oraz zwracana
-          wartość, można zapisać tę wartość bezpośrednio po strzałce z
-          pominięciem słowa kluczowego <b>return</b>.<br />
-          Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa
-          czytelność.<br />
-          Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma
-          dostępu do 'arguments' i 'super', a więc nie jest zamiennikiem
-          tradycyjnej funkcji.
-        </p>
-      </article>
-      <article id="object" class="article">
-        <h2 class="article__heading">obiekt</h2>
-        <p class="article__text">Obiekt w JavaScript:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Jest strukturą danych ułatwiającą odwzorowanie świata rzeczywistego
-            w świecie programowania.
-          </li>
-          <li class="article__list-item">
-            Posiada oddzielone przecinkami własności (zmienne wewnątrz obiektu)
-            oraz metody (funcje wewnątrz obiektu).
-          </li>
-          <li class="article__list-item">
-            Własności/metody składają się z unikalnego w ramach obiektu klucza
-            oraz podanej po dwukropku wartości, którą może być typ prymitywny,
-            funkcja lub zagnieżdżenie.
-          </li>
-          <li class="article__list-item">
-            Aby dostać się do konkretnej własności obiektu, należy po jego
-            nazwie i kropce odwołać się do konkretnego klucza (w przypadku kiedy
-            w obiekcie występują zagnieżdżenia, można dostać się do kolejnych
-            poziomów własności z wykorzystaniem kolejnych kropek).
-          </li>
-          <li class="article__list-item">
-            Aby dostać się do konkretnej metody obiektu, należy po jego nazwie i
-            kropce odwołać się do konkretnego klucza oraz użyć nawiasów
-            okrągłych (i opcjonalnie argumentów) w celu wywołania metody.
-          </li>
-          <li class="article__list-item">
-            Alternatywną opcją dostania się do własności obiektu jest
-            skorzystanie z nawiasów kwadratowych po jego nazwie i podanie
-            wewnątrz nich konkretnego klucza (w apostrofach).
-          </li>
-        </ul>
-      </article>
-      <article id="immutability" class="article">
-        <h2 class="article__heading">immutability w obiektach</h2>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Jeśli obiekt został stworzony z użyciem słowa kluczowego
-            <b>const</b>, jedynie połączenie między nazwą zmiennej a obiektem
-            jest stałe i nie może zostać zmienione. Połączenia między
-            własnościami obiektu i wartościami na jakie wskazują mogą być jednak
-            w dalszym ciągu edytowane. Jest to tzw. mutowanie obiektów, czyli
-            ich zmienianie. Cecha ta odróżnia typy złożone (obiekty) od typów
-            prostych, które nie mogą być mutowane.
-          </li>
-          <li class="article__list-item">
-            Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do
-            danej wartości, dopóki nie zmienimy dokładnie tego przypięcia.
-          </li>
-          <li class="article__list-item">
-            Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy
-            zmienione zostanie przypięcie dla którejś z jego własności. Zmiana
-            takiego przypięcia może nastąpić z "inicjatywy" innego elementu
-            wskazującego na ten obiekt.
-          </li>
-        </ul>
-      </article>
-      <article id="logic" class="article">
-        <h2 class="article__heading">logika</h2>
-        <p class="article__text">Operatory porównania:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>></b> Lewa strona większa od prawej.
-          </li>
-          <li class="article__list-item">
-            <b>&lt;</b> Lewa strona mniejsza od prawej.
-          </li>
-          <li class="article__list-item">
-            <b>>=</b> Lewa strona większa/równa prawej.
-          </li>
-          <li class="article__list-item">
-            <b>&lt;=</b> Lewa strona mniejsza/równa prawej.
-          </li>
-          <li class="article__list-item"><b>==</b> Obie strony równe.</li>
-          <li class="article__list-item">
-            <b>===</b> Obie strony równe (sprawdza typeof).
-          </li>
-          <li class="article__list-item"><b>!=</b> Obie strony różne.</li>
-          <li class="article__list-item">
-            <b>!==</b> Obie strony różne (sprawdza typeof).
-          </li>
-        </ul>
-        <p class="article__text">Wartości fałszywe w JavaScript:</p>
-        <ul class="article__list">
-          <li class="article__list-item"><b>false</b></li>
-          <li class="article__list-item"><b>0</b></li>
-          <li class="article__list-item"><b>'', "", ``</b> Pusty string.</li>
-          <li class="article__list-item"><b>null</b></li>
-          <li class="article__list-item"><b>undefined</b></li>
-          <li class="article__list-item"><b>NaN</b> Not a number.</li>
-        </ul>
-        <p class="article__text">
-          Cała reszta stanowi wartości prawdziwe w JavaScript. Przykłady:
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item"><b>true</b></li>
-          <li class="article__list-item">
-            <b>'Text'</b> Dowolny niepusty string.
-          </li>
-          <li class="article__list-item"><b>12</b> Liczba dodatnia.</li>
-          <li class="article__list-item"><b>-4</b> Liczba ujemna.</li>
-          <li class="article__list-item"><b>{}</b> Obiekt.</li>
-          <li class="article__list-item"><b>[]</b> Tablica.</li>
-          <li class="article__list-item">Tablica.</li>
-        </ul>
-        <p class="article__text">Operatory logiczne:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>AND (&&)</b> Wszystkie warunki muszą być prawdziwe, żeby
-            wyrażenie było prawdziwe.
-          </li>
-          <li class="article__list-item">
-            <b>OR (||)</b> Przynajmniej jeden warunek muszi być prawdziwy, żeby
-            wyrażenie było prawdziwe.
-          </li>
-          <li class="article__list-item">
-            <b>NOT (!)</b> Odwraca wartość wyrażenia logicznego.
-          </li>
-        </ul>
-        <p class="article__text">Instrukcje warunkowe:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>if(condition)</b> Kod w klamrach następujących po instrukcji 'if'
-            wykona się jeśli warunek w nawiasie zwróci prawdę.
-          </li>
-          <li class="article__list-item">
-            <b>else if(condition)</b> Kod w klamrach następujących po instrukcji
-            'if else' wykona się jeśli warunek w nawiasie zwróci prawdę oraz
-            jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił prawdy.
-          </li>
-          <li class="article__list-item">
-            <b>else</b> Kod w klamrach następujących po instrukcji 'else' wykona
-            się jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił
-            prawdy.
-          </li>
-        </ul>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>switch(variable)</b> Wykona kod dla przypadku odpowiadającego
-            wartości zmiennej znajdującej się w nawiasie. W przypadku braku
-            takiego przypadku zwróci wartość domyślną, która jest zdefiniowana
-            na końcu instrukcji. Instrukcja przy porównaniu sprawdza również
-            zgodność typów.
-          </li>
-        </ul>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b> (condition) ? 'ifTrue' : 'ifFalse' </b> 'Ternary operator'.
-            Jeśli warunek podany przed znakiem zapytania jest spełniony,
-            zwracana jest wartość znajdująca się między znakiem zapytania a
-            dwukropkiem. W przeciwnym razie zwracana jest wartość znajdująca się
-            po dwukropku.
-          </li>
-        </ul>
-        <p class="article__text">
-          <a
-            class="article__link"
-            href="https://www.destroyallsoftware.com/talks/wat/"
-            >Dziwne rzeczy</a
-          >
-          w JavaScript.
-        </p>
-      </article>
-      <article id="events" class="article">
-        <h2 class="article__heading">eventy</h2>
-        <p class="article__text">
-          Znacznik <b>&lt;button></b> służy do interakcji na stronie, na której
-          znajduje się już użytkownik, np. wysłanie formularza, zmiana elementu,
-          włączenie menu. Znacznik <b>&lt;a></b> służy do nawigacji, np.
-          przejście do konkretnej sekcji, podstrony, strony zewnętrzenej.<br />
-          Funkcja służąca do nasłuchiwania w JavaScript to 'addEventListener',
-          która wywoływana jest na konkretnym elemencie DOM i przyjmuje jako
-          argumenty: typ (jako string) oraz nazwę wywoływanej funkcji.
-          Opcjonalnie funkcja 'addEventListener' może przyjąć również inne
-          argumenty.<br />
-          Wywoływaną funkcją może być również funkcja strzałkowa, przyjmująca
-          jako argument dowolną nazwę. W takim przypadku nazwa ta będzie odnosić
-          się do 'eventu'.
-        </p>
-      </article>
-      <article id="node" class="article">
-        <h2 class="article__heading">node.js</h2>
-        <p class="article__text">
-          Node można potraktować jako JavaScript uruchamiany poza przeglądarką.
-          Z tego powodu nie ma dostępu do DOM i wszystkich API związanych z nim
-          oraz przeglądarką.
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Node.js jest do pobrania na oficjalnej
-            <a class="article__link" href="https://nodejs.org">stronie</a>.
-            Zalecana jest instalacja wersji wspieranej długoterminowo (LTS -
-            Long Time Support).
-          </li>
-          <li class="article__list-item">
-            Polecenie <b>node -v</b> pozwala na sprawdzenie w konsoli aktualnie
-            zainstalowanej wersji Node.js.
-          </li>
-          <li class="article__list-item">
-            Polecenie <b>node &lt;fileName.extenstion></b> pozwala uruchominie
-            skryptu w Node.js. Skrypt taki nie może używać niczego, co
-            bezpośrednio oddziałuje z elementami DOM (np. metoda
-            addEventListener).
-          </li>
-          <li class="article__list-item">
-            Zastosowanie Node.js jest bardzo szerokie. Moliwe jest napisanie w
-            nim całego backendu aplikacji.
-          </li>
-        </ul>
-      </article>
-      <article id="npm" class="article">
-        <h2 class="article__heading">npm i npx</h2>
-        <p class="article__text">
-          Npm jest managerem pakietów Node.js, chociaż jego nazwa nie pochodzi
-          od 'node package manager'. Jest to repozytorium, z którego można
-          pobrać paczki, pozwalające na szybszą i łatwiejszą pracę z
-          projektem.Oficjalna
-          <a class="article__link" href="https://www.npmjs.com/">strona</a>
-          npm.
-        </p>
-        <p class="article__text">Zalety npm:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Pozwala na dodawanie do projektu bibliotek, skryptów i narzędzi
-            (jest odpowiednikiem App Store/Google Play dla frontendowca).
-          </li>
-          <li class="article__list-item">
-            Pozwala skonfigurować projekt tak, aby uniezależnić go od innych
-            konfiguracji, np. edytora.
-          </li>
-          <li class="article__list-item">
-            Jest na bieżąco aktualizowanym uniwersalnym źródłem ze wszystkimi
-            informacjami.
-          </li>
-          <li class="article__list-item">
-            Zawiera narzędzia, które można podzielić na dwie grupy: narzędzia
-            obsługujące projekt (np. wtyczka Live Server) oraz narzędzia
-            wykorzystywane wewnątrz projektu (np. plik normalizujący style).
-          </li>
-        </ul>
-        <p class="article__text">Polecenia npm/npx:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>npm init</b> Inicjalizuje projekt, aby można było korzystać w nim
-            z npm. Polecenie wykonywane jedynie raz w projekcie.
-          </li>
-          <li class="article__list-item">
-            <b>npm init -y</b> Inicjalizuje projekt podobnie do powyższej
-            metody, jednak bez zadawania pytań o informację o projekcie.
-          </li>
-          <li class="article__list-item">
-            <b>npm install &lt;pacgakeName> --save</b> Instaluje paczkę
-            zawierającą plik/narzędzie wykorzystywane wewnątrz projektu/w
-            przeglądarce. W pliku <b>package.json</b> dodaje daną zależność do
-            'dependencies'.
-          </li>
-          <li class="article__list-item">
-            <b>npm install &lt;pacgakeName> --save-dev</b> Instaluje paczkę
-            zawierającą plik/narzędzie obsługujące projekt. W pliku
-            <b>package.json</b> dodaje daną zależność do 'dev-dependencies'.
-          </li>
-          <li class="article__list-item">
-            <b>npm install</b> Instaluje paczki zdefiniowane w pliku
-            <b>package.json</b> jeśli nie są aktualnie zainstalowane.
-          </li>
-          <li class="article__list-item">
-            <b>npx toolName</b> Uruchamia konsolowe narzędzia (nawet jeśli nie
-            jest zainstalowane). W przypadku gdy narzędzie nie jest
-            zainstalowane, pliki przy każdorazowym uruchomieniu są pobierane do
-            katalogu tymczasowego, skąd następuje uruchomienie. Kiedy natomiast
-            narzędzie jest już zainstalowane, uruchomienie go z wykorzystaniem
-            tego polecenia następuje natychmiastowo.
-          </li>
-        </ul>
-        <p class="article__text">Pliki/katalogi związane z npm:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>package.json</b> Plik generowany przez polecenie <b>npm init</b>.
-            Zawiera strukturę obiektu z informacjami o projekcie.
-          </li>
-          <li class="article__list-item">
-            <b>package-lock.json</b> Plik, który przechowuje informacje o
-            zainstalowanych paczkach i jego głównym zadaniem jest blokowanie
-            wersji (pilnowanie ich zbieżności). Nie należy edydować tego pliku,
-            lecz można go dodać do repozytorium.
-          </li>
-          <li class="article__list-item">
-            <b>node_modules</b> Katalog, który przechowuje pobrane paczki. Nie
-            należy umieszczać tego katalogu w repozytorium, ponieważ z reguły
-            paczki te posiadają duży rozmiar. Inny użytkownik pracujący na danym
-            projekcie może pobrać i zainstalować wymagane paczki zdefiniowane w
-            pliku <b>package.json</b> samodzielnie. Jeśli projekt nie jest
-            aktualnie rozwijany, można usunąć ten katalog w celu zaoszczędzenia
-            miejsca, a w razie potrzeby zainstalować paczki ponownie.
-          </li>
-        </ul>
-        <p class="article__text">
-          Alternatywą dla npm jest korzystający z tej samej bazy pakietów
-          <a class="article__link" href="https://yarnpkg.com/">Yarn</a>.
-        </p>
-      </article>
-      <article id="npm-scripts" class="article">
-        <h2 class="article__heading">npm scripts</h2>
-        <p class="article__text">
-          Skrypty npm to skróty, które można zdefiniować w projekcie. Skrót taki
-          należy dodać jako kolejną wartość dla klucza 'scripts' w pliku
-          <b>package.json</b>. Wartość ta tworzy zagnieżdżenie, gdyż sama składa
-          się z klucza - nazwy skrótu, oraz wartości - polecenia, które zostanie
-          wywołane.
-        </p>
-        <p class="article__text">
-          Polecenie <b>npm run shortcutName</b> powoduje wywołanie skrótu. W
-          przypadku uruchomienia narzędzia konsolowego nie ma konieczności
-          umieszczania 'npx' na początku polecenia, ponieważ katalog
-          <b>node_modules</b> zostaje przeszukiwany domyślnie.
-        </p>
-      </article>
-      <article id="node-sass" class="article">
-        <h2 class="article__heading">node-sass</h2>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Paczka 'node-sass' służy do zamiany pliku .sass/.scss na plik .css.
-            Należy ją zainstalować jako paczkę zawierającą plik/narzędzie
-            obsługujące projekt (paczkę deweloperską).
-          </li>
-          <li class="article__list-item">
-            Aby wykonać zamianę pliku ze stylami należy uruchomić paczkę
-            poleceniem 'npx', a jako argumenty podać nazwy plików: źródłowego i
-            docelowego wraz z rozszerzeniami.
-          </li>
-          <li class="article__list-item">
-            Aby narzędzie po uruchomieniu nasłuchiwało i nadpisywało plik .css
-            po każdym zapisie, należy uruchomić je z dodatkowym argumentem
-            '--watch'. Narzędzie w trakcie nasłuchiwania wyświetla także
-            wszelkie błędy w składni zapisanego pliku .sass/.scss. Aby wyjść z
-            trybu nasłuchiwania, należy skorzystać w terminalu z kombinacji
-            klawiszy 'Ctrl + c'.
-          </li>
-        </ul>
-      </article>
-      <article id="import" class="article">
-        <h2 class="article__heading">import/export</h2>
-        <p class="article__text">
-          W przypadku modułów w JS najbardziej popularne są dwie koncepcje:
-          CommonJS (domyślnie wykorzystywany w skryptach Node.js, nie wymagający
-          użycia dodatkowych narzędzi w Node.js) oraz ES6 Modules (nie wymaga
-          użycia dodatkowych narzędzi w przegladarce).
-        </p>
-        <p class="article__text">Import ES6 Modules:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Import modułu JS wykonuje się z wykorzystaniem znacznika
-            <b>&lt;script type="module"></b>
-          </li>
-          <li class="article__list-item">
-            <b>Eksport nazwany</b> (definiowany z użyciem słowa kluczowego
-            <b>export</b>) używany jest przed konkretną rzeczą, która ma być
-            udostępniona na zewnątrz pliku (np. przed definicją funkcji, która
-            będzie wywołana w innym pliku). Import elementu wyeksportowanego w
-            ten sposób odbywa się z użyciem słowa kluczowego <b>import</b>,
-            nazwy importowanych elementów podanych w klamrach oraz ścieżki i
-            nazwy do pliku źródłowego/modułu poprzedzonej słowem kluczowym
-            <b>from</b>, np.
-            <b
-              >import {function1Name, function2Name} from
-              'directory/fileName.js'</b
-            >.
-          </li>
-          <li class="article__list-item">
-            <b>Eksport domyślny</b> (definiowany z użyciem słów kluczowych
-            <b>export default</b>) nie wymaga takiej samej nazwy elementu
-            podczas importu do pliku docelowego, lecz pozwala na swobodny jej
-            wybór w przeciwieństwie do eksportu nazwanego. Import elementru
-            wyeksportowanego w ten sposób odbywa się również z użyciem słowa
-            kluczowego <b>import</b>, nazwy importowanego elementów (lecz tym
-            razem bez podawania jej w nawiasie klamrowym) oraz ścieżki i nazwy
-            do pliku źródłowego/modułu poprzedzonej słowem kluczowym
-            <b>from</b>, np.
-            <b>import importedElementName from 'directory/fileName.js'</b>.
-          </li>
-          <li class="article__list-item">
-            Słowo kluczowe <b>as</b> pozwala na zmianę nazwy zaimportowanego
-            elementu w pliku docelowym, np.
-            <b
-              >import {sourceFileFunctionName as outputFileFunctionName} from
-              'directory/fileName.js'</b
-            >. Jest to zabieg najczęściej przydatny w przypadku wystąpienia
-            konfliktu nazw lub zbyt długich nazw elementów.
-          </li>
-          <li class="article__list-item">
-            <b>*</b> pozwala na zbiorowy import wszystkich elementów
-            wyeksportowanych w pliku źródłowym, np.
-            <b>import * as myImport from 'directory/fileName.js'</b>. Tworzony
-            jest wtedy obiekt o zdefiniowanej nazwie zawierający wszystkie
-            wyeksportowane elementy. Odwołanie do konkretnego elementu następuje
-            w sposób analogiczny dla obiektów, np. <b>myImport.elementName</b>.
-          </li>
-          <li class="article__list-item">
-            Importowanie z Node.js Modules z wykorzystaniem powyższych metod
-            jest bardzo trudne i może powodować wiele konfliktów. Nie należy
-            wykonywać takich importów bez użycia oprogramowania wspomagającego.
-          </li>
-        </ul>
-      </article>
-      <article id="webpack" class="article">
-        <h2 class="article__heading">webpack</h2>
-        <p class="article__text">
-          <a class="article__link" href="https://webpack.js.org">Webpack</a>
-          jest pakietem modułów JavaScript na liecencji open-source, który
-          ułatwia development, może automatyzować procesy oraz jest używany
-          przez wiodące frameworki i biblioteki. Jego możliwości rozszerzane są
-          za pomocą paczek z npm.
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Może zostać zainstalowany za pomocą narzędzi npm.
-          </li>
-          <li class="article__list-item">
-            Działa bez żadnego pliku konfiguracyjnego.
-          </li>
-          <li class="article__list-item">
-            Domyślnym plikiem wejściowym jest plik <b>index.js</b>, znajdujący
-            się w katalogu <b>src</b>.
-          </li>
-          <li class="article__list-item">
-            Domyślnym plikiem wyjściowym jest plik <b>main.js</b>, znajdujący
-            się w katalogu <b>dist</b>, który może zostać załączony bezpośrednio
-            do pliku .html.
-          </li>
-          <li class="article__list-item">
-            Pozwala na wykonanie standardowego importu (z wykorzystaniem ekportu
-            domyślnego) z Node.js Modules oraz wykorzystanie importowanych
-            elementów w pliku wejściowym, które po odpowiednim przetworzeniu
-            zostaną prawidłowo wykonane w pliku wyjściowym, uzupełnionym
-            automatycznie o inne wymagane elementy (np. funkcje z biblioteki).
-          </li>
-          <li class="article__list-item">
-            Posiada <b>loadery</b>, czyli dodatkowe opcje pozwalające na
-            wykonywanie operacji na plikach innych niż pliki .js (np. pliki ze
-            stylami SCSS).
-          </li>
-          <li class="article__list-item">
-            Posiada <b>pluginy</b>, pozwalające na wykonywanie operacji na
-            plikach (np. kopiowanie).
-          </li>
-          <li class="article__list-item">
-            Posiada dwa <b>tryby pracy (mode)</b>: deweloperski i produkcyjny.
-          </li>
-        </ul>
-        <p class="article__text">
-          Stworzona na potrzeby kursu konfiguracja webpack
-          <a
-            class="article__link"
-            href="https://github.com/maciejkorsan/wtf-webpack-starter/generate"
-            >WTF Webpack Starter Kit</a
-          >
-          zawiera:
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item">Serwer lokalny z autoodświeżaniem.</li>
-          <li class="article__list-item">Wsparcie dla SCSS i sourcemap.</li>
-          <li class="article__list-item">Minifikację.</li>
-          <li class="article__list-item">
-            Babel - pozwala na korzystanie z najnowszych funkcji ECMAScript.
-          </li>
-          <li class="article__list-item">Publikację na github pages.</li>
-        </ul>
-        <p class="article__text">
-          Aby zacząć pracę z konfiguracją webpacka WTF Webpack Starter Kit,
-          należy utworzyć nowe repozytorium na github korzystając z
-          <a
-            class="article__link"
-            href="https://github.com/maciejkorsan/wtf-webpack-starter/generate"
-            >linka</a
-          >
-          do konfiguracji (zostaje utworzona kopia repozytorium, na której można
-          swobodnie pracować bez obaw o wprowadzenie zmian w oryginalnej
-          konfiguracji). Kolejnym krokiem jest sklonowanie utworzonego
-          repozytorium (tworząc repozytorium lokalne należy pamiętać, aby wejść
-          uprzednio do katalogu przechowującego projekty). Ścieżki do plików
-          należy podawać względem plików źródłowych, a nie serwerowych (za
-          wyjątkiem ścieżek z sekcji 'head').
-        </p>
-        <p class="article__text">
-          Komendy pozwalające na rozpoczęcie pracy z konfiguracją oraz jej
-          używanie:
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>npm install</b> Instaluje składniki konfiguracji (instalację
-            należy wykonać tylko raz - na początku projektu oraz ewentualnie w
-            momencie gdy ściągamy nową wersję lub dokładamy coś od siebie).
-          </li>
-          <li class="article__list-item">
-            <b>npm run start</b> Uruchamia projekt w trybue deweloperskim (adres
-            serwera znajduje się w terminalu). Aby zamknąć ten tryb, należy
-            skorzystać w terminalu z kombinacji klawiszy 'Ctrl + c'.
-          </li>
-          <li class="article__list-item">
-            <b>npm run build</b> Buduje projekt w trybie produkcyjnym.
-          </li>
-          <li class="article__list-item">
-            <b>npm run publish</b> Buduje projekt i kopiuje pliki z katalogu
-            <b>dist</b> na gałąź <b>gh-pages</b>, które następnie mogą zostać
-            opublikowane w serwisie 'GitHub Pages'. Postępy w pracy z kodem na
-            plikach źródłowych mogą być w dalszym ciągu commitowane i pushowane
-            w standardowy sposób, natomiast strona nie zostanie opublikowana bez
-            użycia tej komendy, ponieważ repozytorium nie będzie miało dostępu
-            do plików docelowych.
-          </li>
-        </ul>
-        <p class="article__text">
-          Aby dodać nową stronę do projektu, należy oprócz utworzenia samego
-          pliku .html dodać ją także do konfiguracji w pliku
-          'webpack.common.js', a następnie zrestartować serwer lokalny.
-        </p>
-        <p class="article__text">
-          Aby dołączyć plik .js tylko do jednej strony, należy go zdefiniować w
-          pliku 'webpack.common.js' w obiekcie 'entry', a następnie dodać go do
-          tablicy 'chunks' konkretnej strony. Dobrą praktyką jest nazywanie
-          plików .html tak jak plików .js, ponieważ zwiększa to porządek w
-          projekcie oraz w pliku konfiguracyjnym.
-        </p>
-        <p class="article__text">
-          Dzięki loaderowi do SCSS dostępnemu w konfiguracji, możliwy jest
-          import plików .scss do pliku .js, np.
-          <b>import '../scss/main.scss'</b>. Nie oznacza to, że plik ze stylami
-          znajdzie się w pliku .js - finalnie zostanie on utworzony jako
-          oddzielny plik .css.
-        </p>
-        <p class="article__text">
-          Pliki ze stylami można również importować z node_modules (np. plik
-          normalizujący). Import należy wtedy wykonać w głównym pliku .scss z
-          użyciem znaku '~' przed nazwą importowanego elementu, np.
-          <b>@import "~normalize.css"</b>.
-        </p>
-        <p class="article__text">
-          Dzięki source mapie dostępnej w konfiguracji, style w narzędziach
-          deweloperskich przeglądarki będą wyświetlane na postawie pliku .scss
-          zaiast na podstawie finalnej wersji pliku .css, jaki jest
-          interpretowany przez przeglądarkę. Pozwala to na natychmiastową
-          identyfikację konkretnej reguły w edytorze. Source mapa zachowuje się
-          podobnie również w odniesieniu do skryptów, wyświetlając je również na
-          podstawie pliku źródłowego zamiast docelowego. Source mapa
-          wykorzystywana jest jedynie w trybie deweloperskim, aby nikt na
-          produkcji nie zobaczył plików źródłowych (np. ze stylami strony).
-        </p>
-        <p class="article__text">
-          Po zbudowaniu projektu w trybie produkcyjnym wynikiem pracy jest
-          katalog <b>dist</b>, którego zawartość należy opublikować na serwerze.
-          Katalog ten nie jest z reguły commitowany (dlatego znajduje się w
-          pliku .gitignore), ponieważ jest on budowany. Nie należy zmieniać jego
-          zawartości manualnie, poniważ każde kolejne zbudowanie projektu
-          nadpisze dokonane tan zmiany i zostaną one utracone. Do katalogu
-          <b>dist</b> trafiają bez żadnych zmian wszystkie źródłowe pliki .html.
-          Pliki .scss, .saas są zamieniane na plik .css (który finalnie zostaje
-          umieszczony w pliku .html) oraz otrzymuje unikalny hash. Pliki .js
-          oraz obrazki również po skopiowaniu do katalogu <b>dist</b> otrzymują
-          unikalną nazwę. Jest to zabieg stosowany w celu uniknięcia sytuacji,
-          kiedy pamięć podręczna przeglądarki posiada już element o danej nazwie
-          i podmiana tego elementu na inny nie spowoduje jego ponownego
-          pobrania, kiedy będzie on miał ponowinie taką samą nazwę.
-        </p>
-        <p class="article__text">
-          Katalog <b>public</b> zawiera dodatkowe pliki, które powinny zostać
-          umieszczone na serwerze i nie są w żaden sposób modyfikowane przez
-          webpack, np. favicony. Zawartość tego katalogu zostaje skopiowana bez
-          żadnych zmian do katalogu <b>dist</b>. Należy pamiętać o odpowiednich
-          ścieżkach do plików znajdujących się w katalogu <b>public</b>.
-        </p>
-        <p class="article__text">
-          Webpack wyświetla błędy w terminalu ze wskazaniem, w którym miejscu
-          wystąpiły. Kontroluje on zarówno składnię kodu, poprawność użytych
-          ścieżek oraz sprawdza, czy zasoby do których wystąpiło odwołanie
-          istnieją.
-        </p>
-        <p class="article__text">
-          Podczas pracy nad projektem w trybie deweloperskim należy edytować
-          pliki, które znajdują się w katalogu <b>src</b>. Po zapisie
-          edytowanego pliku, zmiany zostaną automatycznie zaktualizowane na
-          serwerze. Należy także zwracać uwagę na ewentualne błędy pojawiające
-          się w terminalu i dokładnie czytać ich treść.
-        </p>
-      </article>
-      <article id="arrays" class="article">
-        <h2 class="article__heading">tablice</h2>
-        <p class="article__text">Tablica (array):</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            Jest niejednorodną strukturą danych, ponieważ może przechowywać
-            różne typy danych jednocześnie (np. liczby, łańcuchy znaków,
-            obiekty).
-          </li>
-          <li class="article__list-item">
-            Aby zadeklarować tablicę, należy użyć nawiasów kwadratowych.
-            Elementy tablicy można zdefiniować już podczas deklaracji tablicy
-            (poprzez umieszczenie ich wewnątrz nawiasów kwadratowych i
-            oddzielenie od siebie przecinkiem) lub dodać je później (z
-            wykorzystaniem odpowiednich metod).
-          </li>
-          <li class="article__list-item">
-            Każdy z elementów tablicy posiada indeks, czyli swoją pozycję w
-            tablicy. Pierwszy element tablicy ma indeks 0. Aby odwołać się do
-            elementu o danym indeksie, należy podać indeks w nawiasach
-            kwadratowych po nazwie zmiennej, do której przypisana jest tablica.
-          </li>
-        </ul>
-        <p class="article__text">Wybrane własności i funkcje tablic:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>length</b> Zwraca ilość elementów tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>push(element)</b> Dodaje <b>element</b> na koniec tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>pop()</b> Usuwa element z końca tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>unshift(element)</b> Dodaje <b>element</b> na początek tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>shift()</b> Usuwa element z początku tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>indexOf(element)</b> Zwraca indeks pierwszego napotkanego
-            <b>element</b> lub wartość -1, gdy <b>element</b> nie zotanie
-            odnaleziony w tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>splice(index, amount)</b> Rozpoczynając od elementu o indeksie
-            <b>index</b>, usuwa <b>amount</b> elementów z tablicy.
-          </li>
-          <li class="article__list-item">
-            <b>slice(startIndex, endIndex)</b> Rozpoczynając od elementu o
-            indeksie <b>startIndex</b> (włącznie), pobiera elementy z tablicy
-            kończąc na elemencie o indeksie <b>endIndex</b> (z wyłączeniem tego
-            elementu).
-          </li>
-        </ul>
-      </article>
-      <article id="loops" class="article">
-        <h2 class="article__heading">pętle</h2>
-        <p class="article__text">
-          Pętla (loop) wykonuje blok kodu określoną liczbę razy.
-        </p>
-        <p class="article__text">Rodzaje pętli:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>for(let</b> <u>i=0</u><b>;</b> <u>i&lt;10</u><b>;</b> <u>i++</u
-            ><b>) {</b>blockOfCode<b>}</b>
-          </li>
-          <li class="article__list-item">
-            <b>while(</b><u>i&lt;10</u><b>) {</b>blockOfCode<b>}</b>
-          </li>
-          <li class="article__list-item">
-            <b>do {</b>blockOfCode<b>} while(</b><u>i&lt;10</u><b>)</b>
-          </li>
-          <li class="article__list-item">
-            <b>for(let</b> <u>propertyName</u> <b>in</b> <u>object</u><b>)</b>
-          </li>
-          <li class="article__list-item">
-            <b>for(let</b> <u>element</u> <b>of</b> <u>array</u><b>)</b>
-          </li>
-        </ul>
-        <p class="article__text">
-          Pętla <b>for</b> składa się z inicjalizacji <u>iteratora</u>,
-          <u>warunku</u> oraz <u>wyrażenia inkrementacji/dekrementacji</u>. Blok
-          kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość
-          prawdziwą.
-        </p>
-        <p class="article__text">
-          Pętla <b>while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli
-          zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
-          najpierw sprawdza warunek, a później wykonuje blok kodu, zatem jeśli
-          początkowy warunek zwróci wartość fałszywą, pętla nie wykona się ani
-          razu.
-        </p>
-        <p class="article__text">
-          Pętla <b>do ... while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz
-          pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
-          najpierw wykonuje blok kodu, a później sprawdza warunek, zatem jeśli
-          początkowy warunek zwróci wartość fałszywą, pętla wykona się raz.
-        </p>
-        <p class="article__text">
-          Pętla <b>for ... in</b> składa się z inicjalizacji
-          <u>zmiennej określającej własność obiektu</u>
-          oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich
-          własnościach przekazanego obiektu.
-        </p>
-        <p class="article__text">
-          Pętla <b>for ... of</b> składa się z inicjalizacji
-          <u>zmiennej określającej element tablicy</u>
-          oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich elementach
-          tablicy.
-        </p>
-        <p class="article__text">Rodzaje inkrementacji i dekrementacji:</p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>preinkrementacja (++i)</b> Zwiększa wartośc wyrażenia o 1 przed
-            wykonaniem pozostałych operacji.
-          </li>
-          <li class="article__list-item">
-            <b>predekrementacja (--i)</b> Zmniejsza wartość wyrażenia o 1 przed
-            wykonaniem pozostałych operacji.
-          </li>
-          <li class="article__list-item">
-            <b>postinkrementacja (i++)</b> Zwiększa wartość wyrażenia o 1 po
-            wykonaniu pozostałych operacji.
-          </li>
-          <li class="article__list-item">
-            <b>postdekrementacja (i--)</b> Zmniejsza wartość wyrażenia o 1 po
-            wykonaniu pozostałych operacji.
-          </li>
-        </ul>
-      </article>
-      <article id="data-storage" class="article">
-        <h2 class="article__heading">przechowywanie danych</h2>
-        <p class="article__text">
-          Sposoby na przechowanie danych w przeglądarce:
-        </p>
-        <ul class="article__list">
-          <li class="article__list-item">
-            <b>ciasteczka (cookies)</b>
-          </li>
-          <li class="article__list-item">
-            <b>local storage</b>
-          </li>
-          <li class="article__list-item">
-            <b>session storage</b>
-          </li>
-        </ul>
-        <p class="article__text">
-          <b>Ciasteczka</b> to małe fragmenty tekstu wysyłane do przeglądarki,
-          wykorzystywane podczas kolejnych wejść na witrynę. Dostępne aż do
-          momentu zamknięcia okna przeglądarki (o ile nie wybrano inaczej w
-          ustawieniach przeglądarki).<br />Wyświetlenie zawartości ciasteczek na
-          stronie: zakładka <b>Application</b> w narzędziach deweloperskich lub
-          polecenie <b>document.cookie</b> w konsoli.<br />Format zapisu:
-          <b>"name = value"</b> (poszczególne ciasteczka oddzielone są znakiem
-          <b>;</b>).<br />Definiowanie nowego ciasteczka:
-          <b>document.cookie = "</b>name <b>=</b> value<b>"</b>.
-        </p>
-        <p class="article__text">
-          <b>Local storage</b> przechowuje dane w przeglądarce do momentu
-          ręcznego wyczyszczenia.<br />Wyświetlenie zawartośi local storage na
-          stronie: zakładka <b>Application</b> w narzędziach deweloperskich lub
-          polecenie <b>localStorage</b> w konsoli.<br />Dodawanie nowego
-          przechowywanego elementu: <b>localStorage.setItem('</b>key<b>', '</b
-          >value<b>')</b>.<br />Pobieranie przechowywanego elementu (w przypadku
-          podania nieistniejącego klucza, zwrócona zostanie wartość
-          <b>null</b>): <b>localStorage.getItem('</b>key<b>')</b>.<br />Usuwanie
-          przechowywanego elementu:
-          <b>localStorage.removeItem('</b>key<b>')</b>.<br />
-          W celu dodania obiektu do local storage, należy go najpierw
-          przekształcić na JSONString z wykorzystaniem metody:
-          <b>JSON.stringify(</b>object<b>)</b>.<br />
-          W celu pobrania z local storage obiektu przechowywanego jako
-          JSONString, należy go najpierw przekształcić na obiekt z
-          wykorzystaniem metody: <b>JSON.parse(</b>JSONString<b>)</b>.
-        </p>
-        <p class="article__text">
-          <b>Session storage</b> przechowuje dane w przeglądarce do momentu
-          zamknięcia sesji (zakładki przeglądarki).<br />
-          Dodawanie, pobieranie i usuwanie elementów jest analogiczne jak dla
-          local storage.
-        </p>
-      </article>
-    </main>
-    <footer class="footer">
-      <p class="footer__text">
-        Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
-        <a class="footer__link" href="#top">Wróć na górę</a>
+      <button class="header-navigation__menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+      <p class="header-navigation__text">WTF: Co Ten Frontend?</p>
+    </nav>
+  </header>
+  <main id="top" class="theory-main">
+    <h1 class="theory-main__heading">JS</h1>
+    <nav class="theory-main__links">
+      <a href="#javascript" class="theory-main__link">javascript</a>
+      <a href="#types-of-data" class="theory-main__link">typy danych i immutability</a>
+      <a href="#functions" class="theory-main__link">funkcje</a>
+      <a href="#object" class="theory-main__link">obiekt</a>
+      <a href="#immutability" class="theory-main__link">immutability w obiektach</a>
+      <a href="#logic" class="theory-main__link">logika</a>
+      <a href="#events" class="theory-main__link">eventy</a>
+      <a href="#node" class="theory-main__link">node.js</a>
+      <a href="#npm" class="theory-main__link">npm i npx</a>
+      <a href="#npm-scripts" class="theory-main__link">npm scripts</a>
+      <a href="#node-sass" class="theory-main__link">node-sass</a>
+      <a href="#import" class="theory-main__link">import/export</a>
+      <a href="#webpack" class="theory-main__link">webpack</a>
+      <a href="#arrays" class="theory-main__link">tablice</a>
+      <a href="#loops" class="theory-main__link">pętle</a>
+      <a href="#data-storage" class="theory-main__link">przechowywanie danych</a>
+    </nav>
+    <div class="theory-main__image"></div>
+    <article id="javascript" class="article">
+      <h2 class="article__heading">javascript</h2>
+      <p class="article__text">Co to jest ECMAScript 6+</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          ECMAScript jest to ustandaryzowany przez organizację ECMA skryptowy
+          język programowania.
+        </li>
+        <li class="article__list-item">
+          JavaScript implementuje rzeczy ze specyfikacji ECMAScript.
+        </li>
+        <li class="article__list-item">
+          Rozwój ECMAScript mocno przyspieszył przez szerokie wykorzystanie
+          JavaScriptu.
+        </li>
+        <li class="article__list-item">
+          ES6 (i nowsze) wprowadzają wiele udogodnień dla developerów.
+        </li>
+        <li class="article__list-item">
+          Nowe feature'y mogą nie być wspierane we wszystkich przeglądarkach,
+          ale są na to sposoby.
+        </li>
+      </ul>
+      <p class="article__text">Składowe JavaScript:</p>
+      <ul class="article__list">
+        <li class="article__list-item">Wartości</li>
+        <li class="article__list-item">Operacje porównania</li>
+        <li class="article__list-item">Zmienne</li>
+        <li class="article__list-item">Literały</li>
+        <li class="article__list-item">Funkcje</li>
+        <li class="article__list-item">Obiekty</li>
+      </ul>
+      <p class="article__text">
+        Skrypty należy umieszczać na końcu znacznika 'body'.<br />
+        Kod JS uruchamia się raz (po załadowaniu strony).<br />
+        JavaScript to frontendowe programowanie.
       </p>
-      <p class="footer__text">Maciej Ryszka - 2020</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </article>
+    <article id="types-of-data" class="article">
+      <h2 class="article__heading">typy danych i immutability</h2>
+      <p class="article__text">
+        Słowa kluczowe służące do deklaracji zmiennych w JavaScript:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>const</b> Deklaruje zmienną. Połączenie między zmienną i jej
+          wartością nie może być zmieniane w trakcie działania programu.
+        </li>
+        <li class="article__list-item">
+          <b>let</b> Deklaruje zmienną. Połączenie między zmienną i jej
+          wartością może być zmieniane w trakcie działania programu.
+        </li>
+        <li class="article__list-item">
+          <b>var</b> Używany do deklaracji we wcześniejszych wersjach
+          JavaScriptu. Teraz do deklaracji zmiennych należy używać słowa
+          kluczowego <b>const</b>, a jeśli połączenie między zmienną i jej
+          wartością będzie edytowane w trakcie działania programu -
+          <b>let</b>.
+        </li>
+      </ul>
+      <p class="article__text">Typy proste w JavaScript:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>String</b> Tekst. Należy podać go w apostrofach (zalecany
+          pojedynczy).
+        </li>
+        <li class="article__list-item"><b>Number</b> Liczba.</li>
+        <li class="article__list-item">
+          <b>Bigint</b> Duża liczba. Większa niż 2^53.
+        </li>
+        <li class="article__list-item"><b>boolean</b> True lub false.</li>
+        <li class="article__list-item">
+          <b>null</b> Wartość celowo niezdefiniowana. Na etapie deklaracji
+          jeszcze nie wiadomo jaką wartość przyjmie, ale wiadomo, że zmienna
+          będzie wykorzystana w trakcie działania programu.
+        </li>
+        <li class="article__list-item">
+          <b>undefinied</b> Brak definicji. Przy próbie odwołania do
+          nieistniejącej zmiennej występuje błąd.
+        </li>
+        <li class="article__list-item">
+          <b>*symbol</b> Tworzy "unikalne opakowanie".
+        </li>
+      </ul>
+      <p class="article__text">
+        Do nazywania zmiennych należy używać schematu camelCase.<br />
+        Do sprawdzenia typu zmiennej służy słowo kluczowe <b>typeof</b>.<br />
+        Operator przypisania '=' nie tworzy nowych zmiennych, lecz tworzy i
+        zwraca połączenie.<br />
+        W przypadku połączenia zmiennej 'a' ze zmienną 'b', występuje
+        połączenie z wartością zmiennej 'b' a nie bezpośrednio z samą zmienną
+        'b'.<br />
+        Koncept <b>immutability</b> polega na tym, że nie możemy zmieniać
+        wartości 'primitive values' (wartości typów prostych, do których
+        podłączamy się za pomocą zmiennych) w JavaScript. To co zmieniamy, to
+        połączenia między nimi a zmiennymi. Wartości już istnieją, są
+        niezmienne. Na przykład nie można sobie zmienić 'true' na 'false' lub
+        na odwrót.
+      </p>
+    </article>
+    <article id="functions" class="article">
+      <h2 class="article__heading">funkcje</h2>
+      <p class="article__text">Składowe funkcji w JavaScript:</p>
+      <ul class="article__list">
+        <li class="article__list-item">Deklaracja.</li>
+        <li class="article__list-item">Parametr (opcjonalnie).</li>
+        <li class="article__list-item">
+          Słowo kluczowe <b>return</b> (opcjonalnie).
+        </li>
+        <li class="article__list-item">Wynik.</li>
+      </ul>
+      <p class="article__text">
+        Wynikiem funkcji, która nie posiada słowa kluczowego jest
+        <b>undefined</b>.<br />
+        Funkcja może przyjmować dowolną ilość argumentów (może również nie
+        przyjmować żadnego).<br />
+        Typ zwracanej wartości może być inny niż typ argumetu/argumentów
+        przyjmowanych przez funkcję.<br />
+        Funkcje tworzone są w celu wywoływania tego samego fragmentu kodu w
+        wielu miejscach. Pozwala to uniknąć duplikacji kodu, zwiększa jego
+        czytelność oraz ułatwia wyszukiwanie i poprawę błędów.<br />
+        Dobrą praktyką jest nazywanie funkcji podczas deklaracji.<br />
+        Wewnątrz funkcji wykowywane są obliczenia/zadania.<br />
+      </p>
+      <p class="article__text">
+        Alternatywnym sposobem deklaracji funkcji jest wykorzystanie 'fat
+        arrow function': <b>const</b> functionName <b>= (</b>parameter<b>) => {</b>functionBody<b>}.</b><br />
+        Jeśli w ciele funkcji znajduje się tylko <b>return</b> oraz zwracana
+        wartość, można zapisać tę wartość bezpośrednio po strzałce z
+        pominięciem słowa kluczowego <b>return</b>.<br />
+        Funkcja strzałkowa skraca zapis deklaracji funkcji i zwiększa
+        czytelność.<br />
+        Funkcja strzałkowa nie tworzy nowego kontekstu 'this' oraz nie ma
+        dostępu do 'arguments' i 'super', a więc nie jest zamiennikiem
+        tradycyjnej funkcji.
+      </p>
+    </article>
+    <article id="object" class="article">
+      <h2 class="article__heading">obiekt</h2>
+      <p class="article__text">Obiekt w JavaScript:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Jest strukturą danych ułatwiającą odwzorowanie świata rzeczywistego
+          w świecie programowania.
+        </li>
+        <li class="article__list-item">
+          Posiada oddzielone przecinkami własności (zmienne wewnątrz obiektu)
+          oraz metody (funcje wewnątrz obiektu).
+        </li>
+        <li class="article__list-item">
+          Własności/metody składają się z unikalnego w ramach obiektu klucza
+          oraz podanej po dwukropku wartości, którą może być typ prymitywny,
+          funkcja lub zagnieżdżenie.
+        </li>
+        <li class="article__list-item">
+          Aby dostać się do konkretnej własności obiektu, należy po jego
+          nazwie i kropce odwołać się do konkretnego klucza (w przypadku kiedy
+          w obiekcie występują zagnieżdżenia, można dostać się do kolejnych
+          poziomów własności z wykorzystaniem kolejnych kropek).
+        </li>
+        <li class="article__list-item">
+          Aby dostać się do konkretnej metody obiektu, należy po jego nazwie i
+          kropce odwołać się do konkretnego klucza oraz użyć nawiasów
+          okrągłych (i opcjonalnie argumentów) w celu wywołania metody.
+        </li>
+        <li class="article__list-item">
+          Alternatywną opcją dostania się do własności obiektu jest
+          skorzystanie z nawiasów kwadratowych po jego nazwie i podanie
+          wewnątrz nich konkretnego klucza (w apostrofach).
+        </li>
+      </ul>
+    </article>
+    <article id="immutability" class="article">
+      <h2 class="article__heading">immutability w obiektach</h2>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Jeśli obiekt został stworzony z użyciem słowa kluczowego
+          <b>const</b>, jedynie połączenie między nazwą zmiennej a obiektem
+          jest stałe i nie może zostać zmienione. Połączenia między
+          własnościami obiektu i wartościami na jakie wskazują mogą być jednak
+          w dalszym ciągu edytowane. Jest to tzw. mutowanie obiektów, czyli
+          ich zmienianie. Cecha ta odróżnia typy złożone (obiekty) od typów
+          prostych, które nie mogą być mutowane.
+        </li>
+        <li class="article__list-item">
+          Jeśli wskazujemy na wartości proste, klucz będzie odwoływał się do
+          danej wartości, dopóki nie zmienimy dokładnie tego przypięcia.
+        </li>
+        <li class="article__list-item">
+          Jeśli wskazujemy na obiekt, może on zostać zmieniony, kiedy
+          zmienione zostanie przypięcie dla którejś z jego własności. Zmiana
+          takiego przypięcia może nastąpić z "inicjatywy" innego elementu
+          wskazującego na ten obiekt.
+        </li>
+      </ul>
+    </article>
+    <article id="logic" class="article">
+      <h2 class="article__heading">logika</h2>
+      <p class="article__text">Operatory porównania:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>></b> Lewa strona większa od prawej.
+        </li>
+        <li class="article__list-item">
+          <b>&lt;</b> Lewa strona mniejsza od prawej.
+        </li>
+        <li class="article__list-item">
+          <b>>=</b> Lewa strona większa/równa prawej.
+        </li>
+        <li class="article__list-item">
+          <b>&lt;=</b> Lewa strona mniejsza/równa prawej.
+        </li>
+        <li class="article__list-item"><b>==</b> Obie strony równe.</li>
+        <li class="article__list-item">
+          <b>===</b> Obie strony równe (sprawdza typeof).
+        </li>
+        <li class="article__list-item"><b>!=</b> Obie strony różne.</li>
+        <li class="article__list-item">
+          <b>!==</b> Obie strony różne (sprawdza typeof).
+        </li>
+      </ul>
+      <p class="article__text">Wartości fałszywe w JavaScript:</p>
+      <ul class="article__list">
+        <li class="article__list-item"><b>false</b></li>
+        <li class="article__list-item"><b>0</b></li>
+        <li class="article__list-item"><b>'', "", ``</b> Pusty string.</li>
+        <li class="article__list-item"><b>null</b></li>
+        <li class="article__list-item"><b>undefined</b></li>
+        <li class="article__list-item"><b>NaN</b> Not a number.</li>
+      </ul>
+      <p class="article__text">
+        Cała reszta stanowi wartości prawdziwe w JavaScript. Przykłady:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item"><b>true</b></li>
+        <li class="article__list-item">
+          <b>'Text'</b> Dowolny niepusty string.
+        </li>
+        <li class="article__list-item"><b>12</b> Liczba dodatnia.</li>
+        <li class="article__list-item"><b>-4</b> Liczba ujemna.</li>
+        <li class="article__list-item"><b>{}</b> Obiekt.</li>
+        <li class="article__list-item"><b>[]</b> Tablica.</li>
+        <li class="article__list-item">Tablica.</li>
+      </ul>
+      <p class="article__text">Operatory logiczne:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>AND (&&)</b> Wszystkie warunki muszą być prawdziwe, żeby
+          wyrażenie było prawdziwe.
+        </li>
+        <li class="article__list-item">
+          <b>OR (||)</b> Przynajmniej jeden warunek muszi być prawdziwy, żeby
+          wyrażenie było prawdziwe.
+        </li>
+        <li class="article__list-item">
+          <b>NOT (!)</b> Odwraca wartość wyrażenia logicznego.
+        </li>
+      </ul>
+      <p class="article__text">Instrukcje warunkowe:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>if(condition)</b> Kod w klamrach następujących po instrukcji 'if'
+          wykona się jeśli warunek w nawiasie zwróci prawdę.
+        </li>
+        <li class="article__list-item">
+          <b>else if(condition)</b> Kod w klamrach następujących po instrukcji
+          'if else' wykona się jeśli warunek w nawiasie zwróci prawdę oraz
+          jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił prawdy.
+        </li>
+        <li class="article__list-item">
+          <b>else</b> Kod w klamrach następujących po instrukcji 'else' wykona
+          się jeśli żaden z wcześniejszych warunków instrukcji nie zwrócił
+          prawdy.
+        </li>
+      </ul>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>switch(variable)</b> Wykona kod dla przypadku odpowiadającego
+          wartości zmiennej znajdującej się w nawiasie. W przypadku braku
+          takiego przypadku zwróci wartość domyślną, która jest zdefiniowana
+          na końcu instrukcji. Instrukcja przy porównaniu sprawdza również
+          zgodność typów.
+        </li>
+      </ul>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b> (condition) ? 'ifTrue' : 'ifFalse' </b> 'Ternary operator'.
+          Jeśli warunek podany przed znakiem zapytania jest spełniony,
+          zwracana jest wartość znajdująca się między znakiem zapytania a
+          dwukropkiem. W przeciwnym razie zwracana jest wartość znajdująca się
+          po dwukropku.
+        </li>
+      </ul>
+      <p class="article__text">
+        <a class="article__link" href="https://www.destroyallsoftware.com/talks/wat/">Dziwne rzeczy</a>
+        w JavaScript.
+      </p>
+    </article>
+    <article id="events" class="article">
+      <h2 class="article__heading">eventy</h2>
+      <p class="article__text">
+        Znacznik <b>&lt;button></b> służy do interakcji na stronie, na której
+        znajduje się już użytkownik, np. wysłanie formularza, zmiana elementu,
+        włączenie menu. Znacznik <b>&lt;a></b> służy do nawigacji, np.
+        przejście do konkretnej sekcji, podstrony, strony zewnętrzenej.<br />
+        Funkcja służąca do nasłuchiwania w JavaScript to 'addEventListener',
+        która wywoływana jest na konkretnym elemencie DOM i przyjmuje jako
+        argumenty: typ (jako string) oraz nazwę wywoływanej funkcji.
+        Opcjonalnie funkcja 'addEventListener' może przyjąć również inne
+        argumenty.<br />
+        Wywoływaną funkcją może być również funkcja strzałkowa, przyjmująca
+        jako argument dowolną nazwę. W takim przypadku nazwa ta będzie odnosić
+        się do 'eventu'.
+      </p>
+    </article>
+    <article id="node" class="article">
+      <h2 class="article__heading">node.js</h2>
+      <p class="article__text">
+        Node można potraktować jako JavaScript uruchamiany poza przeglądarką.
+        Z tego powodu nie ma dostępu do DOM i wszystkich API związanych z nim
+        oraz przeglądarką.
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Node.js jest do pobrania na oficjalnej
+          <a class="article__link" href="https://nodejs.org">stronie</a>.
+          Zalecana jest instalacja wersji wspieranej długoterminowo (LTS -
+          Long Time Support).
+        </li>
+        <li class="article__list-item">
+          Polecenie <b>node -v</b> pozwala na sprawdzenie w konsoli aktualnie
+          zainstalowanej wersji Node.js.
+        </li>
+        <li class="article__list-item">
+          Polecenie <b>node &lt;fileName.extenstion></b> pozwala uruchominie
+          skryptu w Node.js. Skrypt taki nie może używać niczego, co
+          bezpośrednio oddziałuje z elementami DOM (np. metoda
+          addEventListener).
+        </li>
+        <li class="article__list-item">
+          Zastosowanie Node.js jest bardzo szerokie. Moliwe jest napisanie w
+          nim całego backendu aplikacji.
+        </li>
+      </ul>
+    </article>
+    <article id="npm" class="article">
+      <h2 class="article__heading">npm i npx</h2>
+      <p class="article__text">
+        Npm jest managerem pakietów Node.js, chociaż jego nazwa nie pochodzi
+        od 'node package manager'. Jest to repozytorium, z którego można
+        pobrać paczki, pozwalające na szybszą i łatwiejszą pracę z
+        projektem.Oficjalna
+        <a class="article__link" href="https://www.npmjs.com/">strona</a>
+        npm.
+      </p>
+      <p class="article__text">Zalety npm:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Pozwala na dodawanie do projektu bibliotek, skryptów i narzędzi
+          (jest odpowiednikiem App Store/Google Play dla frontendowca).
+        </li>
+        <li class="article__list-item">
+          Pozwala skonfigurować projekt tak, aby uniezależnić go od innych
+          konfiguracji, np. edytora.
+        </li>
+        <li class="article__list-item">
+          Jest na bieżąco aktualizowanym uniwersalnym źródłem ze wszystkimi
+          informacjami.
+        </li>
+        <li class="article__list-item">
+          Zawiera narzędzia, które można podzielić na dwie grupy: narzędzia
+          obsługujące projekt (np. wtyczka Live Server) oraz narzędzia
+          wykorzystywane wewnątrz projektu (np. plik normalizujący style).
+        </li>
+      </ul>
+      <p class="article__text">Polecenia npm/npx:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>npm init</b> Inicjalizuje projekt, aby można było korzystać w nim
+          z npm. Polecenie wykonywane jedynie raz w projekcie.
+        </li>
+        <li class="article__list-item">
+          <b>npm init -y</b> Inicjalizuje projekt podobnie do powyższej
+          metody, jednak bez zadawania pytań o informację o projekcie.
+        </li>
+        <li class="article__list-item">
+          <b>npm install &lt;pacgakeName> --save</b> Instaluje paczkę
+          zawierającą plik/narzędzie wykorzystywane wewnątrz projektu/w
+          przeglądarce. W pliku <b>package.json</b> dodaje daną zależność do
+          'dependencies'.
+        </li>
+        <li class="article__list-item">
+          <b>npm install &lt;pacgakeName> --save-dev</b> Instaluje paczkę
+          zawierającą plik/narzędzie obsługujące projekt. W pliku
+          <b>package.json</b> dodaje daną zależność do 'dev-dependencies'.
+        </li>
+        <li class="article__list-item">
+          <b>npm install</b> Instaluje paczki zdefiniowane w pliku
+          <b>package.json</b> jeśli nie są aktualnie zainstalowane.
+        </li>
+        <li class="article__list-item">
+          <b>npx toolName</b> Uruchamia konsolowe narzędzia (nawet jeśli nie
+          jest zainstalowane). W przypadku gdy narzędzie nie jest
+          zainstalowane, pliki przy każdorazowym uruchomieniu są pobierane do
+          katalogu tymczasowego, skąd następuje uruchomienie. Kiedy natomiast
+          narzędzie jest już zainstalowane, uruchomienie go z wykorzystaniem
+          tego polecenia następuje natychmiastowo.
+        </li>
+      </ul>
+      <p class="article__text">Pliki/katalogi związane z npm:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>package.json</b> Plik generowany przez polecenie <b>npm init</b>.
+          Zawiera strukturę obiektu z informacjami o projekcie.
+        </li>
+        <li class="article__list-item">
+          <b>package-lock.json</b> Plik, który przechowuje informacje o
+          zainstalowanych paczkach i jego głównym zadaniem jest blokowanie
+          wersji (pilnowanie ich zbieżności). Nie należy edydować tego pliku,
+          lecz można go dodać do repozytorium.
+        </li>
+        <li class="article__list-item">
+          <b>node_modules</b> Katalog, który przechowuje pobrane paczki. Nie
+          należy umieszczać tego katalogu w repozytorium, ponieważ z reguły
+          paczki te posiadają duży rozmiar. Inny użytkownik pracujący na danym
+          projekcie może pobrać i zainstalować wymagane paczki zdefiniowane w
+          pliku <b>package.json</b> samodzielnie. Jeśli projekt nie jest
+          aktualnie rozwijany, można usunąć ten katalog w celu zaoszczędzenia
+          miejsca, a w razie potrzeby zainstalować paczki ponownie.
+        </li>
+      </ul>
+      <p class="article__text">
+        Alternatywą dla npm jest korzystający z tej samej bazy pakietów
+        <a class="article__link" href="https://yarnpkg.com/">Yarn</a>.
+      </p>
+    </article>
+    <article id="npm-scripts" class="article">
+      <h2 class="article__heading">npm scripts</h2>
+      <p class="article__text">
+        Skrypty npm to skróty, które można zdefiniować w projekcie. Skrót taki
+        należy dodać jako kolejną wartość dla klucza 'scripts' w pliku
+        <b>package.json</b>. Wartość ta tworzy zagnieżdżenie, gdyż sama składa
+        się z klucza - nazwy skrótu, oraz wartości - polecenia, które zostanie
+        wywołane.
+      </p>
+      <p class="article__text">
+        Polecenie <b>npm run shortcutName</b> powoduje wywołanie skrótu. W
+        przypadku uruchomienia narzędzia konsolowego nie ma konieczności
+        umieszczania 'npx' na początku polecenia, ponieważ katalog
+        <b>node_modules</b> zostaje przeszukiwany domyślnie.
+      </p>
+    </article>
+    <article id="node-sass" class="article">
+      <h2 class="article__heading">node-sass</h2>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Paczka 'node-sass' służy do zamiany pliku .sass/.scss na plik .css.
+          Należy ją zainstalować jako paczkę zawierającą plik/narzędzie
+          obsługujące projekt (paczkę deweloperską).
+        </li>
+        <li class="article__list-item">
+          Aby wykonać zamianę pliku ze stylami należy uruchomić paczkę
+          poleceniem 'npx', a jako argumenty podać nazwy plików: źródłowego i
+          docelowego wraz z rozszerzeniami.
+        </li>
+        <li class="article__list-item">
+          Aby narzędzie po uruchomieniu nasłuchiwało i nadpisywało plik .css
+          po każdym zapisie, należy uruchomić je z dodatkowym argumentem
+          '--watch'. Narzędzie w trakcie nasłuchiwania wyświetla także
+          wszelkie błędy w składni zapisanego pliku .sass/.scss. Aby wyjść z
+          trybu nasłuchiwania, należy skorzystać w terminalu z kombinacji
+          klawiszy 'Ctrl + c'.
+        </li>
+      </ul>
+    </article>
+    <article id="import" class="article">
+      <h2 class="article__heading">import/export</h2>
+      <p class="article__text">
+        W przypadku modułów w JS najbardziej popularne są dwie koncepcje:
+        CommonJS (domyślnie wykorzystywany w skryptach Node.js, nie wymagający
+        użycia dodatkowych narzędzi w Node.js) oraz ES6 Modules (nie wymaga
+        użycia dodatkowych narzędzi w przegladarce).
+      </p>
+      <p class="article__text">Import ES6 Modules:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Import modułu JS wykonuje się z wykorzystaniem znacznika
+          <b>&lt;script type="module"></b>
+        </li>
+        <li class="article__list-item">
+          <b>Eksport nazwany</b> (definiowany z użyciem słowa kluczowego
+          <b>export</b>) używany jest przed konkretną rzeczą, która ma być
+          udostępniona na zewnątrz pliku (np. przed definicją funkcji, która
+          będzie wywołana w innym pliku). Import elementu wyeksportowanego w
+          ten sposób odbywa się z użyciem słowa kluczowego <b>import</b>,
+          nazwy importowanych elementów podanych w klamrach oraz ścieżki i
+          nazwy do pliku źródłowego/modułu poprzedzonej słowem kluczowym
+          <b>from</b>, np.
+          <b>import {function1Name, function2Name} from
+            'directory/fileName.js'</b>.
+        </li>
+        <li class="article__list-item">
+          <b>Eksport domyślny</b> (definiowany z użyciem słów kluczowych
+          <b>export default</b>) nie wymaga takiej samej nazwy elementu
+          podczas importu do pliku docelowego, lecz pozwala na swobodny jej
+          wybór w przeciwieństwie do eksportu nazwanego. Import elementru
+          wyeksportowanego w ten sposób odbywa się również z użyciem słowa
+          kluczowego <b>import</b>, nazwy importowanego elementów (lecz tym
+          razem bez podawania jej w nawiasie klamrowym) oraz ścieżki i nazwy
+          do pliku źródłowego/modułu poprzedzonej słowem kluczowym
+          <b>from</b>, np.
+          <b>import importedElementName from 'directory/fileName.js'</b>.
+        </li>
+        <li class="article__list-item">
+          Słowo kluczowe <b>as</b> pozwala na zmianę nazwy zaimportowanego
+          elementu w pliku docelowym, np.
+          <b>import {sourceFileFunctionName as outputFileFunctionName} from
+            'directory/fileName.js'</b>. Jest to zabieg najczęściej przydatny w przypadku wystąpienia
+          konfliktu nazw lub zbyt długich nazw elementów.
+        </li>
+        <li class="article__list-item">
+          <b>*</b> pozwala na zbiorowy import wszystkich elementów
+          wyeksportowanych w pliku źródłowym, np.
+          <b>import * as myImport from 'directory/fileName.js'</b>. Tworzony
+          jest wtedy obiekt o zdefiniowanej nazwie zawierający wszystkie
+          wyeksportowane elementy. Odwołanie do konkretnego elementu następuje
+          w sposób analogiczny dla obiektów, np. <b>myImport.elementName</b>.
+        </li>
+        <li class="article__list-item">
+          Importowanie z Node.js Modules z wykorzystaniem powyższych metod
+          jest bardzo trudne i może powodować wiele konfliktów. Nie należy
+          wykonywać takich importów bez użycia oprogramowania wspomagającego.
+        </li>
+      </ul>
+    </article>
+    <article id="webpack" class="article">
+      <h2 class="article__heading">webpack</h2>
+      <p class="article__text">
+        <a class="article__link" href="https://webpack.js.org">Webpack</a>
+        jest pakietem modułów JavaScript na liecencji open-source, który
+        ułatwia development, może automatyzować procesy oraz jest używany
+        przez wiodące frameworki i biblioteki. Jego możliwości rozszerzane są
+        za pomocą paczek z npm.
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Może zostać zainstalowany za pomocą narzędzi npm.
+        </li>
+        <li class="article__list-item">
+          Działa bez żadnego pliku konfiguracyjnego.
+        </li>
+        <li class="article__list-item">
+          Domyślnym plikiem wejściowym jest plik <b>index.js</b>, znajdujący
+          się w katalogu <b>src</b>.
+        </li>
+        <li class="article__list-item">
+          Domyślnym plikiem wyjściowym jest plik <b>main.js</b>, znajdujący
+          się w katalogu <b>dist</b>, który może zostać załączony bezpośrednio
+          do pliku .html.
+        </li>
+        <li class="article__list-item">
+          Pozwala na wykonanie standardowego importu (z wykorzystaniem ekportu
+          domyślnego) z Node.js Modules oraz wykorzystanie importowanych
+          elementów w pliku wejściowym, które po odpowiednim przetworzeniu
+          zostaną prawidłowo wykonane w pliku wyjściowym, uzupełnionym
+          automatycznie o inne wymagane elementy (np. funkcje z biblioteki).
+        </li>
+        <li class="article__list-item">
+          Posiada <b>loadery</b>, czyli dodatkowe opcje pozwalające na
+          wykonywanie operacji na plikach innych niż pliki .js (np. pliki ze
+          stylami SCSS).
+        </li>
+        <li class="article__list-item">
+          Posiada <b>pluginy</b>, pozwalające na wykonywanie operacji na
+          plikach (np. kopiowanie).
+        </li>
+        <li class="article__list-item">
+          Posiada dwa <b>tryby pracy (mode)</b>: deweloperski i produkcyjny.
+        </li>
+      </ul>
+      <p class="article__text">
+        Stworzona na potrzeby kursu konfiguracja webpack
+        <a class="article__link" href="https://github.com/maciejkorsan/wtf-webpack-starter/generate">WTF Webpack Starter
+          Kit</a>
+        zawiera:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">Serwer lokalny z autoodświeżaniem.</li>
+        <li class="article__list-item">Wsparcie dla SCSS i sourcemap.</li>
+        <li class="article__list-item">Minifikację.</li>
+        <li class="article__list-item">
+          Babel - pozwala na korzystanie z najnowszych funkcji ECMAScript.
+        </li>
+        <li class="article__list-item">Publikację na github pages.</li>
+      </ul>
+      <p class="article__text">
+        Aby zacząć pracę z konfiguracją webpacka WTF Webpack Starter Kit,
+        należy utworzyć nowe repozytorium na github korzystając z
+        <a class="article__link" href="https://github.com/maciejkorsan/wtf-webpack-starter/generate">linka</a>
+        do konfiguracji (zostaje utworzona kopia repozytorium, na której można
+        swobodnie pracować bez obaw o wprowadzenie zmian w oryginalnej
+        konfiguracji). Kolejnym krokiem jest sklonowanie utworzonego
+        repozytorium (tworząc repozytorium lokalne należy pamiętać, aby wejść
+        uprzednio do katalogu przechowującego projekty). Ścieżki do plików
+        należy podawać względem plików źródłowych, a nie serwerowych (za
+        wyjątkiem ścieżek z sekcji 'head').
+      </p>
+      <p class="article__text">
+        Komendy pozwalające na rozpoczęcie pracy z konfiguracją oraz jej
+        używanie:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>npm install</b> Instaluje składniki konfiguracji (instalację
+          należy wykonać tylko raz - na początku projektu oraz ewentualnie w
+          momencie gdy ściągamy nową wersję lub dokładamy coś od siebie).
+        </li>
+        <li class="article__list-item">
+          <b>npm run start</b> Uruchamia projekt w trybue deweloperskim (adres
+          serwera znajduje się w terminalu). Aby zamknąć ten tryb, należy
+          skorzystać w terminalu z kombinacji klawiszy 'Ctrl + c'.
+        </li>
+        <li class="article__list-item">
+          <b>npm run build</b> Buduje projekt w trybie produkcyjnym.
+        </li>
+        <li class="article__list-item">
+          <b>npm run publish</b> Buduje projekt i kopiuje pliki z katalogu
+          <b>dist</b> na gałąź <b>gh-pages</b>, które następnie mogą zostać
+          opublikowane w serwisie 'GitHub Pages'. Postępy w pracy z kodem na
+          plikach źródłowych mogą być w dalszym ciągu commitowane i pushowane
+          w standardowy sposób, natomiast strona nie zostanie opublikowana bez
+          użycia tej komendy, ponieważ repozytorium nie będzie miało dostępu
+          do plików docelowych.
+        </li>
+      </ul>
+      <p class="article__text">
+        Aby dodać nową stronę do projektu, należy oprócz utworzenia samego
+        pliku .html dodać ją także do konfiguracji w pliku
+        'webpack.common.js', a następnie zrestartować serwer lokalny.
+      </p>
+      <p class="article__text">
+        Aby dołączyć plik .js tylko do jednej strony, należy go zdefiniować w
+        pliku 'webpack.common.js' w obiekcie 'entry', a następnie dodać go do
+        tablicy 'chunks' konkretnej strony. Dobrą praktyką jest nazywanie
+        plików .html tak jak plików .js, ponieważ zwiększa to porządek w
+        projekcie oraz w pliku konfiguracyjnym.
+      </p>
+      <p class="article__text">
+        Dzięki loaderowi do SCSS dostępnemu w konfiguracji, możliwy jest
+        import plików .scss do pliku .js, np.
+        <b>import '../scss/main.scss'</b>. Nie oznacza to, że plik ze stylami
+        znajdzie się w pliku .js - finalnie zostanie on utworzony jako
+        oddzielny plik .css.
+      </p>
+      <p class="article__text">
+        Pliki ze stylami można również importować z node_modules (np. plik
+        normalizujący). Import należy wtedy wykonać w głównym pliku .scss z
+        użyciem znaku '~' przed nazwą importowanego elementu, np.
+        <b>@import "~normalize.css"</b>.
+      </p>
+      <p class="article__text">
+        Dzięki source mapie dostępnej w konfiguracji, style w narzędziach
+        deweloperskich przeglądarki będą wyświetlane na postawie pliku .scss
+        zaiast na podstawie finalnej wersji pliku .css, jaki jest
+        interpretowany przez przeglądarkę. Pozwala to na natychmiastową
+        identyfikację konkretnej reguły w edytorze. Source mapa zachowuje się
+        podobnie również w odniesieniu do skryptów, wyświetlając je również na
+        podstawie pliku źródłowego zamiast docelowego. Source mapa
+        wykorzystywana jest jedynie w trybie deweloperskim, aby nikt na
+        produkcji nie zobaczył plików źródłowych (np. ze stylami strony).
+      </p>
+      <p class="article__text">
+        Po zbudowaniu projektu w trybie produkcyjnym wynikiem pracy jest
+        katalog <b>dist</b>, którego zawartość należy opublikować na serwerze.
+        Katalog ten nie jest z reguły commitowany (dlatego znajduje się w
+        pliku .gitignore), ponieważ jest on budowany. Nie należy zmieniać jego
+        zawartości manualnie, poniważ każde kolejne zbudowanie projektu
+        nadpisze dokonane tan zmiany i zostaną one utracone. Do katalogu
+        <b>dist</b> trafiają bez żadnych zmian wszystkie źródłowe pliki .html.
+        Pliki .scss, .saas są zamieniane na plik .css (który finalnie zostaje
+        umieszczony w pliku .html) oraz otrzymuje unikalny hash. Pliki .js
+        oraz obrazki również po skopiowaniu do katalogu <b>dist</b> otrzymują
+        unikalną nazwę. Jest to zabieg stosowany w celu uniknięcia sytuacji,
+        kiedy pamięć podręczna przeglądarki posiada już element o danej nazwie
+        i podmiana tego elementu na inny nie spowoduje jego ponownego
+        pobrania, kiedy będzie on miał ponowinie taką samą nazwę.
+      </p>
+      <p class="article__text">
+        Katalog <b>public</b> zawiera dodatkowe pliki, które powinny zostać
+        umieszczone na serwerze i nie są w żaden sposób modyfikowane przez
+        webpack, np. favicony. Zawartość tego katalogu zostaje skopiowana bez
+        żadnych zmian do katalogu <b>dist</b>. Należy pamiętać o odpowiednich
+        ścieżkach do plików znajdujących się w katalogu <b>public</b>.
+      </p>
+      <p class="article__text">
+        Webpack wyświetla błędy w terminalu ze wskazaniem, w którym miejscu
+        wystąpiły. Kontroluje on zarówno składnię kodu, poprawność użytych
+        ścieżek oraz sprawdza, czy zasoby do których wystąpiło odwołanie
+        istnieją.
+      </p>
+      <p class="article__text">
+        Podczas pracy nad projektem w trybie deweloperskim należy edytować
+        pliki, które znajdują się w katalogu <b>src</b>. Po zapisie
+        edytowanego pliku, zmiany zostaną automatycznie zaktualizowane na
+        serwerze. Należy także zwracać uwagę na ewentualne błędy pojawiające
+        się w terminalu i dokładnie czytać ich treść.
+      </p>
+    </article>
+    <article id="arrays" class="article">
+      <h2 class="article__heading">tablice</h2>
+      <p class="article__text">Tablica (array):</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Jest niejednorodną strukturą danych, ponieważ może przechowywać
+          różne typy danych jednocześnie (np. liczby, łańcuchy znaków,
+          obiekty).
+        </li>
+        <li class="article__list-item">
+          Aby zadeklarować tablicę, należy użyć nawiasów kwadratowych.
+          Elementy tablicy można zdefiniować już podczas deklaracji tablicy
+          (poprzez umieszczenie ich wewnątrz nawiasów kwadratowych i
+          oddzielenie od siebie przecinkiem) lub dodać je później (z
+          wykorzystaniem odpowiednich metod).
+        </li>
+        <li class="article__list-item">
+          Każdy z elementów tablicy posiada indeks, czyli swoją pozycję w
+          tablicy. Pierwszy element tablicy ma indeks 0. Aby odwołać się do
+          elementu o danym indeksie, należy podać indeks w nawiasach
+          kwadratowych po nazwie zmiennej, do której przypisana jest tablica.
+        </li>
+      </ul>
+      <p class="article__text">Wybrane własności i funkcje tablic:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>length</b> Zwraca ilość elementów tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>push(element)</b> Dodaje <b>element</b> na koniec tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>pop()</b> Usuwa element z końca tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>unshift(element)</b> Dodaje <b>element</b> na początek tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>shift()</b> Usuwa element z początku tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>indexOf(element)</b> Zwraca indeks pierwszego napotkanego
+          <b>element</b> lub wartość -1, gdy <b>element</b> nie zotanie
+          odnaleziony w tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>splice(index, amount)</b> Rozpoczynając od elementu o indeksie
+          <b>index</b>, usuwa <b>amount</b> elementów z tablicy.
+        </li>
+        <li class="article__list-item">
+          <b>slice(startIndex, endIndex)</b> Rozpoczynając od elementu o
+          indeksie <b>startIndex</b> (włącznie), pobiera elementy z tablicy
+          kończąc na elemencie o indeksie <b>endIndex</b> (z wyłączeniem tego
+          elementu).
+        </li>
+      </ul>
+    </article>
+    <article id="loops" class="article">
+      <h2 class="article__heading">pętle</h2>
+      <p class="article__text">
+        Pętla (loop) wykonuje blok kodu określoną liczbę razy.
+      </p>
+      <p class="article__text">Rodzaje pętli:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>for(let</b> <u>i=0</u><b>;</b> <u>i&lt;10</u><b>;</b> <u>i++</u><b>) {</b>blockOfCode<b>}</b>
+        </li>
+        <li class="article__list-item">
+          <b>while(</b><u>i&lt;10</u><b>) {</b>blockOfCode<b>}</b>
+        </li>
+        <li class="article__list-item">
+          <b>do {</b>blockOfCode<b>} while(</b><u>i&lt;10</u><b>)</b>
+        </li>
+        <li class="article__list-item">
+          <b>for(let</b> <u>propertyName</u> <b>in</b> <u>object</u><b>)</b>
+        </li>
+        <li class="article__list-item">
+          <b>for(let</b> <u>element</u> <b>of</b> <u>array</u><b>)</b>
+        </li>
+      </ul>
+      <p class="article__text">
+        Pętla <b>for</b> składa się z inicjalizacji <u>iteratora</u>,
+        <u>warunku</u> oraz <u>wyrażenia inkrementacji/dekrementacji</u>. Blok
+        kodu wewnątrz pętli zostanie wykonany, jeśli warunek zwróci wartość
+        prawdziwą.
+      </p>
+      <p class="article__text">
+        Pętla <b>while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz pętli
+        zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+        najpierw sprawdza warunek, a później wykonuje blok kodu, zatem jeśli
+        początkowy warunek zwróci wartość fałszywą, pętla nie wykona się ani
+        razu.
+      </p>
+      <p class="article__text">
+        Pętla <b>do ... while</b> zawiera <u>warunek</u>. Blok kodu wewnątrz
+        pętli zostanie wykonany, jeśli warunek zwróci wartość prawdziwą. Pętla
+        najpierw wykonuje blok kodu, a później sprawdza warunek, zatem jeśli
+        początkowy warunek zwróci wartość fałszywą, pętla wykona się raz.
+      </p>
+      <p class="article__text">
+        Pętla <b>for ... in</b> składa się z inicjalizacji
+        <u>zmiennej określającej własność obiektu</u>
+        oraz odwołania do <u>obiektu</u>. Iteruje się po wszystkich
+        własnościach przekazanego obiektu.
+      </p>
+      <p class="article__text">
+        Pętla <b>for ... of</b> składa się z inicjalizacji
+        <u>zmiennej określającej element tablicy</u>
+        oraz odwołania do <u>tablicy</u>. Iteruje się po wszystkich elementach
+        tablicy.
+      </p>
+      <p class="article__text">Rodzaje inkrementacji i dekrementacji:</p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>preinkrementacja (++i)</b> Zwiększa wartośc wyrażenia o 1 przed
+          wykonaniem pozostałych operacji.
+        </li>
+        <li class="article__list-item">
+          <b>predekrementacja (--i)</b> Zmniejsza wartość wyrażenia o 1 przed
+          wykonaniem pozostałych operacji.
+        </li>
+        <li class="article__list-item">
+          <b>postinkrementacja (i++)</b> Zwiększa wartość wyrażenia o 1 po
+          wykonaniu pozostałych operacji.
+        </li>
+        <li class="article__list-item">
+          <b>postdekrementacja (i--)</b> Zmniejsza wartość wyrażenia o 1 po
+          wykonaniu pozostałych operacji.
+        </li>
+      </ul>
+    </article>
+    <article id="data-storage" class="article">
+      <h2 class="article__heading">przechowywanie danych</h2>
+      <p class="article__text">
+        Sposoby na przechowanie danych w przeglądarce:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <b>ciasteczka (cookies)</b>
+        </li>
+        <li class="article__list-item">
+          <b>local storage</b>
+        </li>
+        <li class="article__list-item">
+          <b>session storage</b>
+        </li>
+      </ul>
+      <p class="article__text">
+        <b>Ciasteczka</b> to małe fragmenty tekstu wysyłane do przeglądarki,
+        wykorzystywane podczas kolejnych wejść na witrynę. Dostępne aż do
+        momentu zamknięcia okna przeglądarki (o ile nie wybrano inaczej w
+        ustawieniach przeglądarki).<br />Wyświetlenie zawartości ciasteczek na
+        stronie: zakładka <b>Application</b> w narzędziach deweloperskich lub
+        polecenie <b>document.cookie</b> w konsoli.<br />Format zapisu:
+        <b>"name = value"</b> (poszczególne ciasteczka oddzielone są znakiem
+        <b>;</b>).<br />Definiowanie nowego ciasteczka:
+        <b>document.cookie = "</b>name <b>=</b> value<b>"</b>.
+      </p>
+      <p class="article__text">
+        <b>Local storage</b> przechowuje dane w przeglądarce do momentu
+        ręcznego wyczyszczenia.<br />Wyświetlenie zawartośi local storage na
+        stronie: zakładka <b>Application</b> w narzędziach deweloperskich lub
+        polecenie <b>localStorage</b> w konsoli.<br />Dodawanie nowego
+        przechowywanego elementu: <b>localStorage.setItem('</b>key<b>', '</b>value<b>')</b>.<br />Pobieranie
+        przechowywanego elementu (w przypadku
+        podania nieistniejącego klucza, zwrócona zostanie wartość
+        <b>null</b>): <b>localStorage.getItem('</b>key<b>')</b>.<br />Usuwanie
+        przechowywanego elementu:
+        <b>localStorage.removeItem('</b>key<b>')</b>.<br />
+        W celu dodania obiektu do local storage, należy go najpierw
+        przekształcić na JSONString z wykorzystaniem metody:
+        <b>JSON.stringify(</b>object<b>)</b>.<br />
+        W celu pobrania z local storage obiektu przechowywanego jako
+        JSONString, należy go najpierw przekształcić na obiekt z
+        wykorzystaniem metody: <b>JSON.parse(</b>JSONString<b>)</b>.
+      </p>
+      <p class="article__text">
+        <b>Session storage</b> przechowuje dane w przeglądarce do momentu
+        zamknięcia sesji (zakładki przeglądarki).<br />
+        Dodawanie, pobieranie i usuwanie elementów jest analogiczne jak dla
+        local storage.
+      </p>
+    </article>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">
+      Zawartość będzie aktualizowana na bieżąco w miarę możliwości.
+      <a class="footer__link" href="#top">Wróć na górę</a>
+    </p>
+    <p class="footer__text">Maciej Ryszka - 2020</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
